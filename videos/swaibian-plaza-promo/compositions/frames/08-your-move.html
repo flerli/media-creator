@@ -92,10 +92,14 @@
     position: absolute; left: 0; bottom: 0; width: 100%; height: 3px;
     background: rgba(11, 74, 111, 0.08);
   }
-  #root .f08-strip i {
-    display: block; height: 100%; width: 100%; background: #0B4A6F;
-    transform-origin: left center; will-change: transform;
+  #root .f08-rail {
+    position: absolute; top: 2.6cqw; left: 3cqw; z-index: 6;
+    display: flex; align-items: center; gap: .7cqw;
+    border: 1.5px solid rgba(11, 74, 111, .2); background: rgba(250, 248, 245, .92);
+    border-radius: 100px; padding: .55cqw 1.3cqw;
   }
+  #root .f08-rail i { display: block; width: .7cqw; height: .7cqw; border-radius: 50%; background: #0B4A6F; }
+  #root .f08-rail span { font-size: .95cqw; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #0B4A6F; line-height: 1.2; }
 </style>
 <div data-hf-id="hf-npwc" id="root" data-composition-id="08-your-move" data-width="1920" data-height="1080" data-duration="4.75" data-fps="30">
   <div data-hf-id="hf-tyvf" id="08-your-move-bg" class="clip f08-bg" data-start="0" data-duration="4.75" data-track-index="0"></div>
@@ -109,12 +113,7 @@
         <circle data-hf-id="hf-rg7g" cx="960" cy="430" r="900" data-layout-allow-overflow />
       </svg>
     </div>
-    <div data-hf-id="hf-8hxq" class="f08-heroband">
-      <div data-hf-id="hf-dmcu" id="08-your-move-hero" class="f08-hero">Your move.</div>
-    </div>
-    <div data-hf-id="hf-kp1v" class="f08-keepband">
-      <div data-hf-id="hf-kp2w" id="08-your-move-keep" class="f08-keep">I'll keep watch.</div>
-    </div>
+    <div data-hf-id="hf-rl8a" id="08-your-move-rail" class="f08-rail" style="opacity:0"><i data-hf-id="hf-rl8b" id="08-your-move-rail-dot"></i><span data-hf-id="hf-rl8c" id="08-your-move-rail-text">DONNA'S DISPATCH · ON WATCH</span></div>
     <div data-hf-id="hf-jxo5" class="f08-ctarow">
       <div data-hf-id="hf-cw6q" id="08-your-move-cta" class="f08-cta">
         <span data-hf-id="hf-cvqz" id="08-your-move-cta-fill" class="f08-cta-fill"></span>
@@ -126,8 +125,8 @@
       <span data-hf-id="hf-tqbw" id="08-your-move-url" class="f08-url">swaibian.com</span>
     </div>
     <div data-hf-id="hf-j0k4" id="08-your-move-lockup" class="f08-lockup">
+      <span data-hf-id="hf-5yyq" id="08-your-move-byline" class="f08-byline">by</span>
       <img data-hf-id="hf-7zvg" id="08-your-move-wordmark" class="f08-wordmark" src="assets/swaibian-black-logo.png" alt="">
-      <span data-hf-id="hf-5yyq" id="08-your-move-byline" class="f08-byline">Plaza, by Swaibian</span>
     </div>
   </div>
   <div data-hf-id="hf-3ftr" id="08-your-move-strip" class="clip f08-strip" data-start="0" data-duration="4.75" data-track-index="2">
@@ -141,8 +140,6 @@
   var tl = gsap.timeline({ paused: true });
 
   var rings = document.getElementById("08-your-move-rings");
-  var hero = document.getElementById("08-your-move-hero");
-  var keep = document.getElementById("08-your-move-keep");
   var ctaFill = document.getElementById("08-your-move-cta-fill");
   var ctaLabel = document.getElementById("08-your-move-cta-label");
   var ctaRect = document.getElementById("08-your-move-cta-rect");
@@ -160,25 +157,53 @@
   // Progress strip: the dispatch closes - 87.5% -> 100% at open.
   tl.fromTo(stripFill, { scaleX: 0.875 }, { scaleX: 1, duration: 0.55, ease: "power2.out" }, 0.08);
 
-  // Scene 1 (0.0-1.4s): warm paper settles; "Your move." holds at ~28%; "I'll keep watch." fades up beneath it.
-  tl.fromTo(rings, { opacity: 0, scale: 1.04, transformOrigin: "50% 40%" }, { opacity: 1, scale: 1, duration: 1.1, ease: "power3.out" }, 0);
-  tl.fromTo(hero, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.12);
-  tl.fromTo(keep, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 1.05);
+  // Clean end-card: paper + rings settle; the CTA strokes on, then the "by [Swaibian]" lockup rises.
+  tl.fromTo(rings, { opacity: 0, scale: 1.04, transformOrigin: "50% 40%" }, { opacity: 1, scale: 1, duration: 1.0, ease: "power3.out" }, 0);
 
-  // Scene 2 (1.4-3.0s): the CTA pill strokes its border on, fills petrol; "swaibian.com" settles beside it.
-  tl.to(ctaRect, { strokeDashoffset: 0, duration: 0.7, ease: "power2.out" }, 1.4);
-  tl.fromTo(ctaFill, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 1.95);
-  tl.fromTo(ctaLabel, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 2.0);
-  tl.fromTo(urlEl, { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 2.15);
+  // Scene 1 (0.7-2.4s): the CTA pill strokes its border on, fills petrol; "swaibian.com" settles beside it.
+  tl.to(ctaRect, { strokeDashoffset: 0, duration: 0.7, ease: "power2.out" }, 0.7);
+  tl.fromTo(ctaFill, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 1.25);
+  tl.fromTo(ctaLabel, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 1.3);
+  tl.fromTo(urlEl, { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 1.45);
 
-  // Scene 3 (3.0-4.75s): the wordmark lockup settles on a soft 3D rise; held, no exit.
+  // Scene 2 (2.1-4.75s): the "by [Swaibian]" lockup settles on a soft 3D rise; held, no exit.
   tl.fromTo(
     lockup,
     { opacity: 0, y: 30, scale: 0.96, rotateX: 8, transformPerspective: 1000, transformOrigin: "50% 100%" },
     { opacity: 1, y: 0, scale: 1, rotateX: 0, duration: 0.85, ease: "power3.out" },
-    2.8
+    2.1
   );
-  tl.to(lockup, { scale: 1.008, duration: 1.1, ease: "none" }, 3.65);
+  tl.to(lockup, { scale: 1.008, duration: 1.1, ease: "none" }, 3.0);
+
+  // Dispatch pill: alive — entrance, then the status types on ("ON WATCH")
+  var railEl = document.getElementById("08-your-move-rail");
+  var railTextEl = document.getElementById("08-your-move-rail-text");
+  var railDotEl = document.getElementById("08-your-move-rail-dot");
+  var RAIL = [{ t: 0.75, s: "DONNA'S DISPATCH · ON WATCH" }];
+  var TYPE_DUR = 1.0;
+  function railTextAt(v) {
+    var out = "";
+    for (var i = 0; i < RAIL.length; i++) {
+      var st = RAIL[i];
+      if (v < st.t) break;
+      var prevLen = i === 0 ? 0 : RAIL[i - 1].s.length;
+      var p = Math.min(1, (v - st.t) / TYPE_DUR);
+      var n = prevLen + Math.round((st.s.length - prevLen) * p);
+      out = st.s.slice(0, n);
+      if (p < 1) break;
+    }
+    return out;
+  }
+  var rail = { p: 0 };
+  tl.to(rail, { p: 4.75, duration: 4.75, ease: "none", onUpdate: function () {
+    var s2 = railTextAt(rail.p);
+    if (railTextEl.textContent !== s2) railTextEl.textContent = s2;
+  } }, 0);
+  tl.fromTo(railEl, { opacity: 0, y: -10, scale: 0.95 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "power3.out" }, 0.35);
+  tl.fromTo(railDotEl, { scale: 1 }, { scale: 1.35, duration: 0.16, ease: "power2.out" }, 1.77);
+  tl.to(railDotEl, { scale: 1, duration: 0.18, ease: "power2.inOut" }, 1.93);
+  tl.fromTo(railDotEl, { scale: 1 }, { scale: 1.28, duration: 0.14, ease: "power2.out" }, 2.11);
+  tl.to(railDotEl, { scale: 1, duration: 0.35, ease: "power2.inOut" }, 2.25);
 
   tl.seek(0);
   window.__timelines = window.__timelines || {};

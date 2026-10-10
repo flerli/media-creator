@@ -99,7 +99,7 @@
 
   <div id="f03-ui" class="clip" data-start="0" data-duration="4.2" data-track-index="1">
     <div id="f03-scrim"></div>
-    <div id="f03-rail"><i></i><span>Donna's Dispatch</span></div>
+    <div id="f03-rail"><i id="f03-rail-dot"></i><span id="f03-rail-text">DONNA'S DISPATCH</span></div>
     <div id="f03-hl">I ran your pipelines.</div>
     <div id="f03-sb">Design goes in, execution comes out — no handoffs.</div>
   </div>
@@ -176,6 +176,36 @@
   tl.to(headState, { s: 2, o: 0, duration: 0.34, ease: "power2.out", onUpdate: writeHead }, 2.83);
   tl.to(rip, { r: 240, o: 0, duration: 0.4, ease: "power2.out", onUpdate: writeRipple }, 2.91);
   tl.to(route, { opacity: 0.28, duration: 0.36, ease: "power1.out" }, 2.88);
+
+  // Dispatch pill: alive — status types on, the dot pulses
+  var railText = document.getElementById("f03-rail-text");
+  var RAIL = [
+    { t: 0, s: "DONNA'S DISPATCH" },
+    { t: 1.5, s: "DONNA'S DISPATCH · PIPELINES RAN" },
+  ];
+  var TYPE_DUR = 0.55;
+  function railTextAt(v) {
+    var out = "";
+    for (var i = 0; i < RAIL.length; i++) {
+      var st = RAIL[i];
+      if (v < st.t) break;
+      var prevLen = i === 0 ? 0 : RAIL[i - 1].s.length;
+      var p = Math.min(1, (v - st.t) / TYPE_DUR);
+      var n = prevLen + Math.round((st.s.length - prevLen) * p);
+      out = st.s.slice(0, n);
+      if (p < 1) break;
+    }
+    return out;
+  }
+  var rail = { p: 0 };
+  tl.to(rail, { p: 3.7, duration: 3.7, ease: "none", onUpdate: function () {
+    var s2 = railTextAt(rail.p);
+    if (railText.textContent !== s2) railText.textContent = s2;
+  } }, 0);
+  tl.fromTo("#f03-rail-dot", { scale: 1 }, { scale: 1.35, duration: 0.16, ease: "power2.out" }, 1.58);
+  tl.to("#f03-rail-dot", { scale: 1, duration: 0.18, ease: "power2.inOut" }, 1.74);
+  tl.fromTo("#f03-rail-dot", { scale: 1 }, { scale: 1.28, duration: 0.14, ease: "power2.out" }, 1.92);
+  tl.to("#f03-rail-dot", { scale: 1, duration: 0.35, ease: "power2.inOut" }, 2.06);
 
   tl.seek(0);
   window.__timelines = window.__timelines || {};

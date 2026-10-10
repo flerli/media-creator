@@ -30,6 +30,11 @@ music: deadpan minimal tech — mechanical-quiet groove, soft ticking percussion
 - Note (verbatim): "1. massively tighten and speed up 2. more enterprise high gloss like part 7 3. use more impressive 3d animations 4. text shall be more like Donna is really talking to the user"
 - Applied: total cut 59.18s → ~34.4s (same beat grid, compressed multiples); all copy rewritten in Donna's first-person voice addressing the viewer; report beats go media-forward — F2/F3/F5 full-bleed with cinematic scrims (the F7 gloss) — and F2–F6/F8 carry CSS-3D camera work (tilted panels settling flat, z-depth pushes); faster reveals, holds ≤1s.
 
+## Changes from v3 (final-review round 2)
+
+- Note (verbatim): "1. audio is disrupted at 27s and last second 2. last frame: remove test, keep button and logo, add 'by' 3. pills shall be animated more engaging 4. intro 2nd frame more like 'Hello, I am Donna - your ...'"
+- Applied: bed rebuilt — beat-aligned loop seam (25.8–28.0s) and fade to silence exactly at 34.39s, plus fade-trimmed chime/impact SFX tails; F8 is now a clean end card ([Get Plaza] + swaibian.com + "by" + Swaibian wordmark — no headline text); all pills type their status on with a doubled dot pulse; F2 copy is now "Hello — I’m Donna, your chief of staff.".
+
 ## Brand (from capture)
 
 - **Palette (v2 — brighter, warmer)**: paper `#FAF8F5` · petrol `#0B4A6F` · ink `#020617` · muted `#6B7280` · tinted cards 4% petrol fill / 20% border. The product's own dark surfaces (Dispatch canvas, photo scrims) are real evidence windows — `#0F1115` scrim, mint `#63D6D4` lives inside them only.
@@ -49,6 +54,7 @@ music: deadpan minimal tech — mechanical-quiet groove, soft ticking percussion
 - **Gloss**: media-forward — full-bleed captures (F2/F3/F5/F7) under cinematic bottom scrims with a faint top vignette; tilted 3D panels settle flat; one sheen sweep on card beats; no shadows.
 - **Motion grammar + reveal model**: one camera feel — smooth long-tail settles (`power3`-class; soft springs only, never bounce) with **CSS-3D depth as part of the gesture** (perspective wrappers, rotateX/Y settles, translateZ pushes — seek-safe, no libraries); reveals land fast; at t=0 only the first phrase's piece is on screen; nothing front-loads.
 - **Rhythm / held frames**: snappy — 3.2–6.3s per beat; holds ≤1s except F7's calm chain and the final lockup; F1's held beat is short; the progress strip advances one eighth per beat (chrome, extreme bottom edge only).
+- **The dispatch pill is alive**: seated at F1, its label types on and each status types on with the beat — · LIVE (F2) · PIPELINES RAN (F3) · BOARDS MOVED (F4) · MARKET READ (F5) · BRIEFING READY (F6) · LISTENING (F7) · ON WATCH (F8) — seek-safe type-on driver + doubled dot pulse.
 - **Caption band**: all content sits above the bottom ~17%; the strip is the only thing at the extreme edge.
 - **Negative list**: no fake product UI (screens are real captures); no cursor anywhere; no glow/bokeh; no hype risers or swells; **no slideshow** (never front-loaded-then-frozen); **no screensaver** (no independent floating; no lazy breathing, no back-half drift).
 
@@ -87,7 +93,7 @@ Scene 3 (2.6–3.24s): the held read — nothing moves at all; the stillness is 
 ## Frame 2 — The desk
 
 - scene: Full-bleed: the workspace panel settles from a 3D angle to flat as the camera pulls back; the line lands on the lock.
-- onscreen: "I kept working." (lands with the 3D settle) + chrome chip "DONNA'S DISPATCH · LIVE"
+- onscreen: "Hello — I’m Donna, your chief of staff." (lands with the 3D settle) + chrome chip "DONNA'S DISPATCH · LIVE"
 - window: 3.24–7.46s
 - duration: 4.22s
 - poster: 3.4
@@ -105,13 +111,13 @@ Scene 3 (2.6–3.24s): the held read — nothing moves at all; the stillness is 
 - rules: multi-phase-camera, depth-of-field-blur
 - asset_candidates: assets/plaza-workspace-detail.png — full desktop workspace (dark UI: sidebar, kanban, canvas, Donna chat); assets/plaza-donna-command-center.png — Donna chat + canvas
 - constraint: no cursor, no fake hover states — the desk moves by itself
-- narrativeRole: Beat 2 lands the promise: the desk kept working; "Plaza" is named.
-- keyMessage: One desktop — and it didn't stop.
+- narrativeRole: Beat 2 introduces Donna herself, speaking first-person — the product's face, already at work.
+- keyMessage: Donna — your chief of staff, already working.
 
 Adapt — same single decelerating move, now full-bleed and 3D: the workspace floats as a panel held at an angle, settling to flat while the camera pulls back from a detail; a cinematic scrim carries the line.
 
 Scene 1 (0.0–1.6s): the workspace is full-bleed, held in 3D (perspective ~1600px, rotateY −12°, rotateX 6°, slightly scaled in) on a detail of the chat region; the pull-back is ALREADY running and the panel rotates to face the camera as it recedes — one continuous move (CSS-3D transforms + → multi-phase-camera); a touch of soft focus sharpens as it settles (→ depth-of-field-blur).
-Scene 2 (1.6–3.2s): the panel reaches flat and decelerating; the bottom scrim deepens; "I kept working." fades up over the scrim (lower-left ~38%); chip holds top-left.
+Scene 2 (1.6–3.2s): the panel reaches flat and decelerating; the bottom scrim deepens; "Hello — I’m Donna, your chief of staff." fades up over the scrim (lower-left ~38%); chip holds top-left.
 Scene 3 (3.2–4.22s): lock — no camera motion; one faint reading light crosses the media; hold.
 
 ## Frame 3 — Pipelines ran
@@ -268,7 +274,7 @@ Scene 3 (4.2–6.33s): hard cut to the wrist/surf photo; caption "Hands back on 
 ## Frame 8 — Your move
 
 - scene: Paper close: "Your move." then "I'll keep watch."; the CTA and wordmark settle.
-- onscreen: "Your move. I'll keep watch." → CTA "Get Plaza" → "Plaza, by Swaibian — swaibian.com" + Swaibian wordmark
+- onscreen: [Get Plaza] + "swaibian.com" → "by" + Swaibian wordmark (clean end card — no headline text)
 - window: 29.63–34.38s
 - duration: 4.75s
 - poster: 3.4
@@ -289,8 +295,7 @@ Scene 3 (4.2–6.33s): hard cut to the wrist/surf photo; caption "Hands back on 
 - narrativeRole: Turns the report's rapport into an invitation; names the maker.
 - keyMessage: Plaza, by Swaibian — your move.
 
-Adapt — same paper close, faster, with a light 3D settle on the lockup.
+Adapt — clean end card: no headline text; the ask and the maker's mark only, on the same warm paper.
 
-Scene 1 (0.0–1.4s): warm paper; "Your move." holds at (~28%), then "I'll keep watch." fades up beneath it (petrol, smaller).
-Scene 2 (1.4–3.0s): the CTA pill strokes its own border on (→ svg-path-draw) and fills petrol; "swaibian.com" fades in beside it.
-Scene 3 (3.0–4.75s): the wordmark lockup settles with a soft 3D rise (rotateX 8°→0 — CSS-3D transforms + → spring-pop-entrance); placed clear of the bottom band; hold.
+Scene 1 (0.7–2.4s): the CTA pill strokes its own border on (→ svg-path-draw) and fills petrol; "swaibian.com" fades in beside it.
+Scene 2 (2.1–4.75s): the "by" + Swaibian wordmark lockup settles with a soft 3D rise (rotateX 8°→0 — CSS-3D transforms + → spring-pop-entrance); placed clear of the bottom band; hold.

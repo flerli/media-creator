@@ -65,7 +65,7 @@
   <div data-hf-id="hf-z5js" id="01-while-you-were-away-bg" class="clip f01-bg" data-start="0" data-duration="3.64" data-track-index="0"></div>
 
   <div data-hf-id="hf-md25" id="01-while-you-were-away-scene" class="clip f01-scene" data-start="0" data-duration="3.64" data-track-index="1">
-    <div data-hf-id="hf-ndkt" id="01-while-you-were-away-rail" class="f01-rail"><i data-hf-id="hf-5ucq" id="01-while-you-were-away-rail-dot"></i><span data-hf-id="hf-azdt">Donna's Dispatch</span></div>
+    <div data-hf-id="hf-ndkt" id="01-while-you-were-away-rail" class="f01-rail"><i data-hf-id="hf-5ucq" id="01-while-you-were-away-rail-dot"></i><span data-hf-id="hf-azdt" id="01-while-you-were-away-rail-text">DONNA'S DISPATCH</span></div>
     <div data-hf-id="hf-1stg" id="01-while-you-were-away-stage" class="f01-stage">
       <div data-hf-id="hf-50bl" id="01-while-you-were-away-line" class="f01-line">
         <span data-hf-id="hf-48tp" class="f01-measure" aria-hidden="true">While you were out&#160;—<i data-hf-id="hf-306p" class="f01-caret"></i></span>
@@ -167,7 +167,35 @@
       // keeps blinking until 2.6. Scene 3 (2.6-3.24s): the held read — nothing moves at all.
       // No exit motion (the seam owns the exit).
 
-      tl.seek(0);
+      // Dispatch pill: alive — the label types on, the dot pulses
+        var railText = document.getElementById("01-while-you-were-away-rail-text");
+        var railDot = document.getElementById("01-while-you-were-away-rail-dot");
+        var RAIL = [{ t: 0.35, s: "DONNA'S DISPATCH" }];
+        var TYPE_DUR = 0.7;
+        function railTextAt(v) {
+          var out = "";
+          for (var i = 0; i < RAIL.length; i++) {
+            var st = RAIL[i];
+            if (v < st.t) break;
+            var prevLen = i === 0 ? 0 : RAIL[i - 1].s.length;
+            var p = Math.min(1, (v - st.t) / TYPE_DUR);
+            var n = prevLen + Math.round((st.s.length - prevLen) * p);
+            out = st.s.slice(0, n);
+            if (p < 1) break;
+          }
+          return out;
+        }
+        var rail = { p: 0 };
+        tl.to(rail, { p: 3.24, duration: 3.24, ease: "none", onUpdate: function () {
+          var s2 = railTextAt(rail.p);
+          if (railText.textContent !== s2) railText.textContent = s2;
+        } }, 0);
+        tl.fromTo(railDot, { scale: 1 }, { scale: 1.35, duration: 0.16, ease: "power2.out" }, 1.07);
+        tl.to(railDot, { scale: 1, duration: 0.18, ease: "power2.inOut" }, 1.23);
+        tl.fromTo(railDot, { scale: 1 }, { scale: 1.28, duration: 0.14, ease: "power2.out" }, 1.41);
+        tl.to(railDot, { scale: 1, duration: 0.35, ease: "power2.inOut" }, 1.55);
+
+        tl.seek(0);
       window.__timelines = window.__timelines || {};
       window.__timelines["01-while-you-were-away"] = tl;
     })();
