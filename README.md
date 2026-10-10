@@ -87,19 +87,15 @@ The agent then, without further prompting:
 What you end up with: a LinkedIn-ready 30s MP4, plus the full project folder
 so any line, cut, or beat can be changed later and re-rendered identically.
 
-## Projects
+## Example project
 
-| Project | What | Status |
-| --- | --- | --- |
-| `videos/swaibian-one-promo/` | 25s promo for [one.swaibian.com](https://one.swaibian.com) — no-code AI use cases | Delivered — `renders/video.mp4` |
-| `videos/swaibian-com-promo/` | 60s promo for [www.swaibian.com](https://www.swaibian.com) — "No magic. Just work." | Built — 10 frames / 58.5s; no render yet |
-| `videos/swaibian-plaza-promo/` | 60s promo for Plaza — "Donna's Dispatch" | Briefed — in progress; the committed example |
+`videos/swaibian-plaza-promo/` is the one project kept in git — the reference
+for how a project is laid out: `index.html`, `BRIEF.md`, `frame.md`,
+`STORYBOARD.md`, `storyboard.html`, `compositions/`, `capture/`, `assets/`,
+`renders/`, plus its own `hyperframes.json` and pinned `package.json` scripts.
+It is currently briefed and in progress — a 60s "Donna's Dispatch" promo.
 
-Only `videos/swaibian-plaza-promo/` is committed to git; every other project
-under `videos/` is local-only and ignored. Each project holds its own
-`index.html`, `BRIEF.md`, `frame.md`, `STORYBOARD.md`, `storyboard.html`,
-`compositions/`, `capture/`, `assets/`, `renders/`, plus its own
-`hyperframes.json` and pinned `package.json` scripts.
+Other projects under `videos/` are local-only and never leave your machine.
 
 ## Reference
 

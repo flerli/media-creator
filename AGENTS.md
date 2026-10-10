@@ -9,8 +9,9 @@ HyperFrames project under `videos/<project>/`**.
 - `videos/<project>/` — one HyperFrames project per video: `index.html`,
   `BRIEF.md`, `frame.md`, `STORYBOARD.md`, `storyboard.html`,
   `compositions/`, `capture/`, `assets/`, `renders/`, plus its own
-  `hyperframes.json` + pinned `package.json` scripts. First project:
-  `videos/swaibian-one-promo/` (25s promo for one.swaibian.com, delivered).
+  `hyperframes.json` + pinned `package.json` scripts. Committed example:
+  `videos/swaibian-plaza-promo/`; every other project is local-only and
+  gitignored.
 - `.opencode/agents/swaibian-video-producer.md` — the video producer agent;
   it loads the `swaibian-video-producer` skill (`.opencode/skills/`) that
   carries the full production playbook. Use either for any video work.
@@ -22,7 +23,7 @@ Run every HyperFrames command with the project folder as the working
 directory:
 
 ```bash
-cd videos/swaibian-one-promo
+cd videos/<project>
 npm run check          # lint + runtime + layout + motion + contrast gates
 npm run dev            # Studio preview (foreground)
 npx hyperframes preview --background   # agent-safe preview, prints Studio URL
