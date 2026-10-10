@@ -11,8 +11,6 @@ HyperFrames project under `videos/<project>/`**.
   `compositions/`, `capture/`, `assets/`, `renders/`, plus its own
   `hyperframes.json` + pinned `package.json` scripts. First project:
   `videos/swaibian-one-promo/` (25s promo for one.swaibian.com, delivered).
-- `project_management/` — Swaibian One V-Model product planning (epics, TCs,
-  issues). Separate concern; never mix with media tasks.
 - `.opencode/agents/swaibian-video-producer.md` — the video producer agent;
   it loads the `swaibian-video-producer` skill (`.opencode/skills/`) that
   carries the full production playbook. Use either for any video work.
@@ -50,5 +48,4 @@ npx hyperframes init videos/<kebab-name> --non-interactive --example=blank --ski
 - Project truth is per project: `BRIEF.md` → `STORYBOARD.md` → `frame.md` →
   `compositions/`. Read it before editing; never re-scaffold over an
   existing project.
-- Never touch `project_management/` from media tasks. Never commit or push
-  unless asked.
+- Never commit or push unless asked.

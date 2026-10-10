@@ -20,7 +20,6 @@ Each project holds its own `index.html`, `BRIEF.md`, `frame.md`,
 | Path | What |
 | --- | --- |
 | `videos/` | One HyperFrames project per video |
-| `project_management/` | Swaibian One V-Model product planning — separate concern, never mixed with media tasks |
 | `.opencode/` | `swaibian-video-producer` agent + skill (the production playbook) |
 
 ## Working with a project
@@ -58,7 +57,6 @@ approval; never commit or push unless asked.
 - Project truth is per project: `BRIEF.md` → `STORYBOARD.md` → `frame.md` →
   `compositions/`. Read it before editing; never re-scaffold over an existing
   project.
-- Never touch `project_management/` from media tasks.
 
 ## Producing videos
 

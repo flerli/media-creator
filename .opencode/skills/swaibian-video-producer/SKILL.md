@@ -45,8 +45,7 @@ lives at the repo root.
   canvas; green `#10A37F`; purple `#7C3AED`; soft tints).
 - Each project has its own `.media/preferences.json` (project-tier memory) and
   its own pinned `package.json` scripts.
-- Repo root: `README.md`, `AGENTS.md`, `project_management/` (V-Model product
-  work — media tasks never modify it), `.opencode/` (agents + this skill).
+- Repo root: `README.md`, `AGENTS.md`, `.opencode/` (agents + this skill).
 
 ## 3. Where new work lives
 
