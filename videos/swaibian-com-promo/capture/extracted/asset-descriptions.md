@@ -44,13 +44,13 @@ page references) because the capture's image/font phases were budget-exhausted.
 Vision captions were unavailable; descriptions below come from the page's alt
 text and direct inspection.
 
-- images/brainwavr-storyboard-project.png — BrainWavr workspace UI: project "Plate with hole", workflow steps, Edit Artifact dialog; light app UI (3052×2160)
-- images/scaico-studio-overview.png — ScaiCo Studio dark UI: Projects / Agents / Teams / Tools cards + "Getting Started" checklist (1600×1132)
-- images/plaza-donna-command-center.png — Plaza desktop workspace: Donna command center, flagship product (3600×2338)
-- images/bookbloom-feature-characters.jpg — BookBloom hero: frosted-glass character figure rising from an illuminated open book (1024×1024)
-- images/notaria-crystalline-trust.jpg — Notaria hero: crystalline glass/paper planes with a warm light streak (1792×650)
-- images/tendr-hero.jpg — Tendr hero: warm terracotta glass vessels on a reflective table (1536×1024)
-- images/swaibian-black-logo.png — the swaibian wordmark, black on transparent (3519×812)
+- brainwavr-storyboard-project.png — BrainWavr workspace UI: project "Plate with hole", workflow steps, Edit Artifact dialog; light app UI (3052×2160)
+- scaico-studio-overview.png — ScaiCo Studio dark UI: Projects / Agents / Teams / Tools cards + "Getting Started" checklist (1600×1132)
+- plaza-donna-command-center.png — Plaza desktop workspace: Donna command center, flagship product (3600×2338)
+- bookbloom-feature-characters.jpg — BookBloom hero: frosted-glass character figure rising from an illuminated open book (1024×1024)
+- notaria-crystalline-trust.jpg — Notaria hero: crystalline glass/paper planes with a warm light streak (1792×650)
+- tendr-hero.jpg — Tendr hero: warm terracotta glass vessels on a reflective table (1536×1024)
+- swaibian-black-logo.png — the swaibian wordmark, black on transparent (3519×812)
 - fonts/NHaasGroteskTXPro-55Rg.woff — brand typeface regular 400 (the face the site loads)
 - fonts/NHaasGroteskTXPro-75Bold.woff — brand typeface bold 700
 - fonts/NHaasGroteskTXPro-56Italic.woff — brand typeface italic 400
