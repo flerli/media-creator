@@ -1,0 +1,176 @@
+<template>
+<style>
+  @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:400;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Regular.woff") format("woff")}
+  @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:italic;font-weight:400;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Italic.woff") format("woff")}
+  @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:700;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Bold.woff") format("woff")}
+  @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:italic;font-weight:700;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-BoldItalic.woff") format("woff")}
+  @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:100;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-XXThin.woff") format("woff")}
+  @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:200;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-XThin.woff") format("woff")}
+  @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:300;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-Thin.woff") format("woff")}
+
+  #root {
+    position: absolute; inset: 0; width: 1920px; height: 1080px;
+    overflow: hidden; container-type: size;
+    font-family: "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400; color: #020617;
+  }
+
+  #root .f01-bg { position: absolute; inset: 0; background: #FAF8F5; }
+
+  #root .f01-scene { position: absolute; inset: 0; }
+
+  /* dispatch rail — seated top-left, paper chip (v3 sketch) */
+  #root .f01-rail {
+    position: absolute; top: 2.6cqw; left: 3cqw; z-index: 10;
+    display: inline-flex; align-items: center; gap: 0.7cqw;
+    border: 1.5px solid rgba(11, 74, 111, 0.2);
+    background: rgba(250, 248, 245, 0.92);
+    border-radius: 100px; padding: 0.55cqw 1.3cqw;
+    color: #0B4A6F;
+  }
+  #root .f01-rail i { display: block; width: 0.7cqw; height: 0.7cqw; border-radius: 50%; background: #0B4A6F; }
+  #root .f01-rail span {
+    font-size: 0.95cqw; font-weight: 600; letter-spacing: 0.14em;
+    line-height: 1.2; text-transform: uppercase; white-space: nowrap;
+  }
+
+  /* the typed line: a centered, fixed-width stage the text fills left-to-right.
+     The stage owns positioning (CSS transform, not animated); the line plane is
+     the GSAP transform target — its 3D settle runs on the timeline. */
+  #root .f01-stage {
+    position: absolute; left: 0; right: 0; top: 46%;
+    transform: translateY(-50%);
+    display: flex; justify-content: center;
+  }
+  #root .f01-line {
+    position: relative; font-size: 5cqw; font-weight: 400; letter-spacing: -0.01em;
+    color: #0B4A6F; white-space: nowrap;
+  }
+  #root .f01-measure { display: inline-block; visibility: hidden; white-space: pre; }
+  #root .f01-live { position: absolute; left: 0; top: 0; white-space: pre; }
+  #root .f01-caret {
+    display: inline-block; width: 0.55cqw; height: 4.6cqw;
+    background: #0B4A6F; margin-left: 0.8cqw; vertical-align: -0.6cqw;
+  }
+
+  /* progress strip chrome — this frame is 1/8 */
+  #root .f01-strip {
+    position: absolute; left: 0; bottom: 0; width: 100%; height: 3px;
+    background: rgba(11, 74, 111, 0.08);
+  }
+  #root .f01-strip i { display: block; width: 100%; height: 100%; background: #0B4A6F; transform-origin: left center; }
+</style>
+
+<div data-hf-id="hf-x8ce" id="root" data-composition-id="01-while-you-were-away" data-width="1920" data-height="1080" data-duration="3.64">
+  <div data-hf-id="hf-z5js" id="01-while-you-were-away-bg" class="clip f01-bg" data-start="0" data-duration="3.64" data-track-index="0"></div>
+
+  <div data-hf-id="hf-md25" id="01-while-you-were-away-scene" class="clip f01-scene" data-start="0" data-duration="3.64" data-track-index="1">
+    <div data-hf-id="hf-ndkt" id="01-while-you-were-away-rail" class="f01-rail"><i data-hf-id="hf-5ucq" id="01-while-you-were-away-rail-dot"></i><span data-hf-id="hf-azdt">Donna's Dispatch</span></div>
+    <div data-hf-id="hf-1stg" id="01-while-you-were-away-stage" class="f01-stage">
+      <div data-hf-id="hf-50bl" id="01-while-you-were-away-line" class="f01-line">
+        <span data-hf-id="hf-48tp" class="f01-measure" aria-hidden="true">While you were out&#160;—<i data-hf-id="hf-306p" class="f01-caret"></i></span>
+        <span data-hf-id="hf-7mg7" class="f01-live"><span data-hf-id="hf-ndls" id="01-while-you-were-away-text"></span><i data-hf-id="hf-9jlb" id="01-while-you-were-away-caret" class="f01-caret"></i></span>
+      </div>
+    </div>
+  </div>
+
+  <div data-hf-id="hf-gpgi" id="01-while-you-were-away-strip" class="clip f01-strip" data-start="0" data-duration="3.64" data-track-index="2">
+    <i data-hf-id="hf-oilr" id="01-while-you-were-away-fill"></i>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+
+      // Deterministic constants — no clocks, no randomness.
+      var DURATION = 3.24;
+      var PREFIX = "While you were out";
+      var FULL = "While you were out\u00A0\u2014";
+      var TYPE_START = 0.4;      // caret blinks alone at the line's start first
+      var CHAR_STEP = 0.075;     // fast keystroke cluster spacing
+      var WORD_STEP = 0.15;      // short breath at word breaks
+      var DASH_T = 2.05;         // the em-dash lands (typing spans 0.4 -> 1.9, ~1.5s)
+      var BLINK_STOP = 2.6;      // Scene 3 begins: the held read — caret solid, nothing moves
+      var BLINK_PERIOD = 0.65;   // 4 whole blink cycles across 0 -> BLINK_STOP
+      var BLINK_PHASE = Math.PI / 2; // visible at t=0 and again exactly at BLINK_STOP
+      var TYPE_GRACE = 0.25;     // caret stays solid within this window of a keystroke
+
+      // Discrete text sequence (discrete-text-sequence): whole-string states at frame thresholds.
+      var SEQUENCE = [{ t: 0, text: "" }];
+      var t = TYPE_START;
+      SEQUENCE.push({ t: t, text: PREFIX.slice(0, 1) });
+      for (var i = 1; i < PREFIX.length; i++) {
+        t += PREFIX.charAt(i - 1) === " " ? WORD_STEP : CHAR_STEP;
+        SEQUENCE.push({ t: t, text: PREFIX.slice(0, i + 1) });
+      }
+      SEQUENCE.push({ t: DASH_T, text: FULL });
+
+      // Baked typing events — pure function of the sequence, seek-safe in both directions.
+      var CHANGE_TIMES = [];
+      for (var c = 1; c < SEQUENCE.length; c++) {
+        if (SEQUENCE[c].text !== SEQUENCE[c - 1].text) CHANGE_TIMES.push(SEQUENCE[c].t);
+      }
+
+      function textAt(time) {
+        for (var k = SEQUENCE.length - 1; k >= 0; k--) {
+          if (time >= SEQUENCE[k].t) return SEQUENCE[k].text;
+        }
+        return "";
+      }
+
+      // Context-sensitive caret: petrol block; solid while typing (grace window), deterministic
+      // sin square-wave blink on idle, solid through the held read.
+      function caretVisible(time) {
+        if (time >= BLINK_STOP) return true;
+        for (var m = 0; m < CHANGE_TIMES.length; m++) {
+          if (time >= CHANGE_TIMES[m] && time - CHANGE_TIMES[m] < TYPE_GRACE) return true;
+        }
+        return Math.sin((time / BLINK_PERIOD) * Math.PI * 2 + BLINK_PHASE) > 0;
+      }
+
+      var textEl = document.getElementById("01-while-you-were-away-text");
+      var caretEl = document.getElementById("01-while-you-were-away-caret");
+      var railEl = document.getElementById("01-while-you-were-away-rail");
+      var lineEl = document.getElementById("01-while-you-were-away-line");
+      var fillEl = document.getElementById("01-while-you-were-away-fill");
+
+      textEl.textContent = "";
+      caretEl.style.opacity = "1";
+
+      var tl = gsap.timeline({ paused: true });
+
+      // Scene 1 (0.0-1.9s): warm paper; the rail seats top-left; the strip fills its first eighth;
+      // the caret blinks at the line's start, then "While you were out" types on fast (~1.5s)
+      // while the line plane settles from a slight 3D tilt down onto the paper.
+      tl.fromTo(lineEl, { opacity: 0 }, { opacity: 1, duration: 0.22, ease: "power2.out" }, 0);
+      tl.fromTo(lineEl,
+        { rotationX: 9, transformPerspective: 1400, transformOrigin: "50% 100%" },
+        { rotationX: 0, duration: 2.05, ease: "power2.out" }, 0);
+      tl.fromTo(railEl,
+        { opacity: 0, y: -10, rotationX: -8, transformPerspective: 900, transformOrigin: "50% 0%" },
+        { opacity: 1, y: 0, rotationX: 0, duration: 0.45, ease: "power2.out" }, 0.04);
+      tl.fromTo(fillEl, { scaleX: 0 }, { scaleX: 0.125, duration: 0.55, ease: "power2.out" }, 0.06);
+
+      // Scenes 1-3 clock: discrete type-on + trailing caret blink, then frozen after the dash.
+      var clock = { t: 0 };
+      tl.to(clock, {
+        t: DURATION,
+        duration: DURATION,
+        ease: "none",
+        onUpdate: function () {
+          textEl.textContent = textAt(clock.t);
+          caretEl.style.opacity = caretVisible(clock.t) ? "1" : "0";
+        }
+      }, 0);
+
+      // Scene 2 (1.9-2.6s): the em-dash lands at 2.05; the line is flat on the paper; the caret
+      // keeps blinking until 2.6. Scene 3 (2.6-3.24s): the held read — nothing moves at all.
+      // No exit motion (the seam owns the exit).
+
+      tl.seek(0);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["01-while-you-were-away"] = tl;
+    })();
+  </script>
+</div>
+</template>

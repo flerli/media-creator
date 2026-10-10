@@ -30,11 +30,12 @@ Swaibian wordmark.
 - **Website capture enabled** (route default): crawl www.swaibian.com/plaza for
   screens, brand tokens, and assets — including the full-res product imagery
   (`/products/plaza/*.png` up to 7680px, `/products/plaza-globetrotter/*.jpg`).
-- **Series design system:** carry the Koi Zauber frame system (Neue Haas,
-  warm paper/petrol) into this project, extended with Plaza's own register —
-  charcoal ground, mint accent — for the dispatch feed. Film is
-  charcoal-dominant; paper returns once in the closing Swaibian tag. Exact
-  balance shown in the sketch pass.
+- **Series design system, warmed after sketch review:** the Koi Zauber frame
+  system (Neue Haas, warm paper/petrol) carried into this project. After the
+  sketch pass the user chose a brighter, warmer register ("too black"): warm
+  paper `#FAF8F5` dominant, petrol accent throughout; the product's own dark
+  surfaces (Dispatch canvas, scrims) appear only as real evidence windows.
+  Layouts and copy approved as sketched.
 - **Stamp-and-clack SFX:** report cards land with a dry stamp thunk on the
   beat, under the music bed.
 - **Beat-locked cuts:** frame durations land on the measured beat grid.

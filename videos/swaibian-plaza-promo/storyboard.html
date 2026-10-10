@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Donna's Dispatch — storyboard v1</title>
+<title>Donna's Dispatch — storyboard v3</title>
 <style>
   @font-face{font-family:"Neue Haas Grotesk Text Pro";font-weight:400;font-style:normal;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Regular.woff") format("woff");}
   @font-face{font-family:"Neue Haas Grotesk Text Pro";font-weight:400;font-style:italic;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Italic.woff") format("woff");}
@@ -11,9 +11,8 @@
   @font-face{font-family:"Neue Haas Grotesk Text Pro";font-weight:700;font-style:italic;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-BoldItalic.woff") format("woff");}
 
   :root{
-    --char:#0F1115; --mint:#63D6D4; --petrol:#0B4A6F; --paper:#F0F0F0; --ink:#020617; --muted:#6B7280;
-    --d-line:rgba(240,240,240,.16); --d-fill:rgba(240,240,240,.05); --d-mut:rgba(240,240,240,.62);
-    --t4:rgba(11,74,111,.04); --t8:rgba(11,74,111,.08); --bd:rgba(11,74,111,.2);
+    --paper:#FAF8F5; --petrol:#0B4A6F; --ink:#020617; --muted:#6B7280; --mint:#63D6D4; --win:#0F1115;
+    --t4:rgba(11,74,111,.04); --t8:rgba(11,74,111,.08); --t15:rgba(11,74,111,.15); --bd:rgba(11,74,111,.2); --bdd:rgba(11,74,111,.35);
     --shell:#ECEAE6;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -23,7 +22,7 @@
   .head{display:flex;flex-wrap:wrap;align-items:flex-end;gap:24px;justify-content:space-between;margin-bottom:12px;}
   .head h1{font-size:34px;font-weight:700;letter-spacing:-.02em;}
   .head h1 .v{font-size:15px;font-weight:400;color:var(--muted);vertical-align:super;margin-left:6px;}
-  .head .dek{color:var(--muted);font-size:15px;margin-top:6px;max-width:680px;line-height:1.5;}
+  .head .dek{color:var(--muted);font-size:15px;margin-top:6px;max-width:720px;line-height:1.5;}
   .tags{display:flex;gap:8px;flex-wrap:wrap;}
   .tags span{border:1.5px solid var(--bd);color:var(--petrol);border-radius:100px;padding:6px 14px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;background:var(--t4);}
   .rule{height:1.5px;background:var(--bd);margin:18px 0 8px;}
@@ -34,8 +33,7 @@
   .grid.two{grid-template-columns:repeat(2,1fr);}
 
   .cell{display:flex;flex-direction:column;gap:10px;}
-  .cellframe{aspect-ratio:16/9;container-type:inline-size;position:relative;overflow:hidden;border:1.5px solid var(--bd);border-radius:10px;background:var(--char);}
-  .cellframe.paperish{background:var(--paper);}
+  .cellframe{aspect-ratio:16/9;container-type:inline-size;position:relative;overflow:hidden;border:1.5px solid var(--bd);border-radius:10px;background:var(--paper);}
   .labelrow{display:flex;justify-content:space-between;align-items:baseline;gap:12px;}
   .labelrow .name{font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;}
   .labelrow .id{font-size:12px;color:var(--muted);letter-spacing:.02em;white-space:nowrap;}
@@ -44,67 +42,70 @@
   .chip{display:inline-block;align-self:flex-start;font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--petrol);background:var(--t8);border:1.5px solid var(--bd);border-radius:100px;padding:4px 12px;}
 
   /* ── in-frame shared ─────────────────────────────── */
-  .rail{position:absolute;top:2.6cqw;left:3cqw;display:flex;align-items:center;gap:.7cqw;border:1px solid rgba(99,214,212,.45);background:rgba(99,214,212,.08);border-radius:100px;padding:.55cqw 1.3cqw;}
-  .rail i{width:.7cqw;height:.7cqw;border-radius:50%;background:var(--mint);}
-  .rail span{font-size:.95cqw;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mint);}
-  .strip{position:absolute;left:0;bottom:0;width:100%;height:3px;background:var(--d-fill);}
-  .strip i{display:block;height:100%;background:var(--mint);}
-  .strip.light{background:var(--t8);}
-  .strip.light i{background:var(--petrol);}
-  .asset{position:absolute;border:1.5px dashed var(--d-line);border-radius:10px;background:var(--d-fill);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9cqw;padding:1.6cqw;text-align:center;}
-  .asset .fn{font-size:1.05cqw;font-weight:600;letter-spacing:.06em;color:var(--d-mut);}
-  .asset .ds{font-size:.92cqw;letter-spacing:.04em;color:rgba(240,240,240,.45);}
-  .h1d{position:absolute;color:#F5F6F7;font-weight:700;letter-spacing:-.02em;line-height:1.04;}
-  .subd{position:absolute;color:var(--d-mut);font-size:1.3cqw;line-height:1.45;}
+  .rail{position:absolute;top:2.6cqw;left:3cqw;z-index:5;display:flex;align-items:center;gap:.7cqw;border:1.5px solid var(--bd);background:rgba(250,248,245,.92);border-radius:100px;padding:.55cqw 1.3cqw;}
+  .rail i{width:.7cqw;height:.7cqw;border-radius:50%;background:var(--petrol);}
+  .rail span{font-size:.95cqw;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--petrol);}
+  .strip{position:absolute;left:0;bottom:0;width:100%;height:3px;background:var(--t8);z-index:6;}
+  .strip i{display:block;height:100%;background:var(--petrol);}
+  .asset{position:absolute;border:1.5px dashed var(--bdd);border-radius:10px;background:var(--t4);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.9cqw;padding:1.6cqw;text-align:center;}
+  .asset .fn{font-size:1.05cqw;font-weight:600;letter-spacing:.06em;color:var(--petrol);}
+  .asset .ds{font-size:.92cqw;letter-spacing:.04em;color:var(--muted);}
+  .hl{position:absolute;color:var(--ink);font-weight:700;letter-spacing:-.02em;line-height:1.04;}
+  .sb{position:absolute;color:var(--muted);font-size:1.3cqw;line-height:1.45;}
+
+  /* full-bleed cells (the F7 gloss) */
+  .full{position:absolute;inset:0;background:rgba(15,17,21,.06);border:none;border-radius:0;padding:0;display:block;}
+  .full .lbl{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%);font-size:1.05cqw;font-weight:600;letter-spacing:.06em;color:var(--petrol);white-space:nowrap;}
+  .full .lbl2{position:absolute;top:52%;left:50%;transform:translate(-50%,-50%);font-size:.92cqw;letter-spacing:.04em;color:var(--muted);white-space:nowrap;}
+  .scrim{position:absolute;left:0;right:0;bottom:0;height:46%;background:linear-gradient(180deg, rgba(15,17,21,0) 0%, rgba(15,17,21,.62) 62%, rgba(15,17,21,.86) 100%);z-index:3;}
+  .onmedia{position:absolute;left:4cqw;z-index:4;color:#F5F6F7;}
+  .onmedia .t{font-size:4.4cqw;font-weight:700;letter-spacing:-.02em;line-height:1.05;}
+  .onmedia .s{margin-top:.7cqw;font-size:1.25cqw;color:rgba(245,246,247,.78);line-height:1.45;}
 
   /* ── 01 ── */
-  .c1 .typed{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);white-space:nowrap;color:var(--mint);font-size:5cqw;font-weight:400;letter-spacing:-.01em;}
-  .c1 .caret{display:inline-block;width:.55cqw;height:4.6cqw;background:var(--mint);margin-left:.8cqw;vertical-align:-.6cqw;}
+  .c1 .typed{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);white-space:nowrap;color:var(--petrol);font-size:5cqw;font-weight:400;letter-spacing:-.01em;}
+  .c1 .caret{display:inline-block;width:.55cqw;height:4.6cqw;background:var(--petrol);margin-left:.8cqw;vertical-align:-.6cqw;}
   /* ── 02 ── */
-  .c2 .h1d{left:4.6cqw;top:38%;font-size:6.6cqw;}
-  .c2 .asset{right:4.6cqw;top:16%;width:50cqw;height:64%;}
-  /* ── 03–06 ── */
-  .c3 .h1d,.c4 .h1d,.c5 .h1d,.c6 .h1d{left:4.6cqw;top:19%;font-size:4.6cqw;}
-  .c3 .subd,.c4 .subd,.c5 .subd,.c6 .subd{left:4.7cqw;top:38%;width:44cqw;}
-  .c3 .asset,.c5 .asset{right:4.6cqw;top:12%;width:51cqw;height:72%;}
-  .c4 .board{position:absolute;right:4.6cqw;top:15%;width:51cqw;height:66%;display:grid;grid-template-columns:repeat(3,1fr);gap:1.1cqw;}
-  .c4 .col{border:1.5px dashed var(--d-line);border-radius:10px;padding:1cqw;display:flex;flex-direction:column;gap:.8cqw;}
-  .c4 .col em{font-style:normal;font-size:.9cqw;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--d-mut);}
-  .c4 .task{height:4.2cqw;border:1.5px solid var(--d-line);border-radius:8px;background:rgba(240,240,240,.03);}
-  .c4 .task.mov{border-color:var(--mint);background:rgba(99,214,212,.14);}
-  .c4 .hop{position:absolute;right:9cqw;top:47%;width:36cqw;border-top:1.5px dashed rgba(99,214,212,.6);}
+  .c2 .full .lbl,.c2 .full .lbl2{color:var(--petrol);}
+  /* ── 04 / 06 cards ── */
+  .c4 .hl,.c6 .hl{left:4.6cqw;top:19%;font-size:3.9cqw;}
+  .c4 .sb,.c6 .sb{left:4.7cqw;top:36%;width:42cqw;}
+  .c4 .board{position:absolute;right:4.6cqw;top:14%;width:51cqw;height:70%;display:grid;grid-template-columns:repeat(3,1fr);gap:1.1cqw;transform:perspective(90cqw) rotateY(-6deg) rotateX(3deg);}
+  .c4 .col{border:1.5px dashed var(--bdd);border-radius:10px;padding:1cqw;display:flex;flex-direction:column;gap:.8cqw;background:var(--t4);}
+  .c4 .col em{font-style:normal;font-size:.9cqw;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--petrol);opacity:.75;}
+  .c4 .task{height:4.2cqw;border:1.5px solid var(--bd);border-radius:8px;background:#fff;}
+  .c4 .task.mov{border-color:var(--petrol);background:var(--t8);}
   .c6 .asset{right:4.6cqw;top:12%;width:51cqw;height:72%;}
   .c6 .rows{position:absolute;right:6.2cqw;top:22%;width:40cqw;display:flex;flex-direction:column;gap:1.2cqw;}
-  .c6 .row{display:flex;align-items:center;gap:1.2cqw;border:1.5px solid var(--d-line);border-radius:8px;background:rgba(15,17,21,.85);padding:1.3cqw 1.5cqw;}
-  .c6 .chk{width:1.6cqw;height:1.6cqw;border-radius:4px;background:var(--mint);position:relative;flex:none;}
-  .c6 .chk::after{content:"";position:absolute;left:.45cqw;top:.28cqw;width:.7cqw;height:.35cqw;border-left:2px solid #0F1115;border-bottom:2px solid #0F1115;transform:rotate(-45deg);}
-  .c6 .rt{font-size:1.25cqw;color:#F5F6F7;letter-spacing:.01em;}
+  .c6 .row{display:flex;align-items:center;gap:1.2cqw;border:1.5px solid var(--bd);border-radius:8px;background:#fff;padding:1.3cqw 1.5cqw;}
+  .c6 .chk{width:1.6cqw;height:1.6cqw;border-radius:4px;background:var(--petrol);position:relative;flex:none;}
+  .c6 .chk::after{content:"";position:absolute;left:.45cqw;top:.28cqw;width:.7cqw;height:.35cqw;border-left:2px solid var(--paper);border-bottom:2px solid var(--paper);transform:rotate(-45deg);}
+  .c6 .rt{font-size:1.25cqw;color:var(--ink);letter-spacing:.01em;}
   /* ── 07 ── */
-  .c7 .photo{position:absolute;inset:0;border:none;border-radius:0;background:linear-gradient(180deg,rgba(15,17,21,0) 40%,rgba(15,17,21,.82) 100%),var(--d-fill);gap:0;}
-  .c7 .photo .fn{position:absolute;top:44%;left:50%;transform:translate(-50%,-50%);}
-  .c7 .photo .ds{position:absolute;top:52%;left:50%;transform:translate(-50%,-50%);}
-  .c7 .cap{position:absolute;left:4cqw;bottom:5.6cqw;color:#F5F6F7;font-size:3cqw;font-weight:700;letter-spacing:-.02em;}
-  .c7 .sub{position:absolute;left:4.1cqw;bottom:3.4cqw;color:var(--mint);font-size:1.35cqw;letter-spacing:.02em;}
-  /* ── 08 (paper) ── */
-  .c8 .h1p{position:absolute;left:50%;top:30%;transform:translate(-50%,-50%);font-size:7cqw;font-weight:700;letter-spacing:-.02em;color:var(--ink);}
-  .c8 .ctarow{position:absolute;left:50%;top:55%;transform:translateX(-50%);display:flex;align-items:center;gap:1.6cqw;}
-  .c8 .cta{background:var(--petrol);color:var(--paper);border-radius:100px;padding:1.35cqw 3cqw;font-size:1.5cqw;font-weight:600;letter-spacing:.02em;}
-  .c8 .url{color:var(--petrol);font-size:1.45cqw;letter-spacing:.02em;}
-  .c8 .mark{position:absolute;left:50%;bottom:6cqw;transform:translateX(-50%);display:flex;align-items:center;gap:1.4cqw;}
-  .c8 .logoblock{border:1.5px dashed var(--bd);border-radius:8px;padding:.9cqw 2cqw;font-size:.95cqw;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;}
+  .c7 .photo{position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,17,21,.06) 40%,rgba(15,17,21,.82) 100%),var(--t4);}
+  .c7 .photo .fn{position:absolute;top:42%;left:50%;transform:translate(-50%,-50%);font-size:1.05cqw;font-weight:600;letter-spacing:.06em;color:var(--petrol);}
+  .c7 .photo .ds{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:.92cqw;letter-spacing:.04em;color:var(--muted);}
+  /* ── 08 ── */
+  .c8 .hp{position:absolute;left:50%;top:26%;transform:translateX(-50%);font-size:6.4cqw;font-weight:700;letter-spacing:-.02em;color:var(--ink);white-space:nowrap;}
+  .c8 .keep{position:absolute;left:50%;top:40%;transform:translateX(-50%);font-size:1.7cqw;color:var(--petrol);white-space:nowrap;}
+  .c8 .ctarow{position:absolute;left:50%;top:56%;transform:translateX(-50%);display:flex;align-items:center;gap:1.6cqw;}
+  .c8 .cta{background:var(--petrol);color:var(--paper);border-radius:100px;padding:1.2cqw 2.8cqw;font-size:1.4cqw;font-weight:600;letter-spacing:.02em;}
+  .c8 .url{color:var(--petrol);font-size:1.4cqw;letter-spacing:.02em;}
+  .c8 .mark{position:absolute;left:50%;bottom:9cqw;transform:translateX(-50%);display:flex;align-items:center;gap:1.4cqw;}
+  .c8 .logoblock{border:1.5px dashed var(--bdd);border-radius:8px;padding:.9cqw 2cqw;font-size:.95cqw;letter-spacing:.06em;color:var(--muted);text-transform:uppercase;}
   .c8 .byline{color:var(--petrol);font-size:1.2cqw;letter-spacing:.02em;}
 
   /* ── review cells ── */
-  .seamrow{display:flex;align-items:center;gap:.9cqw;padding:2.4cqw;position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);}
-  .seamrow .bx{flex:none;border:1.5px solid var(--d-line);border-radius:8px;padding:1cqw 1.2cqw;font-size:1cqw;font-weight:600;color:#F5F6F7;letter-spacing:.06em;}
-  .seamrow .ar{flex:1;text-align:center;font-size:.85cqw;letter-spacing:.08em;text-transform:uppercase;color:var(--d-mut);}
-  .seamrow .ar b{display:block;color:var(--mint);font-weight:600;}
+  .seamrow{display:flex;align-items:center;gap:.8cqw;padding:2cqw;position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);}
+  .seamrow .bx{flex:none;border:1.5px solid var(--bd);border-radius:8px;padding:.9cqw 1.1cqw;font-size:.95cqw;font-weight:600;color:var(--petrol);letter-spacing:.06em;background:var(--t4);}
+  .seamrow .ar{flex:1;text-align:center;font-size:.8cqw;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);}
+  .seamrow .ar b{display:block;color:var(--petrol);font-weight:600;}
   .tok{position:absolute;inset:0;padding:3cqw;display:flex;flex-direction:column;gap:1.5cqw;}
   .tok .sw{display:flex;gap:1.2cqw;flex-wrap:wrap;}
-  .tok .sw span{display:flex;align-items:center;gap:.6cqw;font-size:.95cqw;color:var(--d-mut);letter-spacing:.02em;}
-  .tok .sw i{width:1.6cqw;height:1.6cqw;border-radius:5px;border:1px solid var(--d-line);}
-  .tok .tl{font-size:1cqw;color:var(--d-mut);line-height:1.5;}
-  .tok .tl b{color:var(--mint);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.85cqw;}
+  .tok .sw span{display:flex;align-items:center;gap:.6cqw;font-size:.95cqw;color:var(--muted);letter-spacing:.02em;}
+  .tok .sw i{width:1.6cqw;height:1.6cqw;border-radius:5px;border:1px solid var(--bd);}
+  .tok .tl{font-size:1cqw;color:var(--muted);line-height:1.5;}
+  .tok .tl b{color:var(--petrol);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.85cqw;}
 
   .foot{margin-top:40px;padding-top:14px;border-top:1.5px solid var(--bd);color:var(--muted);font-size:12.5px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;}
 </style>
@@ -113,38 +114,39 @@
 
 <div class="head">
   <div>
-    <h1>Donna's Dispatch — storyboard<span class="v">v1</span></h1>
-    <div class="dek">The film is one of Donna's dispatches, delivered to the viewer — “While you were away —”: five report cards of real work on the product's own captured screens, the life that keeps running, then your move. Charcoal dispatch register; paper returns once, in the closing Swaibian tag.</div>
+    <h1>Donna's Dispatch — storyboard<span class="v">v3</span></h1>
+    <div class="dek">Donna speaks directly to the viewer — “While you were out — I kept working.” Tightened to ≈34.4s on the same beat grid; media-forward gloss (full-bleed captures under cinematic scrims, like the rooftop) and CSS-3D settles on panels and pushes. Same dispatch rail, same warm paper close.</div>
   </div>
-  <div class="tags"><span>16:9 · 1920×1080</span><span>≈60s · 8 beats</span><span>no voiceover — type + music</span><span>no captions</span></div>
+  <div class="tags"><span>16:9 · 1920×1080</span><span>≈34.4s · 8 beats</span><span>no voiceover — type + music</span><span>no captions</span></div>
 </div>
 <div class="rule"></div>
 
 <!-- ACT I -->
 <section class="act">
-  <h2>Act I — the opening (held frame → promise)</h2>
+  <h2>Act I — the opening (held beat → promise, full-bleed)</h2>
   <div class="grid">
 
     <div class="cell">
       <div class="cellframe c1" id="frame-01">
         <div class="rail"><i></i><span>Donna's Dispatch</span></div>
-        <div class="typed">While you were away&nbsp;—<span class="caret"></span></div>
+        <div class="typed">While you were out&nbsp;—<span class="caret"></span></div>
         <div class="strip"><i style="width:12.5%"></i></div>
       </div>
-      <div class="labelrow"><span class="name">01 · While you were away</span><span class="id">01-while-you-were-away · 0–5s</span></div>
-      <div class="note"><b>The caret lands last</b> — the line types over ~2.5s, then holds dead-still; nothing else moves. This is the held frame. Seam: cut open from black.</div>
+      <div class="labelrow"><span class="name">01 · While you were out</span><span class="id">01-while-you-were-away · 0–3.24s</span></div>
+      <div class="note"><b>The caret lands last</b> — the line types fast (~1.5s), then holds dead-still. The held beat, shortened. Seam: cut open from black.</div>
       <span class="chip">seam: open (cut)</span>
     </div>
 
     <div class="cell">
       <div class="cellframe c2" id="frame-02">
+        <div class="full"><span class="lbl">plaza-workspace-detail.png</span><span class="lbl2">full-bleed — held in 3D, settling flat</span></div>
         <div class="rail"><i></i><span>Donna's Dispatch · Live</span></div>
-        <div class="h1d">Plaza didn’t.</div>
-        <div class="asset"><span class="fn">plaza-workspace-detail.png</span><span class="ds">full workspace — the pull-back lands here</span></div>
+        <div class="scrim"></div>
+        <div class="onmedia" style="bottom:5.4cqw;"><div class="t">I kept working.</div></div>
         <div class="strip"><i style="width:25%"></i></div>
       </div>
-      <div class="labelrow"><span class="name">02 · The desk</span><span class="id">02-the-desk · 5–12s</span></div>
-      <div class="note"><b>The pull-back moves first</b> — one decelerating zoom-out from a desk detail to the full workspace; “Plaza didn’t.” lands exactly on the lock, rail chip stamped. Seam: zoom-through into the feed.</div>
+      <div class="labelrow"><span class="name">02 · The desk</span><span class="id">02-the-desk · 3.24–7.46s</span></div>
+      <div class="note"><b>The 3D settle moves first</b> — the workspace floats at an angle, rotating to flat as the pull-back runs; the line lands on the lock. Gloss: full-bleed + scrim. Seam: zoom-through.</div>
       <span class="chip">seam: zoom-through</span>
     </div>
 
@@ -153,59 +155,58 @@
 
 <!-- ACT II -->
 <section class="act">
-  <h2>Act II — the report (five cards, stamped on the beat)</h2>
+  <h2>Act II — the report (fast, media-forward, 3D)</h2>
   <div class="grid">
 
     <div class="cell">
       <div class="cellframe c3" id="frame-03">
+        <div class="full"><span class="lbl">plaza-metro-swaiboard-workspace.png</span><span class="lbl2">full-bleed — slight 3D lean settling flat; pulse runs the chain</span></div>
         <div class="rail"><i></i><span>Donna's Dispatch</span></div>
-        <div class="h1d">Your pipelines ran.</div>
-        <div class="subd">Visual workflows, straight into execution. No handoffs.</div>
-        <div class="asset"><span class="fn">plaza-metro-swaiboard-workspace.png</span><span class="ds">The Metro — a pulse travels the node chain, then the board behind it</span></div>
+        <div class="scrim"></div>
+        <div class="onmedia" style="bottom:4.4cqw;"><div class="t">I ran your pipelines.</div><div class="s">Design goes in, execution comes out — no handoffs.</div></div>
         <div class="strip"><i style="width:37.5%"></i></div>
       </div>
-      <div class="labelrow"><span class="name">03 · Pipelines ran</span><span class="id">03-pipelines-ran · 12–19s</span></div>
-      <div class="note"><b>The window stamps in</b>, then a mint pulse travels Trigger → Agent → the execution board. Subline trails the pulse; nothing else moves. Seam: feed slides left.</div>
+      <div class="labelrow"><span class="name">03 · Pipelines ran</span><span class="id">03-pipelines-ran · 7.46–11.15s</span></div>
+      <div class="note"><b>The lean settles, then the pulse runs</b> — full-bleed Metro; camera eases laterally with the pulse. Seam: feed slides left.</div>
       <span class="chip">seam: push-slide L</span>
     </div>
 
     <div class="cell">
       <div class="cellframe c4" id="frame-04">
         <div class="rail"><i></i><span>Donna's Dispatch</span></div>
-        <div class="h1d">Your boards moved.</div>
-        <div class="subd">Built while you slept.</div>
+        <div class="hl">I moved your boards forward.</div>
+        <div class="sb">Built while you slept. You're welcome.</div>
         <div class="board">
           <div class="col"><em>Planned</em><div class="task"></div><div class="task"></div></div>
           <div class="col"><em>In progress</em><div class="task mov"></div><div class="task"></div></div>
           <div class="col"><em>Done</em><div class="task"></div><div class="task mov"></div></div>
         </div>
-        <div class="hop"></div>
         <div class="strip"><i style="width:50%"></i></div>
       </div>
-      <div class="labelrow"><span class="name">04 · Boards moved</span><span class="id">04-boards-moved · 19–26s</span></div>
-      <div class="note"><b>The stage stays locked</b> — task chips hop the columns and flip status, each landing on a beat. Board region of the real capture behind. Seam: feed slides left.</div>
+      <div class="labelrow"><span class="name">04 · Boards moved</span><span class="id">04-boards-moved · 11.15–14.85s</span></div>
+      <div class="note"><b>The card settles from a 3D tilt</b>, three quick chip hops follow; stage locked. Seam: feed slides left.</div>
       <span class="chip">seam: push-slide L</span>
     </div>
 
     <div class="cell">
       <div class="cellframe c5" id="frame-05">
+        <div class="full" style="background:rgba(15,17,21,.9);"><span class="lbl" style="color:rgba(240,240,240,.78)">plaza-donna-dispatch-canvas.png</span><span class="lbl2" style="color:rgba(240,240,240,.45)">full-bleed dark — z-depth push into the chart</span></div>
         <div class="rail"><i></i><span>Donna's Dispatch</span></div>
-        <div class="h1d">I read the market.</div>
-        <div class="subd">Researched, compiled, delivered. Unasked.</div>
-        <div class="asset"><span class="fn">plaza-donna-dispatch-canvas.png</span><span class="ds">push in → the digest headline it compiled; figures stay untouched</span></div>
+        <div class="scrim"></div>
+        <div class="onmedia" style="bottom:4.4cqw;"><div class="t">I read the market for you.</div><div class="s">Researched, compiled, delivered — before you asked.</div></div>
         <div class="strip"><i style="width:62.5%"></i></div>
       </div>
-      <div class="labelrow"><span class="name">05 · Market read</span><span class="id">05-market-read · 26–34s</span></div>
-      <div class="note"><b>The camera pushes</b> through the digest chart to the headline — the numbers live inside the captured screen, never re-typeset. Seam: feed slides left.</div>
+      <div class="labelrow"><span class="name">05 · Market read</span><span class="id">05-market-read · 14.85–19.60s</span></div>
+      <div class="note"><b>The z-push moves first</b> — translateZ + a slight rotateY arc land the chart dead-center; figures stay inside the capture. Seam: feed slides left.</div>
       <span class="chip">seam: push-slide L</span>
     </div>
 
     <div class="cell">
       <div class="cellframe c6" id="frame-06">
         <div class="rail"><i></i><span>Donna's Dispatch</span></div>
-        <div class="h1d">Your briefing is ready.</div>
-        <div class="subd">Monday, 09:00 — calendar, open items, carry-overs.</div>
-        <div class="asset"><span class="fn">plaza-briefing-canvas.png</span><span class="ds">briefing canvas behind</span></div>
+        <div class="hl">I drafted your Monday briefing.</div>
+        <div class="sb">Calendar, open items, carry-overs — done.</div>
+        <div class="asset"><span class="fn">plaza-briefing-canvas.png</span><span class="ds">briefing card, settling from a lean</span></div>
         <div class="rows">
           <div class="row"><span class="chk"></span><span class="rt">Calendar preview</span></div>
           <div class="row"><span class="chk"></span><span class="rt">Open items</span></div>
@@ -213,8 +214,8 @@
         </div>
         <div class="strip"><i style="width:75%"></i></div>
       </div>
-      <div class="labelrow"><span class="name">06 · Briefing ready</span><span class="id">06-briefing-ready · 34–41s</span></div>
-      <div class="note"><b>Rows arrive and check off</b> one at a time over the briefing capture, then the card settles. Seam: feed slides left — the desk report ends.</div>
+      <div class="labelrow"><span class="name">06 · Briefing ready</span><span class="id">06-briefing-ready · 19.60–23.29s</span></div>
+      <div class="note"><b>Rows arrive fast, then check off</b> — card settles from a 3D lean; static camera. Seam: zoom-through out of the report.</div>
       <span class="chip">seam: push-slide L</span>
     </div>
 
@@ -229,25 +230,26 @@
     <div class="cell">
       <div class="cellframe c7" id="frame-07">
         <div class="rail"><i></i><span>Donna's Dispatch</span></div>
-        <div class="asset photo"><span class="fn">globetrotter-rooftop-donna-listening.jpg</span><span class="ds">full-bleed photo chain — rooftop → beach → wrist, near-still</span></div>
-        <div class="cap">Your thought from the surf — filed.</div>
-        <div class="sub">“Donna replied. Back to the sunset.”</div>
+        <div class="photo"><span class="fn">globetrotter-rooftop-donna-listening.jpg</span><span class="ds">full-bleed photo chain — rooftop → beach → wrist, ~2.1s each</span></div>
+        <div class="scrim"></div>
+        <div class="onmedia" style="bottom:4.4cqw;"><div class="t" style="font-size:3.2cqw;">You were out living. I was listening.</div><div class="s" style="color:#63D6D4;">“Donna replied. Back to the sunset.”</div></div>
         <div class="strip"><i style="width:87.5%"></i></div>
       </div>
-      <div class="labelrow"><span class="name">07 · From the surf</span><span class="id">07-from-the-surf · 41–50s</span></div>
-      <div class="note"><b>Register flips to photography</b> — three near-still cards, captions settle; no effects over the photos. Seam: zoom-through out of the dark; blur-crossfade onto paper.</div>
+      <div class="labelrow"><span class="name">07 · From the surf</span><span class="id">07-from-the-surf · 23.29–29.63s</span></div>
+      <div class="note"><b>The gloss reference</b> — three near-still cards, captions settle; no effects over the photos. Seam: zoom-through in; blur-crossfade to paper.</div>
       <span class="chip">seam: zoom-through</span>
     </div>
 
     <div class="cell">
-      <div class="cellframe paperish c8" id="frame-08">
-        <div class="h1p">Your move.</div>
+      <div class="cellframe c8" id="frame-08">
+        <div class="hp">Your move.</div>
+        <div class="keep">I'll keep watch.</div>
         <div class="ctarow"><span class="cta">Get Plaza</span><span class="url">swaibian.com</span></div>
         <div class="mark"><span class="logoblock">swaibian-black-logo.png</span><span class="byline">Plaza, by Swaibian</span></div>
-        <div class="strip light"><i style="width:100%"></i></div>
+        <div class="strip"><i style="width:100%"></i></div>
       </div>
-      <div class="labelrow"><span class="name">08 · Your move</span><span class="id">08-your-move · 50–59s</span></div>
-      <div class="note"><b>“Your move.” holds still</b>, then the CTA row and wordmark settle; the strip completes. Paper returns for the first time. Seam: end.</div>
+      <div class="labelrow"><span class="name">08 · Your move</span><span class="id">08-your-move · 29.63–34.38s</span></div>
+      <div class="note"><b>“I'll keep watch.” lands, then the ask</b> — CTA strokes its border; the lockup settles with a light 3D rise. Seam: end.</div>
       <span class="chip">seam: blur-crossfade in · end</span>
     </div>
 
@@ -263,50 +265,52 @@
       <div class="cellframe" id="frame-seams">
         <div class="seamrow">
           <span class="bx">01</span>
-          <span class="ar"><b>zoom-through</b>5→12</span>
+          <span class="ar"><b>zoom-through</b>3.24→7.46</span>
           <span class="bx">02</span>
-          <span class="ar"><b>push-slide L</b>12→19</span>
+          <span class="ar"><b>push-slide L</b>7.46→11.15</span>
           <span class="bx">03</span>
-          <span class="ar"><b>push-slide L</b>19→26</span>
+          <span class="ar"><b>push-slide L</b>11.15→14.85</span>
           <span class="bx">04</span>
         </div>
-        <div class="seamrow" style="top:auto;bottom:16%;transform:none;">
+        <div class="seamrow" style="top:auto;bottom:14%;transform:none;">
           <span class="bx">05</span>
-          <span class="ar"><b>push-slide L</b>26→34</span>
+          <span class="ar"><b>push-slide L</b>14.85→19.60</span>
           <span class="bx">06</span>
-          <span class="ar"><b>push-slide L</b>34→41</span>
+          <span class="ar"><b>zoom-through</b>19.60→23.29</span>
           <span class="bx">07</span>
-          <span class="ar"><b>blur-crossfade</b>41→50</span>
+          <span class="ar"><b>blur-crossfade</b>23.29→29.63</span>
           <span class="bx">08</span>
         </div>
       </div>
       <div class="labelrow"><span class="name">Seam map</span><span class="id">one direction: left</span></div>
-      <div class="note">The feed runs leftward; section turns use zoom-through; only the paper return gets a blur-crossfade. First seam opens from black.</div>
+      <div class="note">The feed runs leftward; section turns use zoom-through; only the close gets a blur-crossfade. Tightened boundaries on the same beat grid.</div>
     </div>
 
     <div class="cell">
       <div class="cellframe" id="frame-tokens">
         <div class="tok">
           <div class="sw">
-            <span><i style="background:#0F1115"></i>canvas-dark #0F1115</span>
-            <span><i style="background:#63D6D4"></i>accent-mint #63D6D4</span>
+            <span><i style="background:#FAF8F5"></i>paper #FAF8F5</span>
             <span><i style="background:#0B4A6F"></i>petrol #0B4A6F</span>
-            <span><i style="background:#F0F0F0"></i>paper #F0F0F0</span>
             <span><i style="background:#020617"></i>ink #020617</span>
+            <span><i style="background:#6B7280"></i>muted #6B7280</span>
+            <span><i style="background:#0F1115"></i>window #0F1115</span>
+            <span><i style="background:#63D6D4"></i>mint — inside windows only</span>
           </div>
           <div class="tl"><b>Type</b> — Neue Haas Grotesk Text Pro: display −0.02em · chrome eyebrows 0.08em caps · numerals; weights 100–700 shipped.</div>
-          <div class="tl"><b>Bans</b> — no fake UI (every screen is a capture) · no glow · no hype risers · not a slideshow · not a screensaver · figures never leave the captured screens.</div>
+          <div class="tl"><b>Motion</b> — CSS-3D only (perspective / rotateX-Y settles / translateZ pushes), long-tail settles; no libraries, no shadow, no glow.</div>
+          <div class="tl"><b>Bans</b> — no fake UI (every screen is a capture) · no cursor · no hype risers · not a slideshow · not a screensaver · mint never painted on paper.</div>
         </div>
       </div>
-      <div class="labelrow"><span class="name">Tokens + bans</span><span class="id">from capture + frame.md</span></div>
-      <div class="note">Light evidence cards float on charcoal — the product's own canvas motif. Paper register returns once, at 08.</div>
+      <div class="labelrow"><span class="name">Tokens + bans</span><span class="id">from capture + frame.md (v3)</span></div>
+      <div class="note">Enterprise gloss: media-forward, full-bleed, cinematic scrims; paper stays the calm frame around it.</div>
     </div>
 
   </div>
 </section>
 
 <div class="foot">
-  <span>v1 · layout + copy locked after your review — motion arrives only in the build</span>
+  <span>v3 · tightened ≈34.4s, Donna's voice, full-bleed gloss + CSS-3D — per final review</span>
   <span>open from file:// · no scripts · no external assets</span>
 </div>
 

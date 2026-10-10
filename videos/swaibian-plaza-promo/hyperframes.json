@@ -9,5 +9,17 @@
   "media": {
     "autoProxy": true
   },
-  "authoringSkill": "product-launch-video"
+  "authoringSkill": "product-launch-video",
+  "registryItems": [
+    {
+      "name": "typewriter",
+      "type": "hyperframes:component",
+      "target": "compositions/components/typewriter.html"
+    },
+    {
+      "name": "success-check",
+      "type": "hyperframes:component",
+      "target": "compositions/components/success-check.html"
+    }
+  ]
 }

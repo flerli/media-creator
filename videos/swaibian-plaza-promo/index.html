@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1920, height=1080" />
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js" integrity="sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2" crossorigin="anonymous"></script>
     <style>
       * {
         margin: 0;
@@ -12,25 +12,23 @@
       }
       html,
       body {
-        margin: 0;
         width: 1920px;
         height: 1080px;
         overflow: hidden;
-        background: #0a0a0a;
+        background: #000;
       }
       #root {
+        position: relative;
+        width: 1920px;
+        height: 1080px;
+        overflow: hidden;
+        background: #FAF8F5;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
         width: 100%;
         height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-      }
-      #title {
-        color: #f4f4f5;
-        font-size: 72px;
-        font-weight: 600;
-        letter-spacing: -0.03em;
       }
     </style>
   </head>
@@ -39,17 +37,188 @@
       id="root"
       data-composition-id="main"
       data-start="0"
-      data-duration="10"
+      data-duration="34.39"
       data-width="1920"
       data-height="1080"
     >
-      <h1 id="title" class="clip" data-start="0" data-duration="10" data-track-index="0">Title</h1>
+      <div
+        id="el-01-while-you-were-away"
+        class="scene"
+        data-composition-id="01-while-you-were-away"
+        data-composition-src="compositions/frames/01-while-you-were-away.html"
+        data-start="0"
+        data-duration="3.64"
+        data-track-index="0"
+      ></div>
+
+      <div
+        id="el-02-the-desk"
+        class="scene"
+        data-composition-id="02-the-desk"
+        data-composition-src="compositions/frames/02-the-desk.html"
+        data-start="3.24"
+        data-duration="4.72"
+        data-track-index="1"
+      ></div>
+
+      <div
+        id="el-03-pipelines-ran"
+        class="scene"
+        data-composition-id="03-pipelines-ran"
+        data-composition-src="compositions/frames/03-pipelines-ran.html"
+        data-start="7.46"
+        data-duration="4.2"
+        data-track-index="0"
+      ></div>
+
+      <div
+        id="el-04-boards-moved"
+        class="scene"
+        data-composition-id="04-boards-moved"
+        data-composition-src="compositions/frames/04-boards-moved.html"
+        data-start="11.16"
+        data-duration="4.2"
+        data-track-index="1"
+      ></div>
+
+      <div
+        id="el-05-market-read"
+        class="scene"
+        data-composition-id="05-market-read"
+        data-composition-src="compositions/frames/05-market-read.html"
+        data-start="14.86"
+        data-duration="5.25"
+        data-track-index="0"
+      ></div>
+
+      <div
+        id="el-06-briefing-ready"
+        class="scene"
+        data-composition-id="06-briefing-ready"
+        data-composition-src="compositions/frames/06-briefing-ready.html"
+        data-start="19.61"
+        data-duration="4.1"
+        data-track-index="1"
+      ></div>
+
+      <div
+        id="el-07-from-the-surf"
+        class="scene"
+        data-composition-id="07-from-the-surf"
+        data-composition-src="compositions/frames/07-from-the-surf.html"
+        data-start="23.31"
+        data-duration="6.93"
+        data-track-index="0"
+      ></div>
+
+      <div
+        id="el-08-your-move"
+        class="scene"
+        data-composition-id="08-your-move"
+        data-composition-src="compositions/frames/08-your-move.html"
+        data-start="29.64"
+        data-duration="4.75"
+        data-track-index="1"
+      ></div>
+
+      <!-- BGM -->
+      <audio
+        id="el-bgm"
+        src="assets/bgm/track-34.wav"
+        data-start="0"
+        data-duration="34.39"
+        data-track-index="11"
+        data-volume="0.9"
+      ></audio>
+
+      <!-- SFX -->
+      <audio
+        id="el-sfx-0"
+        src="assets/sfx/typing.mp3"
+        data-start="0"
+        data-duration="1.5"
+        data-track-index="20"
+        data-volume="0.35"
+      ></audio>
+      <audio
+        id="el-sfx-1"
+        src="assets/sfx/whoosh-short.mp3"
+        data-start="3.44"
+        data-duration="0.57"
+        data-track-index="21"
+        data-volume="0.35"
+      ></audio>
+      <audio
+        id="el-sfx-2"
+        src="assets/sfx/click.mp3"
+        data-start="7.61"
+        data-duration="0.37"
+        data-track-index="22"
+        data-volume="0.45"
+      ></audio>
+      <audio
+        id="el-sfx-3"
+        src="assets/sfx/pop.mp3"
+        data-start="12.16"
+        data-duration="0.72"
+        data-track-index="23"
+        data-volume="0.45"
+      ></audio>
+      <audio
+        id="el-sfx-4"
+        src="assets/sfx/ping.mp3"
+        data-start="18.26"
+        data-duration="1.32"
+        data-track-index="24"
+        data-volume="0.42"
+      ></audio>
+      <audio
+        id="el-sfx-5"
+        src="assets/sfx/chime.mp3"
+        data-start="22.61"
+        data-duration="1.8"
+        data-track-index="25"
+        data-volume="0.32"
+      ></audio>
+      <audio
+        id="el-sfx-6"
+        src="assets/sfx/notification.mp3"
+        data-start="25.61"
+        data-duration="2.46"
+        data-track-index="26"
+        data-volume="0.32"
+      ></audio>
+      <audio
+        id="el-sfx-7"
+        src="assets/sfx/impact-bass-1.mp3"
+        data-start="32.74"
+        data-duration="1.6"
+        data-track-index="27"
+        data-volume="0.45"
+      ></audio>
     </div>
+
     <script>
-      const tl = gsap.timeline({ paused: true });
-      // Example: tl.fromTo("#title", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6 }, 0);
-      window.__timelines["main"] = tl;
-      tl.seek(0);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["main"] = gsap.timeline({ paused: true });
+      // ── frame transitions (injected by transitions.mjs) ──
+      (function () { var tl = window.__timelines["main"];
+        tl.to("#el-01-while-you-were-away", { scale: 2.5, opacity: 0, filter: "blur(8px)", duration: 0.4, ease: "power3.in" }, 3.24);
+        tl.fromTo("#el-02-the-desk", { scale: 0.5, opacity: 0, filter: "blur(8px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, 3.24);
+        tl.to("#el-02-the-desk", { x: -1920, duration: 0.5, ease: "power3.inOut" }, 7.46);
+        tl.fromTo("#el-03-pipelines-ran", { x: 1920, opacity: 1 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }, 7.46);
+        tl.to("#el-03-pipelines-ran", { x: -1920, duration: 0.5, ease: "power3.inOut" }, 11.16);
+        tl.fromTo("#el-04-boards-moved", { x: 1920, opacity: 1 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }, 11.16);
+        tl.to("#el-04-boards-moved", { x: -1920, duration: 0.5, ease: "power3.inOut" }, 14.86);
+        tl.fromTo("#el-05-market-read", { x: 1920, opacity: 1 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }, 14.86);
+        tl.to("#el-05-market-read", { x: -1920, duration: 0.5, ease: "power3.inOut" }, 19.61);
+        tl.fromTo("#el-06-briefing-ready", { x: 1920, opacity: 1 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.inOut" }, 19.61);
+        tl.to("#el-06-briefing-ready", { scale: 2.5, opacity: 0, filter: "blur(8px)", duration: 0.4, ease: "power3.in" }, 23.31);
+        tl.fromTo("#el-07-from-the-surf", { scale: 0.5, opacity: 0, filter: "blur(8px)" }, { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, 23.31);
+        tl.to("#el-07-from-the-surf", { filter: "blur(10px)", scale: 1.03, opacity: 0, duration: 0.6, ease: "power2.inOut" }, 29.64);
+        tl.fromTo("#el-08-your-move", { filter: "blur(10px)", scale: 0.97, opacity: 0 }, { filter: "blur(0px)", scale: 1, opacity: 1, duration: 0.6, ease: "power2.inOut" }, 29.64);
+        tl.to({}, { duration: 34.39 }, 0); // full-span anchor — main.duration() == composition total (Studio master duration)
+      })();
     </script>
   </body>
 </html>

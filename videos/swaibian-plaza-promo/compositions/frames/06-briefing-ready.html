@@ -1,0 +1,385 @@
+<template>
+  <style>
+    @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:400;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Regular.woff") format("woff")}
+    @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:italic;font-weight:400;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Italic.woff") format("woff")}
+    @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:700;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Bold.woff") format("woff")}
+    @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:italic;font-weight:700;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-BoldItalic.woff") format("woff")}
+    @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:100;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-XXThin.woff") format("woff")}
+    @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:200;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-XThin.woff") format("woff")}
+    @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:300;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-Thin.woff") format("woff")}
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    #root {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      container-type: size;
+      font-family: "Neue Haas Grotesk Text Pro", sans-serif;
+      font-weight: 400;
+      color: #020617;
+    }
+
+    #hf06-bg {
+      position: absolute;
+      inset: 0;
+      background: #FAF8F5;
+    }
+
+    #hf06-stage {
+      position: absolute;
+      inset: 0;
+    }
+
+    #hf06-rail {
+      position: absolute;
+      top: 2.6cqw;
+      left: 3cqw;
+      display: flex;
+      align-items: center;
+      gap: 0.7cqw;
+      border: 1.5px solid rgba(11, 74, 111, 0.2);
+      background: rgba(11, 74, 111, 0.08);
+      border-radius: 100px;
+      padding: 0.55cqw 1.3cqw;
+    }
+
+    #hf06-rail .hf06-rail-dot {
+      width: 0.7cqw;
+      height: 0.7cqw;
+      border-radius: 50%;
+      background: #0B4A6F;
+      flex: none;
+    }
+
+    #hf06-rail .hf06-rail-label {
+      font-size: 0.95cqw;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #0B4A6F;
+      line-height: 1.2;
+    }
+
+    #hf06-card {
+      position: absolute;
+      right: 4.6cqw;
+      top: 12%;
+      bottom: 17%;
+      width: 51cqw;
+      border: 1.5px solid rgba(11, 74, 111, 0.2);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #0F1115;
+    }
+
+    #hf06-shot {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+    }
+
+    #hf06-wash {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(15, 17, 21, 0.06) 0%,
+        rgba(15, 17, 21, 0.28) 55%,
+        rgba(15, 17, 21, 0.48) 100%
+      );
+    }
+
+    #hf06-headline {
+      position: absolute;
+      left: 4.6cqw;
+      top: 19%;
+      font-size: 3.9cqw;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      line-height: 1.05;
+      color: #020617;
+    }
+
+    #hf06-subline {
+      position: absolute;
+      left: 4.7cqw;
+      top: 36%;
+      width: 42cqw;
+      font-size: 1.3cqw;
+      line-height: 1.45;
+      color: #6B7280;
+    }
+
+    #hf06-rows {
+      position: absolute;
+      right: 6.2cqw;
+      top: 22%;
+      width: 40cqw;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2cqw;
+    }
+
+    .hf06-slot {
+      position: relative;
+    }
+
+    .hf06-ghost {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      gap: 1.2cqw;
+      padding: 1.3cqw 1.5cqw;
+      border: 1.5px dashed rgba(11, 74, 111, 0.4);
+      border-radius: 8px;
+      background: rgba(250, 248, 245, 0.4);
+    }
+
+    .hf06-gnum {
+      width: 1.6cqw;
+      height: 1.6cqw;
+      border: 1.5px solid rgba(11, 74, 111, 0.4);
+      border-radius: 4px;
+      color: rgba(11, 74, 111, 0.7);
+      background: rgba(250, 248, 245, 0.9);
+      font-size: 0.85cqw;
+      font-weight: 600;
+      line-height: 1;
+      display: grid;
+      place-items: center;
+      flex: none;
+    }
+
+    .hf06-row {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 1.2cqw;
+      padding: 1.3cqw 1.5cqw;
+      background: #FFFFFF;
+      border: 1.5px solid rgba(11, 74, 111, 0.2);
+      border-radius: 8px;
+      transform-origin: 50% 50%;
+    }
+
+    .hf06-badge {
+      position: relative;
+      width: 1.6cqw;
+      height: 1.6cqw;
+      border: 1.5px solid rgba(11, 74, 111, 0.4);
+      border-radius: 4px;
+      display: grid;
+      place-items: center;
+      flex: none;
+      background: rgba(11, 74, 111, 0);
+    }
+
+    .hf06-num {
+      font-size: 0.85cqw;
+      font-weight: 600;
+      line-height: 1;
+      color: #0B4A6F;
+    }
+
+    .hf06-check {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .hf06-check path {
+      fill: none;
+      stroke: #FAF8F5;
+      stroke-width: 2.6;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .hf06-label {
+      font-size: 1.25cqw;
+      line-height: 1.3;
+      letter-spacing: 0.01em;
+      color: #020617;
+    }
+
+    #hf06-progress {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 3px;
+      background: rgba(11, 74, 111, 0.08);
+    }
+
+    #hf06-fill {
+      display: block;
+      width: 75%;
+      height: 100%;
+      background: #0B4A6F;
+      transform-origin: left center;
+    }
+  </style>
+
+  <div data-hf-id="hf-gud1" id="root" data-composition-id="06-briefing-ready" data-width="1920" data-height="1080" data-duration="4.1" data-fps="30">
+    <div data-hf-id="hf-dmal" id="hf06-bg" class="clip" data-start="0" data-duration="4.1" data-track-index="0"></div>
+
+    <div data-hf-id="hf-fxu7" id="hf06-stage" class="clip" data-start="0" data-duration="4.1" data-track-index="1">
+      <div data-hf-id="hf-nhqm" id="hf06-rail">
+        <span data-hf-id="hf-les8" class="hf06-rail-dot"></span>
+        <span data-hf-id="hf-kozf" class="hf06-rail-label">Donna's Dispatch</span>
+      </div>
+
+      <div data-hf-id="hf-lxgc" id="hf06-card">
+        <img data-hf-id="hf-arl4" id="hf06-shot" src="assets/plaza-briefing-canvas.png" alt="">
+        <div data-hf-id="hf-r0gv" id="hf06-wash"></div>
+      </div>
+
+      <div data-hf-id="hf-lfqk" id="hf06-headline">I drafted your<br>Monday briefing.</div>
+      <div data-hf-id="hf-roqk" id="hf06-subline">Calendar, open items, carry-overs — done.</div>
+
+      <div data-hf-id="hf-23n5" id="hf06-rows">
+        <div data-hf-id="hf-wk75" class="hf06-slot">
+          <div data-hf-id="hf-u33d" class="hf06-ghost" id="hf06-ghost-0"><span data-hf-id="hf-2ioq" class="hf06-gnum" data-layout-allow-overlap="">1</span></div>
+          <div data-hf-id="hf-jz5l" class="hf06-row" id="hf06-row-0" data-layout-allow-overlap>
+            <span data-hf-id="hf-jawk" class="hf06-badge" id="hf06-badge-0">
+              <span data-hf-id="hf-bxb7" class="hf06-num" id="hf06-num-0">1</span>
+              <svg data-hf-id="hf-yfhg" class="hf06-check" viewBox="0 0 24 24" aria-hidden="true">
+                <path data-hf-id="hf-f62c" id="hf06-path-0" class="hf06-check-path" d="M6 12.6l4.1 4.1L18.4 8" />
+              </svg>
+            </span>
+            <span data-hf-id="hf-cmqy" class="hf06-label" id="hf06-label-0">Calendar preview</span>
+          </div>
+        </div>
+        <div data-hf-id="hf-6t05" class="hf06-slot">
+          <div data-hf-id="hf-tbfk" class="hf06-ghost" id="hf06-ghost-1"><span data-hf-id="hf-2wzr" class="hf06-gnum" data-layout-allow-overlap="">2</span></div>
+          <div data-hf-id="hf-j7hs" class="hf06-row" id="hf06-row-1" data-layout-allow-overlap>
+            <span data-hf-id="hf-k2kd" class="hf06-badge" id="hf06-badge-1">
+              <span data-hf-id="hf-oz6p" class="hf06-num" id="hf06-num-1">2</span>
+              <svg data-hf-id="hf-dcpo" class="hf06-check" viewBox="0 0 24 24" aria-hidden="true">
+                <path data-hf-id="hf-fxq5" id="hf06-path-1" class="hf06-check-path" d="M6 12.6l4.1 4.1L18.4 8" />
+              </svg>
+            </span>
+            <span data-hf-id="hf-j031" class="hf06-label" id="hf06-label-1">Open items</span>
+          </div>
+        </div>
+        <div data-hf-id="hf-7zx8" class="hf06-slot">
+          <div data-hf-id="hf-1zbf" class="hf06-ghost" id="hf06-ghost-2"><span data-hf-id="hf-3bas" class="hf06-gnum" data-layout-allow-overlap="">3</span></div>
+          <div data-hf-id="hf-u2zf" class="hf06-row" id="hf06-row-2" data-layout-allow-overlap>
+            <span data-hf-id="hf-o0oe" class="hf06-badge" id="hf06-badge-2">
+              <span data-hf-id="hf-1grv" class="hf06-num" id="hf06-num-2">3</span>
+              <svg data-hf-id="hf-c5sl" class="hf06-check" viewBox="0 0 24 24" aria-hidden="true">
+                <path data-hf-id="hf-jvu6" id="hf06-path-2" class="hf06-check-path" d="M6 12.6l4.1 4.1L18.4 8" />
+              </svg>
+            </span>
+            <span data-hf-id="hf-5o1d" class="hf06-label" id="hf06-label-2">Carry-overs from this week</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div data-hf-id="hf-lrr7" id="hf06-progress" class="clip" data-start="0" data-duration="4.1" data-track-index="2">
+      <span data-hf-id="hf-6968" id="hf06-fill"></span>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var tl = gsap.timeline({ paused: true });
+
+      tl.fromTo("#hf06-fill", { scaleX: 62.5 / 75 }, { scaleX: 1, duration: 0.5, ease: "power2.out" }, 0.05);
+
+      tl.fromTo("#hf06-rail", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 0.06);
+      tl.fromTo(
+        "#hf06-card",
+        { opacity: 0, rotateY: -7, transformOrigin: "100% 50%", transformPerspective: 1400 },
+        { opacity: 1, rotateY: 0, duration: 0.8, ease: "power3.out" },
+        0,
+      );
+      tl.fromTo("#hf06-shot", { scale: 1.05 }, { scale: 1, duration: 1.35, ease: "power3.out" }, 0.05);
+      tl.fromTo("#hf06-headline", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 0.16);
+
+      for (var g = 0; g < 3; g += 1) {
+        tl.fromTo(
+          "#hf06-ghost-" + g,
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, duration: 0.32, ease: "power3.out" },
+          0.3 + g * 0.07,
+        );
+      }
+
+      var CONTENT = [
+        { row: "#hf06-row-0", label: "Calendar preview", hold: 0.1 },
+        { row: "#hf06-row-1", label: "Open items", hold: 0.1 },
+        { row: "#hf06-row-2", label: "Carry-overs from this week", hold: 0.12 },
+      ];
+      var BASE_DURATION = 0.3;
+      var SEC_PER_CHAR = 0.012;
+      var SEQ_START = 0.9;
+      var cumulative = 0;
+      var TIMELINE = CONTENT.map(function (entry) {
+        var dur = BASE_DURATION + entry.label.length * SEC_PER_CHAR + entry.hold;
+        var start = cumulative;
+        cumulative += dur;
+        return { row: entry.row, start: start };
+      });
+
+      TIMELINE.forEach(function (entry) {
+        tl.fromTo(
+          entry.row,
+          { opacity: 0, scale: 0, y: 16 },
+          { opacity: 1, scale: 1, y: 0, duration: 0.42, ease: "power3.out" },
+          SEQ_START + entry.start,
+        );
+      });
+
+      tl.fromTo("#hf06-subline", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 1.0);
+
+      var paths = document.querySelectorAll(".hf06-check-path");
+      var lens = [];
+      for (var c = 0; c < paths.length; c += 1) {
+        var len = paths[c].getTotalLength();
+        if (!len) {
+          len = 17.82;
+        }
+        lens[c] = len;
+        paths[c].style.strokeDasharray = "" + len;
+        paths[c].style.strokeDashoffset = "" + len;
+      }
+
+      var FLIPS = [2.6, 2.86, 3.12];
+      for (var f = 0; f < FLIPS.length; f += 1) {
+        (function (i, t) {
+          tl.fromTo(
+            "#hf06-badge-" + i,
+            { backgroundColor: "rgba(11, 74, 111, 0)", borderColor: "rgba(11, 74, 111, 0.4)" },
+            { backgroundColor: "#0B4A6F", borderColor: "#0B4A6F", duration: 0.2, ease: "power2.out" },
+            t,
+          );
+          tl.fromTo("#hf06-num-" + i, { opacity: 1 }, { opacity: 0, duration: 0.12, ease: "power1.out" }, t + 0.02);
+          tl.fromTo(
+            "#hf06-path-" + i,
+            { strokeDashoffset: lens[i] },
+            { strokeDashoffset: 0, duration: 0.34, ease: "power2.out" },
+            t + 0.06,
+          );
+        })(f, FLIPS[f]);
+      }
+
+      tl.seek(0);
+      window.__timelines = window.__timelines || {};
+      window.__timelines["06-briefing-ready"] = tl;
+    })();
+  </script>
+</template>

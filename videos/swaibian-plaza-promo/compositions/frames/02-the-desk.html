@@ -1,0 +1,206 @@
+<template>
+  <div data-hf-id="hf-96q5" id="root" data-composition-id="02-the-desk" data-width="1920" data-height="1080" data-duration="4.72" data-fps="30">
+    <style>
+      @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:400;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Regular.woff") format("woff")}
+      @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:italic;font-weight:400;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Italic.woff") format("woff")}
+      @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:700;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Bold.woff") format("woff")}
+      @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:italic;font-weight:700;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-BoldItalic.woff") format("woff")}
+      @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:100;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-XXThin.woff") format("woff")}
+      @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:200;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-XThin.woff") format("woff")}
+      @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:300;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-Thin.woff") format("woff")}
+
+      #root, #root * {
+        box-sizing: border-box;
+      }
+
+      #root {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        container-type: size;
+        font-family: "Neue Haas Grotesk Text Pro", sans-serif;
+        font-weight: 400;
+        color: #F0F0F0;
+      }
+
+      #f02-media {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        background: #0F1115;
+      }
+
+      #f02-cam {
+        position: absolute;
+        inset: 0;
+        transform-origin: 50% 50%;
+        perspective: 1600px;
+        will-change: transform;
+      }
+
+      #f02-panel {
+        position: absolute;
+        inset: 0;
+        transform-origin: 50% 50%;
+        transform: rotateY(-12deg) rotateX(6deg) scale(1.12);
+        will-change: transform;
+      }
+
+      #f02-img {
+        position: absolute;
+        left: -305.94px;
+        top: 0;
+        width: 2531.87px;
+        height: 1080px;
+        display: block;
+        --dof: 4px;
+        filter: blur(var(--dof));
+        will-change: filter;
+      }
+
+      #f02-light {
+        position: absolute;
+        left: 0;
+        top: -15%;
+        width: 620px;
+        height: 130%;
+        pointer-events: none;
+        background: linear-gradient(100deg, rgba(255, 250, 240, 0) 0%, rgba(255, 250, 240, 0.015) 38%, rgba(255, 250, 240, 0.085) 50%, rgba(255, 250, 240, 0.015) 62%, rgba(255, 250, 240, 0) 100%);
+      }
+
+      #f02-scrim {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 58%;
+        background: linear-gradient(180deg, rgba(15, 17, 21, 0) 0%, rgba(15, 17, 21, 0.38) 24%, rgba(15, 17, 21, 0.78) 55%, rgba(15, 17, 21, 0.94) 100%);
+      }
+
+      #f02-rail {
+        position: absolute;
+        top: 2.6cqw;
+        left: 3cqw;
+        display: flex;
+        align-items: center;
+        gap: 0.7cqw;
+        padding: 0.55cqw 1.3cqw;
+        border: 1.5px solid rgba(250, 248, 245, 0.4);
+        background: rgba(250, 248, 245, 0.92);
+        border-radius: 100px;
+      }
+
+      #f02-rail i {
+        display: block;
+        width: 0.7cqw;
+        height: 0.7cqw;
+        border-radius: 50%;
+        background: #0B4A6F;
+      }
+
+      #f02-rail span {
+        font-size: 0.95cqw;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        line-height: 1.2;
+        text-transform: uppercase;
+        color: #0B4A6F;
+        white-space: nowrap;
+      }
+
+      #f02-line {
+        position: absolute;
+        left: 4cqw;
+        bottom: 10.4cqw;
+        font-size: 4.4cqw;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.05;
+        color: #F0F0F0;
+        white-space: nowrap;
+      }
+
+      #f02-progress {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        background: rgba(11, 74, 111, 0.08);
+      }
+
+      #f02-fill {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #0B4A6F;
+        transform-origin: left center;
+      }
+    </style>
+
+    <div id="f02-media" class="clip" data-start="0" data-duration="4.72" data-track-index="0">
+      <div id="f02-cam" data-layout-allow-overflow>
+        <div id="f02-panel">
+          <img id="f02-img" src="assets/plaza-workspace-detail.png" alt="" data-layout-allow-overflow="">
+        </div>
+      </div>
+      <div id="f02-light" data-layout-allow-overflow=""></div>
+    </div>
+
+    <div id="f02-ui" class="clip" data-start="0" data-duration="4.72" data-track-index="1">
+      <div id="f02-scrim"></div>
+      <div id="f02-rail"><i></i><span>Donna's Dispatch · Live</span></div>
+      <div id="f02-line">I kept working.</div>
+    </div>
+
+    <div id="f02-progress" class="clip" data-start="0" data-duration="4.72" data-track-index="2">
+      <span id="f02-fill"></span>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var tl = gsap.timeline({ paused: true });
+
+        var camEl = document.getElementById("f02-cam");
+        var panelEl = document.getElementById("f02-panel");
+
+        var cam = { scale: 2.35, x: -2246.42, y: -442.09 };
+        var tilt = { ry: -12, rx: 6, s: 1.12 };
+        var drift = { p: 0, amp: 1 };
+
+        function applyCamera() {
+          var dx = Math.sin(drift.p) * 6 * drift.amp;
+          var dy = Math.sin(drift.p * 1.3) * 3 * drift.amp;
+          camEl.style.transform = "translate(" + (cam.x + dx) + "px," + (cam.y + dy) + "px) scale(" + cam.scale + ")";
+        }
+
+        function applyTilt() {
+          panelEl.style.transform = "rotateY(" + tilt.ry + "deg) rotateX(" + tilt.rx + "deg) scale(" + tilt.s + ")";
+        }
+
+        applyCamera();
+        applyTilt();
+
+        tl.fromTo(cam, { scale: 2.35, x: -2246.42, y: -442.09 }, { scale: 1, x: 0, y: 0, duration: 3, ease: "expo.out", onUpdate: applyCamera }, 0);
+        tl.fromTo(tilt, { ry: -12, rx: 6, s: 1.12 }, { ry: 0, rx: 0, s: 1, duration: 2.8, ease: "power3.out", onUpdate: applyTilt }, 0);
+        tl.fromTo(drift, { p: 0 }, { p: Math.PI * 2, duration: 3, ease: "none", onUpdate: applyCamera }, 0);
+        tl.fromTo(drift, { amp: 1 }, { amp: 0, duration: 3, ease: "power1.in", onUpdate: applyCamera }, 0);
+        tl.fromTo("#f02-img", { "--dof": "4px" }, { "--dof": "0px", duration: 2.6, ease: "power2.out" }, 0);
+
+        tl.fromTo("#f02-rail", { opacity: 0, y: -12, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "power3.out" }, 0.12);
+        tl.fromTo("#f02-fill", { scaleX: 0.125 }, { scaleX: 0.25, duration: 0.9, ease: "power2.out" }, 0.12);
+
+        tl.fromTo("#f02-scrim", { opacity: 0.55 }, { opacity: 1, duration: 1.4, ease: "power2.inOut" }, 1.5);
+        tl.fromTo("#f02-line", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 1.1, ease: "power3.out" }, 2);
+
+        tl.fromTo("#f02-light", { x: -780 }, { x: 2320, duration: 0.9, ease: "power1.inOut" }, 3.3);
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["02-the-desk"] = tl;
+      })();
+    </script>
+  </div>
+</template>

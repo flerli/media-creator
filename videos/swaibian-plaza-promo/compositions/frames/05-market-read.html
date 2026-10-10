@@ -1,0 +1,243 @@
+<template>
+  <div id="root" data-composition-id="05-market-read" data-width="1920" data-height="1080" data-duration="5.25" data-fps="30">
+    <style>
+      @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:400;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Regular.woff") format("woff")}
+      @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:italic;font-weight:400;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Italic.woff") format("woff")}
+      @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:700;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Bold.woff") format("woff")}
+      @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:italic;font-weight:700;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-BoldItalic.woff") format("woff")}
+      @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:100;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-XXThin.woff") format("woff")}
+      @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:200;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-XThin.woff") format("woff")}
+      @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:300;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-Thin.woff") format("woff")}
+
+      #root, #root * {
+        box-sizing: border-box;
+      }
+
+      #root {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        container-type: size;
+        font-family: "Neue Haas Grotesk Text Pro", sans-serif;
+        font-weight: 400;
+        color: #020617;
+      }
+
+      #f05-bg {
+        position: absolute;
+        inset: 0;
+        background: #FAF8F5;
+      }
+
+      #f05-stage {
+        position: absolute;
+        inset: 0;
+      }
+
+      #f05-media {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+      }
+
+      #f05-outer {
+        position: absolute;
+        inset: 0;
+        transform-origin: 50% 50%;
+        transform: scale(1);
+        will-change: transform;
+      }
+
+      #f05-inner {
+        position: absolute;
+        inset: 0;
+        will-change: transform;
+      }
+
+      #f05-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 100% 40%;
+      }
+
+      #f05-dusk {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        background: rgba(8, 10, 12, 0.5);
+        pointer-events: none;
+      }
+
+      #f05-scrim {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 46%;
+        z-index: 3;
+        pointer-events: none;
+        background: linear-gradient(180deg, rgba(15, 17, 21, 0) 0%, rgba(15, 17, 21, 0.62) 62%, rgba(15, 17, 21, 0.86) 100%);
+      }
+
+      #f05-rail {
+        position: absolute;
+        left: 3cqw;
+        top: 2.6cqw;
+        z-index: 6;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.7cqw;
+        padding: 0.55cqw 1.3cqw;
+        border-radius: 100px;
+        background: rgba(250, 248, 245, 0.92);
+        border: 1.5px solid rgba(11, 74, 111, 0.2);
+        color: #0B4A6F;
+        font-size: 0.95cqw;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        line-height: 1.2;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+
+      #f05-rail i {
+        display: block;
+        width: 0.7cqw;
+        height: 0.7cqw;
+        border-radius: 50%;
+        background: #0B4A6F;
+      }
+
+      #f05-copy {
+        position: absolute;
+        left: 4cqw;
+        bottom: 10.4cqw;
+        z-index: 5;
+        width: 56cqw;
+        color: #F5F6F7;
+      }
+
+      #f05-copy .t {
+        font-size: 4.4cqw;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        line-height: 1.05;
+      }
+
+      #f05-copy .s {
+        margin-top: 0.7cqw;
+        font-size: 1.25cqw;
+        line-height: 1.45;
+        color: rgba(245, 246, 247, 0.78);
+      }
+
+      #f05-progress {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3px;
+        z-index: 6;
+        background: rgba(11, 74, 111, 0.08);
+      }
+
+      #f05-fill {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: #0B4A6F;
+        transform-origin: left center;
+      }
+    </style>
+
+    <div data-hf-id="hf-05bg" id="f05-bg" class="clip" data-start="0" data-duration="5.25" data-track-index="0"></div>
+
+    <div data-hf-id="hf-05st" id="f05-stage" class="clip" data-start="0" data-duration="5.25" data-track-index="1">
+      <div data-hf-id="hf-05md" id="f05-media" role="img" aria-label="Donna's Dispatch canvas — market digest and one-year chart">
+        <div data-hf-id="hf-05o" id="f05-outer" data-layout-allow-overflow>
+          <div data-hf-id="hf-05i" id="f05-inner">
+            <img data-hf-id="hf-05img" id="f05-img" src="assets/plaza-donna-dispatch-canvas.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div data-hf-id="hf-05dk" id="f05-dusk"></div>
+      <div data-hf-id="hf-05sc" id="f05-scrim"></div>
+      <div data-hf-id="hf-05rl" id="f05-rail"><i data-hf-id="hf-05rd"></i><span data-hf-id="hf-05rt">Donna's Dispatch</span></div>
+      <div data-hf-id="hf-05cp" id="f05-copy">
+        <div data-hf-id="hf-05t" class="t">I read the market for you.</div>
+        <div data-hf-id="hf-05s" class="s">Researched, compiled, delivered — before you asked.</div>
+      </div>
+    </div>
+
+    <div data-hf-id="hf-05pg" id="f05-progress" class="clip" data-start="0" data-duration="5.25" data-track-index="2">
+      <span data-hf-id="hf-05fl" id="f05-fill"></span>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var tl = gsap.timeline({ paused: true });
+
+        // Full-bleed z-depth push: outer scales (with a slight rotateY bank), inner
+        // counter-translates so the chart card lands at frame center (coordinate-target-zoom,
+        // nested wrappers: T = -offset, measured once at setup and baked).
+        var SRC_W = 7680;
+        var SRC_H = 3276;
+        var CHART_X = 6811; // chart-card center in source px
+        var CHART_Y = 1307;
+        var PUSH_SCALE = 1.8;
+
+        var rootRect = document.getElementById("root").getBoundingClientRect();
+        var k = rootRect.width / 1920 || 1; // normalize to local canvas units
+        var W = rootRect.width / k;
+        var H = rootRect.height / k;
+
+        var cover = Math.max(W / SRC_W, H / SRC_H);
+        var dispW = SRC_W * cover;
+        var offX = (dispW - W) * 1.0; // object-position-x: 100%
+        var px = CHART_X * cover - offX;
+        var py = CHART_Y * cover;
+        var tx = -(px - W / 2);
+        var ty = -(py - H / 2);
+
+        var outer = document.getElementById("f05-outer");
+        var inner = document.getElementById("f05-inner");
+
+        tl.fromTo(
+          "#f05-fill",
+          { scaleX: 0.5 },
+          { scaleX: 0.625, duration: 0.5, ease: "power2.out" },
+          0.06
+        );
+
+        tl.fromTo(
+          "#f05-dusk",
+          { opacity: 1 },
+          { opacity: 0, duration: 1.2, ease: "power2.out" },
+          1.2
+        );
+
+        tl.fromTo(
+          outer,
+          { scale: 1, rotationY: 0, transformPerspective: 1200 },
+          { scale: PUSH_SCALE, rotationY: 2, duration: 2.2, ease: "power3.inOut" },
+          1.2
+        );
+
+        tl.fromTo(
+          inner,
+          { x: 0, y: 0 },
+          { x: tx, y: ty, duration: 2.2, ease: "power3.inOut" },
+          1.2
+        );
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["05-market-read"] = tl;
+      })();
+    </script>
+  </div>
+</template>

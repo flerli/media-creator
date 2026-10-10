@@ -1,0 +1,188 @@
+<template>
+<style>
+  @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:400;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Regular.woff") format("woff")}
+  @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:italic;font-weight:400;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Italic.woff") format("woff")}
+  @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:700;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Bold.woff") format("woff")}
+  @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:italic;font-weight:700;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-BoldItalic.woff") format("woff")}
+  @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:100;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-XXThin.woff") format("woff")}
+  @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:200;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-XThin.woff") format("woff")}
+  @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:300;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-Thin.woff") format("woff")}
+
+  #root {
+    position: absolute; inset: 0; width: 1920px; height: 1080px;
+    overflow: hidden; container-type: size;
+    font-family: "Neue Haas Grotesk Text Pro", sans-serif;
+    color: #020617;
+  }
+
+  #root .f08-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(115% 85% at 50% 22%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 56%),
+      radial-gradient(160% 135% at 50% 44%, #FAF8F5 40%, #F4F0E8 78%, #EDE7DB 100%);
+  }
+
+  #root .f08-rings {
+    position: absolute; inset: 0; transform-origin: 50% 40%;
+    will-change: transform, opacity;
+  }
+  #root .f08-rings svg { display: block; width: 100%; height: 100%; }
+  #root .f08-rings circle { fill: none; stroke: rgba(11, 74, 111, 0.065); stroke-width: 1.5; }
+
+  #root .f08-scene { position: absolute; inset: 0; }
+
+  #root .f08-heroband {
+    position: absolute; left: 0; right: 0; top: calc(28% - 3.71cqw);
+    display: flex; justify-content: center;
+  }
+  #root .f08-hero {
+    font-size: 7cqw; font-weight: 700; letter-spacing: -0.02em; line-height: 1.06;
+    color: #020617; white-space: nowrap;
+    transform-origin: 50% 50%; will-change: transform;
+  }
+
+  #root .f08-keepband {
+    position: absolute; left: 0; right: 0; top: 40%;
+    display: flex; justify-content: center;
+  }
+  #root .f08-keep {
+    font-size: 1.7cqw; letter-spacing: 0.02em; line-height: 1.3;
+    color: #0B4A6F; white-space: nowrap;
+    transform-origin: 50% 50%; will-change: transform;
+  }
+
+  #root .f08-ctarow {
+    position: absolute; left: 0; right: 0; top: 56%;
+    display: flex; justify-content: center; align-items: center; gap: 1.6cqw;
+  }
+  #root .f08-cta {
+    position: relative; width: 17.7cqw; height: 4.58cqw;
+  }
+  #root .f08-cta-fill {
+    position: absolute; inset: 0; border-radius: 100px; background: #0B4A6F;
+    will-change: opacity;
+  }
+  #root .f08-cta-stroke {
+    position: absolute; inset: 0; width: 100%; height: 100%; display: block;
+  }
+  #root .f08-cta-rect { fill: none; stroke: #0B4A6F; stroke-width: 1.5; }
+  #root .f08-cta-label {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    color: #FAF8F5; font-size: 1.5cqw; font-weight: 600; letter-spacing: 0.02em; line-height: 1;
+    will-change: opacity;
+  }
+  #root .f08-url {
+    color: #0B4A6F; font-size: 1.45cqw; letter-spacing: 0.02em; line-height: 1.2;
+    transform-origin: 50% 50%; will-change: transform;
+  }
+
+  #root .f08-lockup {
+    position: absolute; left: 0; right: 0; bottom: 10.5cqw;
+    display: flex; justify-content: center; align-items: center; gap: 1.4cqw;
+    transform-origin: 50% 100%; will-change: transform;
+  }
+  #root .f08-wordmark {
+    display: block; height: 3.2cqw; width: auto;
+  }
+  #root .f08-byline {
+    color: #0B4A6F; font-size: 1.2cqw; letter-spacing: 0.02em; line-height: 1.2;
+  }
+
+  #root .f08-strip {
+    position: absolute; left: 0; bottom: 0; width: 100%; height: 3px;
+    background: rgba(11, 74, 111, 0.08);
+  }
+  #root .f08-strip i {
+    display: block; height: 100%; width: 100%; background: #0B4A6F;
+    transform-origin: left center; will-change: transform;
+  }
+</style>
+<div data-hf-id="hf-npwc" id="root" data-composition-id="08-your-move" data-width="1920" data-height="1080" data-duration="4.75" data-fps="30">
+  <div data-hf-id="hf-tyvf" id="08-your-move-bg" class="clip f08-bg" data-start="0" data-duration="4.75" data-track-index="0"></div>
+  <div data-hf-id="hf-mom4" id="08-your-move-scene" class="clip f08-scene" data-start="0" data-duration="4.75" data-track-index="1">
+    <div data-hf-id="hf-rg1a" id="08-your-move-rings" class="f08-rings" data-layout-allow-overlap="">
+      <svg data-hf-id="hf-rg2b" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle data-hf-id="hf-rg3c" cx="960" cy="430" r="210" />
+        <circle data-hf-id="hf-rg4d" cx="960" cy="430" r="360" />
+        <circle data-hf-id="hf-rg5e" cx="960" cy="430" r="520" data-layout-allow-overflow />
+        <circle data-hf-id="hf-rg6f" cx="960" cy="430" r="700" data-layout-allow-overflow />
+        <circle data-hf-id="hf-rg7g" cx="960" cy="430" r="900" data-layout-allow-overflow />
+      </svg>
+    </div>
+    <div data-hf-id="hf-8hxq" class="f08-heroband">
+      <div data-hf-id="hf-dmcu" id="08-your-move-hero" class="f08-hero">Your move.</div>
+    </div>
+    <div data-hf-id="hf-kp1v" class="f08-keepband">
+      <div data-hf-id="hf-kp2w" id="08-your-move-keep" class="f08-keep">I'll keep watch.</div>
+    </div>
+    <div data-hf-id="hf-jxo5" class="f08-ctarow">
+      <div data-hf-id="hf-cw6q" id="08-your-move-cta" class="f08-cta">
+        <span data-hf-id="hf-cvqz" id="08-your-move-cta-fill" class="f08-cta-fill"></span>
+        <svg data-hf-id="hf-s6pk" class="f08-cta-stroke" viewBox="0 0 340 88" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect data-hf-id="hf-770g" id="08-your-move-cta-rect" class="f08-cta-rect" x="0.75" y="0.75" width="338.5" height="86.5" rx="43.25" ry="43.25" />
+        </svg>
+        <span data-hf-id="hf-h241" id="08-your-move-cta-label" class="f08-cta-label">Get Plaza</span>
+      </div>
+      <span data-hf-id="hf-tqbw" id="08-your-move-url" class="f08-url">swaibian.com</span>
+    </div>
+    <div data-hf-id="hf-j0k4" id="08-your-move-lockup" class="f08-lockup">
+      <img data-hf-id="hf-7zvg" id="08-your-move-wordmark" class="f08-wordmark" src="assets/swaibian-black-logo.png" alt="">
+      <span data-hf-id="hf-5yyq" id="08-your-move-byline" class="f08-byline">Plaza, by Swaibian</span>
+    </div>
+  </div>
+  <div data-hf-id="hf-3ftr" id="08-your-move-strip" class="clip f08-strip" data-start="0" data-duration="4.75" data-track-index="2">
+    <i data-hf-id="hf-wt6k" id="08-your-move-strip-fill"></i>
+  </div>
+</div>
+<script>
+      (function () {
+  "use strict";
+
+  var tl = gsap.timeline({ paused: true });
+
+  var rings = document.getElementById("08-your-move-rings");
+  var hero = document.getElementById("08-your-move-hero");
+  var keep = document.getElementById("08-your-move-keep");
+  var ctaFill = document.getElementById("08-your-move-cta-fill");
+  var ctaLabel = document.getElementById("08-your-move-cta-label");
+  var ctaRect = document.getElementById("08-your-move-cta-rect");
+  var urlEl = document.getElementById("08-your-move-url");
+  var lockup = document.getElementById("08-your-move-lockup");
+  var stripFill = document.getElementById("08-your-move-strip-fill");
+
+  // Measure the pill border path (svg-path-draw) so the CTA strokes its own border on.
+  var perim = 0;
+  if (ctaRect && typeof ctaRect.getTotalLength === "function") perim = ctaRect.getTotalLength();
+  if (!perim) perim = 2 * (338.5 - 2 * 43.25) + 2 * (86.5 - 2 * 43.25) + 2 * Math.PI * 43.25;
+  ctaRect.style.strokeDasharray = perim + "px";
+  ctaRect.style.strokeDashoffset = perim + "px";
+
+  // Progress strip: the dispatch closes - 87.5% -> 100% at open.
+  tl.fromTo(stripFill, { scaleX: 0.875 }, { scaleX: 1, duration: 0.55, ease: "power2.out" }, 0.08);
+
+  // Scene 1 (0.0-1.4s): warm paper settles; "Your move." holds at ~28%; "I'll keep watch." fades up beneath it.
+  tl.fromTo(rings, { opacity: 0, scale: 1.04, transformOrigin: "50% 40%" }, { opacity: 1, scale: 1, duration: 1.1, ease: "power3.out" }, 0);
+  tl.fromTo(hero, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 0.12);
+  tl.fromTo(keep, { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 1.05);
+
+  // Scene 2 (1.4-3.0s): the CTA pill strokes its border on, fills petrol; "swaibian.com" settles beside it.
+  tl.to(ctaRect, { strokeDashoffset: 0, duration: 0.7, ease: "power2.out" }, 1.4);
+  tl.fromTo(ctaFill, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 1.95);
+  tl.fromTo(ctaLabel, { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 2.0);
+  tl.fromTo(urlEl, { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power3.out" }, 2.15);
+
+  // Scene 3 (3.0-4.75s): the wordmark lockup settles on a soft 3D rise; held, no exit.
+  tl.fromTo(
+    lockup,
+    { opacity: 0, y: 30, scale: 0.96, rotateX: 8, transformPerspective: 1000, transformOrigin: "50% 100%" },
+    { opacity: 1, y: 0, scale: 1, rotateX: 0, duration: 0.85, ease: "power3.out" },
+    2.8
+  );
+  tl.to(lockup, { scale: 1.008, duration: 1.1, ease: "none" }, 3.65);
+
+  tl.seek(0);
+  window.__timelines = window.__timelines || {};
+  window.__timelines["08-your-move"] = tl;
+})();
+</script>
+</template>

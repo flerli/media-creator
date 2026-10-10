@@ -11,7 +11,7 @@ unit: the frame — 1920×1080 primary; 9:16 and 1:1 documented
 principle: atoms are sacred · composition is free · numbers come from the script
 
 colors:
-  bg: "#F0F0F0"
+  bg: "#FAF8F5"
   primary: "#0B4A6F"
   text: "#020617"
   text-muted: "#6B7280"
@@ -127,23 +127,23 @@ This is the **blue-professional** preset remixed onto the captured brand. The YA
 - **Weights** — the brand font ships `{100, 200, 300, 400, 500, 600, 700, 900}` only; every weight is clamped to these — ignore higher preset weights (e.g. 600/700) in prose.
 - **Colors** — use the frontmatter hex; preset color NAMES in prose (e.g. "cobalt", "cream") mean the remapped brand values.
 
-## Plaza extension — charcoal dispatch register (approved at intent)
+## Plaza extension — the warm dispatch register (v2, after sketch review: brighter, warmer)
 
-The film presents **as one of Donna's dispatches**: the dispatch canvas is the
-product's own dark surface, so the film is **charcoal-dominant** — `{colors.canvas-dark}`
-ground, `{colors.text-on-dark}` type, and **`{colors.accent-mint}` as the only signal
-accent on dark** (eyebrow chips, status dots, the typed dispatch line, live tags).
-Light evidence cards float on charcoal exactly as the product's own dark canvases
-float light cards — that motif is the film's core composition.
+The film presents **as one of Donna's dispatches** — a report printed on
+**warm paper**: the whole film rides the light system above (`{colors.bg}` ground,
+ink headlines, **petrol as the single accent**), with the product's real screens
+floating as lightly bordered evidence cards. Where the product itself is dark
+(the Dispatch canvas, caption scrims), the dark is a **real evidence window**
+inside a card — never a painted ground.
 
 Rules:
 
-- On **dark** surfaces use mint — never petrol, never coral. On **light** surfaces
-  (paper cards, the closing tag) the petrol system above applies as written — never mint.
-- Dark chips/cards use `{colors.card-dark-bg}` fill + `{colors.card-dark-border}` border,
-  no shadows (the same tinted-surface logic, inverted).
-- The paper register returns **once** — the closing Swaibian tag — light `{colors.bg}`
-  canvas with the petrol `cta-button` and the wordmark.
+- Ground is warm paper everywhere, including the closing tag — no register flip.
+- **Petrol carries every accent on paper** (rail chip, progress strip, CTA). **Never paint mint on paper.**
+- `{colors.canvas-dark}` / `{colors.accent-mint}` exist only inside/behind the product's
+  own dark surfaces (scrims for captions over photos, chips that must sit on a dark window);
+  use `{colors.text-on-dark}` there.
+- Tinted cards stay the universal surface (4% petrol fill, 20% border, no shadows).
 
 
 ## Overview

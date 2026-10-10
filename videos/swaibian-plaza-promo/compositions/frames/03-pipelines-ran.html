@@ -1,0 +1,185 @@
+<template>
+<style>
+  @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:400;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Regular.woff") format("woff")}
+  @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:italic;font-weight:400;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Italic.woff") format("woff")}
+  @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:700;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Bold.woff") format("woff")}
+  @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:italic;font-weight:700;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-BoldItalic.woff") format("woff")}
+  @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:100;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-XXThin.woff") format("woff")}
+  @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:200;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-XThin.woff") format("woff")}
+  @font-face{font-family:"Neue Haas Grotesk Text Pro";font-style:normal;font-weight:300;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-Thin.woff") format("woff")}
+
+  #root, #root * { box-sizing: border-box; }
+
+  #root {
+    position: absolute; inset: 0; width: 1920px; height: 1080px;
+    overflow: hidden; container-type: size;
+    font-family: "Neue Haas Grotesk Text Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    color: #020617;
+  }
+
+  /* full-bleed media panel — oversized so the opening 3D lean never exposes a frame edge */
+  #f03-panel {
+    position: absolute; inset: -7% -9%;
+    overflow: hidden;
+    transform-origin: 50% 50%;
+    will-change: transform;
+  }
+
+  /* camera world — the capture at 0.64 scale (cover + slight zoom), centered on the frame */
+  #f03-world {
+    position: absolute; left: -19.2px; top: -132.56px;
+    width: 2304px; height: 1496.32px;
+    transform-origin: 50% 50%;
+    will-change: transform;
+  }
+
+  #f03-shot { display: block; width: 100%; height: 100%; object-fit: cover; }
+  #f03-overlay { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+  /* bottom scrim — the frame 07 gloss register */
+  #f03-scrim {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(15,17,21,.14) 36%, rgba(15,17,21,.70) 70%, rgba(15,17,21,.95) 100%);
+  }
+
+  /* chip — top-left, paper pill on media */
+  #f03-rail {
+    position: absolute; top: 2.6cqw; left: 3cqw; z-index: 5;
+    display: flex; align-items: center; gap: .7cqw;
+    border: 1.5px solid rgba(250,248,245,.4);
+    background: rgba(250,248,245,.92);
+    border-radius: 100px; padding: .55cqw 1.3cqw;
+  }
+  #f03-rail i { width: .7cqw; height: .7cqw; border-radius: 50%; background: #0B4A6F; }
+  #f03-rail span {
+    font-size: .95cqw; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+    color: #0B4A6F; line-height: 1.2;
+  }
+
+  /* copy — Donna to the viewer, bottom-left over the scrim (kept above the 83% cutoff) */
+  #f03-hl {
+    position: absolute; left: 4cqw; bottom: 12.7cqw; z-index: 4;
+    font-size: 4.4cqw; font-weight: 700; letter-spacing: -.02em; line-height: 1.05;
+    color: #F0F0F0; white-space: nowrap;
+  }
+  #f03-sb {
+    position: absolute; left: 4cqw; bottom: 10.1cqw; z-index: 4;
+    font-size: 1.3cqw; line-height: 1.4; color: rgba(240,240,240,.78);
+  }
+
+  /* progress strip chrome — extreme bottom edge */
+  #f03-strip {
+    position: absolute; left: 0; bottom: 0; width: 100%; height: 3px;
+    background: rgba(11,74,111,.08);
+  }
+  #f03-fill { display: block; width: 100%; height: 100%; background: #0B4A6F; transform-origin: left center; }
+</style>
+<div id="root" data-composition-id="03-pipelines-ran" data-width="1920" data-height="1080" data-duration="4.2" data-fps="30">
+  <div id="f03-panel" class="clip" data-start="0" data-duration="4.2" data-track-index="0" data-layout-allow-overflow="">
+    <div id="f03-world" data-layout-allow-overflow="">
+      <img id="f03-shot" src="assets/plaza-metro-swaiboard-workspace.png" alt="">
+      <svg id="f03-overlay" viewBox="0 0 3600 2338" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <radialGradient id="f03-glow">
+            <stop offset="0" stop-color="#0B4A6F" stop-opacity="0.5" />
+            <stop offset="0.55" stop-color="#0B4A6F" stop-opacity="0.16" />
+            <stop offset="1" stop-color="#0B4A6F" stop-opacity="0" />
+          </radialGradient>
+        </defs>
+        <path id="f03-route" d="M1648 753 L1732 750 L2060 750 L2192 750 L2565 777 C2632 792 2712 856 2772 864 L2935 866 C3005 955 3002 1205 2935 1465" fill="none" stroke="#0B4A6F" stroke-width="11" stroke-linecap="round" stroke-dasharray="26 22" opacity="0" />
+        <circle id="f03-ripple" cx="2935" cy="1465" r="30" opacity="0" fill="none" stroke="#0B4A6F" stroke-width="8" />
+        <g id="f03-head" opacity="0">
+          <circle r="58" fill="url(#f03-glow)" />
+          <circle r="22" fill="#0B4A6F" stroke="#FAF8F5" stroke-width="5" />
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <div id="f03-ui" class="clip" data-start="0" data-duration="4.2" data-track-index="1">
+    <div id="f03-scrim"></div>
+    <div id="f03-rail"><i></i><span>Donna's Dispatch</span></div>
+    <div id="f03-hl">I ran your pipelines.</div>
+    <div id="f03-sb">Design goes in, execution comes out — no handoffs.</div>
+  </div>
+
+  <div id="f03-strip" class="clip" data-start="0" data-duration="4.2" data-track-index="2">
+    <span id="f03-fill"></span>
+  </div>
+</div>
+<script>
+(function () {
+  "use strict";
+
+  var tl = gsap.timeline({ paused: true });
+
+  // Scene 1 (0.0-1.2s): the full-bleed Metro starts on a gentle 3D lean and settles flat as the
+  // scene opens; chip, headline and subline seat bottom-left over the scrim.
+  tl.fromTo(
+    "#f03-panel",
+    { rotateY: 5, transformPerspective: 1500 },
+    { rotateY: 0, transformPerspective: 1500, duration: 1.1, ease: "power3.out" },
+    0
+  );
+  tl.fromTo("#f03-fill", { scaleX: 0.25 }, { scaleX: 0.375, duration: 0.55, ease: "power2.out" }, 0.06);
+  tl.fromTo("#f03-rail", { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.1);
+  tl.fromTo("#f03-hl", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 0.2);
+  tl.fromTo("#f03-sb", { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.65, ease: "power3.out" }, 0.5);
+
+  // Camera (viewport-change): one world wrapper, one camera-state writer. The world is the capture
+  // at cover+1.2x, so all offsets are measured from the world center, which sits on frame center.
+  var world = document.getElementById("f03-world");
+  var cam = { x: 0, y: 0, scale: 1 };
+  function applyCamera() {
+    world.style.transform = "translate(" + cam.x + "px, " + cam.y + "px) scale(" + cam.scale + ")";
+  }
+  applyCamera();
+
+  // Pulse (svg-icon-enrichment): dash flow along the captured connector chain + a travelling head.
+  var route = document.getElementById("f03-route");
+  var head = document.getElementById("f03-head");
+  var ripple = document.getElementById("f03-ripple");
+  var routeLen = route.getTotalLength();
+  var pulse = { p: 0 };
+  var headState = { s: 0.5, o: 0 };
+  function writeHead() {
+    var pt = route.getPointAtLength(pulse.p * routeLen);
+    head.setAttribute("transform", "translate(" + pt.x + " " + pt.y + ") scale(" + headState.s + ")");
+    head.style.opacity = String(headState.o);
+  }
+  writeHead();
+  var flow = { off: 0 };
+  function writeFlow() { route.style.strokeDashoffset = String(flow.off); }
+  writeFlow();
+  var rip = { r: 30, o: 0 };
+  function writeRipple() {
+    ripple.setAttribute("r", String(rip.r));
+    ripple.setAttribute("opacity", String(rip.o));
+  }
+  writeRipple();
+
+  // Scene 2 (1.2-2.6s): the pulse ignites at the Trigger node and runs the captured connector
+  // chain rightward (dash flow); the camera eases laterally with it and decelerates.
+  tl.fromTo(route, { opacity: 0 }, { opacity: 0.8, duration: 0.28, ease: "power1.out" }, 1.22);
+  tl.fromTo(headState, { o: 0 }, { o: 1, duration: 0.22, ease: "power2.out", onUpdate: writeHead }, 1.22);
+  tl.to(headState, { s: 1.3, duration: 0.16, ease: "power2.out", onUpdate: writeHead }, 1.22);
+  tl.to(headState, { s: 1, duration: 0.2, ease: "power2.inOut", onUpdate: writeHead }, 1.38);
+  tl.to(pulse, { p: 0.6807, duration: 1.15, ease: "power1.inOut", onUpdate: writeHead }, 1.3);
+  tl.to(flow, { off: -1152, duration: 1.53, ease: "none", onUpdate: writeFlow }, 1.3);
+  tl.to(cam, { x: -150, duration: 1.44, ease: "power2.out", onUpdate: applyCamera }, 1.28);
+
+  // Scene 3 (2.6-3.70s): the pulse drops from the chain onto the Swaiboard region and dissipates;
+  // the camera settles; locked hold.
+  tl.to(pulse, { p: 1, duration: 0.38, ease: "power2.inOut", onUpdate: writeHead }, 2.45);
+  tl.fromTo(rip, { r: 30, o: 0 }, { r: 44, o: 0.55, duration: 0.08, ease: "none", onUpdate: writeRipple }, 2.83);
+  tl.to(headState, { s: 2, o: 0, duration: 0.34, ease: "power2.out", onUpdate: writeHead }, 2.83);
+  tl.to(rip, { r: 240, o: 0, duration: 0.4, ease: "power2.out", onUpdate: writeRipple }, 2.91);
+  tl.to(route, { opacity: 0.28, duration: 0.36, ease: "power1.out" }, 2.88);
+
+  tl.seek(0);
+  window.__timelines = window.__timelines || {};
+  window.__timelines["03-pipelines-ran"] = tl;
+})();
+</script>
+</template>

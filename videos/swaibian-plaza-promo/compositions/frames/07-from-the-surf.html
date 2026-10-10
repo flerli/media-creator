@@ -1,0 +1,145 @@
+<template>
+  <div data-hf-id="hf-4bof" id="root" data-composition-id="07-from-the-surf" data-width="1920" data-height="1080" data-duration="6.93" data-fps="30">
+    <style>
+      @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:400;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Regular.woff") format("woff")}
+      @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:italic;font-weight:400;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Italic.woff") format("woff")}
+      @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:700;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-Bold.woff") format("woff")}
+      @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:italic;font-weight:700;font-display:block;src:url("assets/fonts/captured-NHaasGroteskTXPro-BoldItalic.woff") format("woff")}
+      @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:100;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-XXThin.woff") format("woff")}
+      @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:200;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-XThin.woff") format("woff")}
+      @font-face{font-family:Neue Haas Grotesk Text Pro;font-style:normal;font-weight:300;font-display:block;src:url("assets/fonts/captured-NeueHaasDisplay-Thin.woff") format("woff")}
+
+      *,*::before,*::after{box-sizing:border-box}
+
+      #root{
+        position:absolute;
+        inset:0;
+        width:1920px;
+        height:1080px;
+        overflow:hidden;
+        container-type:size;
+        font-family:"Neue Haas Grotesk Text Pro",sans-serif;
+        font-weight:400;
+        color:#0B4A6F;
+      }
+
+      #f07-stage{position:absolute;inset:0}
+      .f07-card{position:absolute;inset:0;overflow:hidden}
+      #f07-card2,#f07-card3{opacity:0}
+      .f07-card img{display:block;width:100%;height:100%;object-fit:cover}
+      #f07-img1{object-position:50% 29%}
+      #f07-img2{object-position:50% 52%}
+      #f07-img3{object-position:50% 50%}
+      .f07-scrim{
+        position:absolute;
+        inset:0;
+        background:linear-gradient(180deg,rgba(15,17,21,.14) 36%,rgba(15,17,21,.70) 70%,rgba(15,17,21,.95) 100%);
+      }
+
+      #f07-ui{position:absolute;inset:0}
+      .f07-rail{
+        position:absolute;
+        top:2.6cqw;
+        left:3cqw;
+        display:flex;
+        align-items:center;
+        gap:.7cqw;
+        border:1.5px solid rgba(250,248,245,.4);
+        background:rgba(250,248,245,.92);
+        border-radius:100px;
+        padding:.55cqw 1.3cqw;
+      }
+      .f07-rail i{width:.7cqw;height:.7cqw;border-radius:50%;background:#0B4A6F}
+      .f07-rail span{font-size:.95cqw;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#0B4A6F;line-height:1.2}
+
+      #f07-cap{
+        position:absolute;
+        left:4cqw;
+        bottom:11.7cqw;
+        color:#F0F0F0;
+        font-size:3cqw;
+        font-weight:700;
+        letter-spacing:-.02em;
+        line-height:1.05;
+      }
+      .f07-sub{
+        position:absolute;
+        left:4.1cqw;
+        bottom:9.5cqw;
+        color:#63D6D4;
+        font-size:1.35cqw;
+        letter-spacing:.02em;
+        line-height:1.3;
+      }
+      #f07-sub1{z-index:1}
+      #f07-sub2{z-index:2;opacity:0}
+      #f07-sub3{z-index:3;opacity:0}
+
+      #f07-progress{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(11,74,111,.08)}
+      #f07-fill{display:block;width:100%;height:100%;background:#0B4A6F;transform-origin:left center}
+    </style>
+
+    <div data-hf-id="hf-rasz" id="f07-stage" class="clip" data-start="0" data-duration="6.93" data-track-index="0">
+      <div data-hf-id="hf-romb" id="f07-card1" class="f07-card">
+        <img data-hf-id="hf-5q47" id="f07-img1" src="assets/globetrotter-rooftop-donna-listening.jpg" alt="">
+        <div data-hf-id="hf-rv1c" class="f07-scrim"></div>
+      </div>
+      <div data-hf-id="hf-gt4o" id="f07-card2" class="f07-card">
+        <img data-hf-id="hf-59pu" id="f07-img2" src="assets/globetrotter-beach-donna-replied.jpg" alt="">
+        <div data-hf-id="hf-132w" class="f07-scrim"></div>
+      </div>
+      <div data-hf-id="hf-hksh" id="f07-card3" class="f07-card">
+        <img data-hf-id="hf-o4b3" id="f07-img3" src="assets/globetrotter-watch-surfing.jpg" alt="">
+        <div data-hf-id="hf-zw5t" class="f07-scrim"></div>
+      </div>
+    </div>
+
+    <div data-hf-id="hf-n0m0" id="f07-ui" class="clip" data-start="0" data-duration="6.93" data-track-index="1">
+      <div data-hf-id="hf-xo0y" id="f07-rail" class="f07-rail"><i data-hf-id="hf-wt6k"></i><span data-hf-id="hf-azdt">Donna's Dispatch</span></div>
+      <div data-hf-id="hf-wpx6" id="f07-cap">You were out living. I was listening.</div>
+      <div data-hf-id="hf-abqy" id="f07-sub1" class="f07-sub" data-layout-allow-overlap="">Donna is listening. The cocktail can wait.</div>
+      <div data-hf-id="hf-kz98" id="f07-sub2" class="f07-sub" data-layout-allow-overlap="">Donna replied. Back to the sunset.</div>
+      <div data-hf-id="hf-vim8" id="f07-sub3" class="f07-sub">Hands back on the board.</div>
+    </div>
+
+    <div data-hf-id="hf-vy30" id="f07-progress" class="clip" data-start="0" data-duration="6.93" data-track-index="2">
+      <span data-hf-id="hf-pi7b" id="f07-fill"></span>
+    </div>
+
+    <script>
+      (function () {
+        "use strict";
+
+        var tl = gsap.timeline({ paused: true });
+
+        // Scene 1 (0.0-2.1s) - rooftop card fades in with one restrained settle; chrome, headline, caption land
+        tl.fromTo("#f07-card1", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.out" }, 0);
+        tl.fromTo("#f07-img1", { scale: 1.05 }, { scale: 1, duration: 1.3, ease: "power3.out" }, 0);
+        tl.fromTo("#f07-fill", { scaleX: 0.75 }, { scaleX: 0.875, duration: 0.8, ease: "power2.out" }, 0.12);
+        tl.fromTo("#f07-rail", { opacity: 0, y: -12 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 0.12);
+        tl.fromTo("#f07-cap", { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 0.35);
+        tl.fromTo("#f07-sub1", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 0.8);
+
+        // Scene 2 (2.1-4.2s) - hard cut to the beach photo; caption swaps in place
+        tl.set("#f07-card1", { opacity: 0 }, 2.1);
+        tl.set("#f07-card2", { opacity: 1 }, 2.1);
+        tl.fromTo("#f07-img2", { scale: 1.045 }, { scale: 1, duration: 1.2, ease: "power3.out" }, 2.15);
+        tl.to("#f07-sub1", { opacity: 0, y: -14, duration: 0.35, ease: "power2.in" }, 2.15);
+        tl.fromTo("#f07-sub2", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 2.3);
+
+        // Scene 3 (4.2-6.33s) - hard cut to the wrist above the surf; caption swaps once more
+        tl.set("#f07-card2", { opacity: 0 }, 4.2);
+        tl.set("#f07-card3", { opacity: 1 }, 4.2);
+        tl.fromTo("#f07-img3", { scale: 1.04 }, { scale: 1, duration: 1.2, ease: "power3.out" }, 4.25);
+        tl.to("#f07-sub2", { opacity: 0, y: -14, duration: 0.35, ease: "power2.in" }, 4.25);
+        tl.fromTo("#f07-sub3", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 4.4);
+
+        // (5.45-6.33s) - the last photo holds dead still; nothing moves.
+
+        tl.seek(0);
+        window.__timelines = window.__timelines || {};
+        window.__timelines["07-from-the-surf"] = tl;
+      })();
+    </script>
+  </div>
+</template>
