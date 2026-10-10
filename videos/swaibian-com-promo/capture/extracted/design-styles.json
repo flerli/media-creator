@@ -1,0 +1,284 @@
+{
+  "typography": [
+    {
+      "role": "display",
+      "fontFamily": "Neue Haas Grotesk Text Pro",
+      "fontSize": "96px",
+      "fontWeight": "600",
+      "lineHeight": "96px",
+      "letterSpacing": "-2.4px",
+      "color": "transparent",
+      "sampleText": "AI, Made Simple."
+    },
+    {
+      "role": "heading",
+      "fontFamily": "Neue Haas Grotesk Text Pro",
+      "fontSize": "49.6px",
+      "fontWeight": "600",
+      "lineHeight": "40px",
+      "letterSpacing": "-1.24px",
+      "color": "#0B4A6F",
+      "sampleText": "Talk to your assistant from your phone or watch."
+    },
+    {
+      "role": "heading-3",
+      "fontFamily": "Neue Haas Grotesk Text Pro",
+      "fontSize": "36px",
+      "fontWeight": "600",
+      "lineHeight": "40px",
+      "letterSpacing": "normal",
+      "color": "#171717",
+      "sampleText": "Workflow navigation, progress, and collaboration in one surf"
+    },
+    {
+      "role": "heading-2",
+      "fontFamily": "Neue Haas Grotesk Text Pro",
+      "fontSize": "30px",
+      "fontWeight": "600",
+      "lineHeight": "36px",
+      "letterSpacing": "-0.75px",
+      "color": "#141414",
+      "sampleText": "BrainWavr"
+    },
+    {
+      "role": "body",
+      "fontFamily": "Neue Haas Grotesk Text Pro",
+      "fontSize": "18px",
+      "fontWeight": "300",
+      "lineHeight": "28px",
+      "letterSpacing": "normal",
+      "color": "#0B4A6F",
+      "sampleText": "Rooted in the heart of Swabia — where precision engineering "
+    },
+    {
+      "role": "link",
+      "fontFamily": "Neue Haas Grotesk Text Pro",
+      "fontSize": "16px",
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "normal",
+      "color": "#000000",
+      "sampleText": "About us"
+    },
+    {
+      "role": "heading-2",
+      "fontFamily": "Neue Haas Grotesk Text Pro",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "lineHeight": "16px",
+      "letterSpacing": "2.4px",
+      "color": "#636363",
+      "sampleText": "Frameworks"
+    }
+  ],
+  "spacing": {
+    "observed": [
+      4,
+      8,
+      10,
+      12,
+      16,
+      20,
+      24,
+      32,
+      40,
+      48,
+      56,
+      192
+    ],
+    "baseUnit": 8
+  },
+  "radius": [
+    "6px",
+    "9999px"
+  ],
+  "shadows": [
+    {
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
+      "count": 12
+    },
+    {
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+      "count": 6
+    },
+    {
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(32, 32, 32, 0.08) 0px 32px 80px 0px",
+      "count": 5
+    },
+    {
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px",
+      "count": 5
+    },
+    {
+      "value": "rgba(175, 255, 235, 0.8) 0px -1px 8px 0px inset",
+      "count": 1
+    }
+  ],
+  "buttons": [
+    {
+      "label": "Explore Our Products",
+      "background": "transparent",
+      "backgroundImage": "linear-gradient(135deg, rgba(11, 74, 111, 0.88), rgba(11, 74, 111, 0.72))",
+      "backdropFilter": "",
+      "color": "#99FFDD",
+      "padding": "12px 24px",
+      "borderRadius": "9999px",
+      "border": "1px solid rgba(153, 255, 221, 0.4)",
+      "boxShadow": "none",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "height": "46px"
+    },
+    {
+      "label": "button",
+      "background": "#FFFFFF",
+      "backgroundImage": "",
+      "backdropFilter": "blur(4px)",
+      "color": "#171717",
+      "padding": "0px",
+      "borderRadius": "9999px",
+      "border": "1px solid rgba(255, 255, 255, 0.4)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
+      "fontSize": "16px",
+      "fontWeight": "300",
+      "height": "40px"
+    },
+    {
+      "label": "button",
+      "background": "#FFFFFF",
+      "backgroundImage": "",
+      "backdropFilter": "",
+      "color": "#0B4A6F",
+      "padding": "0px",
+      "borderRadius": "9999px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 1px 2px 0px",
+      "fontSize": "16px",
+      "fontWeight": "300",
+      "height": "8px"
+    },
+    {
+      "label": "button",
+      "background": "#FFFFFF",
+      "backgroundImage": "",
+      "backdropFilter": "blur(4px)",
+      "color": "#171717",
+      "padding": "0px",
+      "borderRadius": "9999px",
+      "border": "1px solid rgb(229, 231, 235)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
+      "fontSize": "16px",
+      "fontWeight": "300",
+      "height": "40px"
+    },
+    {
+      "label": "button",
+      "background": "transparent",
+      "backgroundImage": "",
+      "backdropFilter": "",
+      "color": "#FFFFFF",
+      "padding": "0px",
+      "borderRadius": "9999px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "boxShadow": "none",
+      "fontSize": "16px",
+      "fontWeight": "300",
+      "height": "8px"
+    }
+  ],
+  "cards": [],
+  "nav": {
+    "label": "navigation",
+    "background": "#FFFFFF",
+    "backgroundImage": "",
+    "backdropFilter": "blur(12px)",
+    "color": "#0B4A6F",
+    "padding": "0px",
+    "borderRadius": "0px",
+    "border": "",
+    "boxShadow": "rgba(175, 255, 235, 0.8) 0px -1px 8px 0px inset",
+    "fontSize": "16px",
+    "fontWeight": "300",
+    "height": "65px"
+  },
+  "chips": [
+    {
+      "label": "Oil & Gas",
+      "background": "#FFFFFF",
+      "color": "#0B4A6F",
+      "padding": "8px 16px",
+      "borderRadius": "9999px",
+      "border": "1px solid rgb(229, 231, 235)",
+      "boxShadow": "none",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "height": "36px"
+    },
+    {
+      "label": "Plaza flagship",
+      "background": "transparent",
+      "color": "#0B4A6F",
+      "padding": "8px 16px",
+      "borderRadius": "9999px",
+      "border": "1px solid rgba(11, 74, 111, 0.12)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(11, 74, 111, 0.07) 0px 10px 24px 0px",
+      "fontSize": "10.88px",
+      "fontWeight": "600",
+      "height": "34.3125px"
+    }
+  ],
+  "statCells": [],
+  "tabs": [],
+  "backgrounds": [
+    {
+      "value": "linear-gradient(135deg, rgb(240, 240, 240) 0%, rgb(182, 173, 170) 100%)",
+      "area": 11281140
+    },
+    {
+      "value": "radial-gradient(circle at 18% 68%, rgba(153, 255, 221, 0.12), rgba(0, 0, 0, 0) 32%), radial-gradient(circle at 82% 18%, rgba(255, 196, 168, 0.1), rgba(0, 0, 0, 0) 28%)",
+      "area": 1907700
+    },
+    {
+      "value": "radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0) 32%), linear-gradient(rgba(20, 20, 20, 0.02), rgba(20, 20, 20, 0.12))",
+      "area": 2045047
+    },
+    {
+      "value": "linear-gradient(rgba(238, 244, 246, 0.94), rgba(249, 249, 246, 0.92) 48%, rgba(236, 232, 228, 0.94))",
+      "area": 1907700
+    },
+    {
+      "value": "linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.04) 42%, rgba(219, 225, 225, 0.08))",
+      "area": 1907700
+    },
+    {
+      "value": "radial-gradient(circle, rgba(164, 219, 201, 0.47) 0%, rgba(153, 255, 221, 0.06) 40%, rgba(0, 0, 0, 0) 72%)",
+      "area": 944784
+    }
+  ],
+  "glass": [
+    {
+      "backdropFilter": "blur(40px)",
+      "background": "rgba(255, 255, 255, 0.72)",
+      "border": "1px solid rgba(255, 255, 255, 0.7)",
+      "borderRadius": "38.4px",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(32, 32, 32, 0.08) 0px 32px 80px 0px",
+      "area": 5074080
+    },
+    {
+      "backdropFilter": "blur(1.5px)",
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "0px solid rgb(229, 231, 235)",
+      "borderRadius": "0px",
+      "boxShadow": "",
+      "area": 1907700
+    },
+    {
+      "backdropFilter": "blur(40px)",
+      "background": "rgba(255, 255, 255, 0.82)",
+      "border": "1px solid rgba(255, 255, 255, 0.7)",
+      "borderRadius": "37.6px",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(11, 74, 111, 0.1) 0px 28px 70px 0px",
+      "area": 836256
+    }
+  ]
+}

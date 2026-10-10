@@ -1,0 +1,464 @@
+{
+  "files": [
+    {
+      "file": "KaTeX_AMS-Regular-BQhdFMY1.woff2",
+      "family": "KaTeX_AMS",
+      "rawFamily": "KaTeX_AMS",
+      "subfamily": "Regular",
+      "postscript": "KaTeX_AMS-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_AMS-Regular-DMm9YOAa.woff",
+      "family": "KaTeX_AMS",
+      "rawFamily": "KaTeX_AMS",
+      "subfamily": "Regular",
+      "postscript": "KaTeX_AMS-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_AMS-Regular-DRggAlZN.ttf",
+      "family": "KaTeX_AMS",
+      "rawFamily": "KaTeX_AMS",
+      "subfamily": "Regular",
+      "postscript": "KaTeX_AMS-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Caligraphic-Bold-ATXxdsX0.ttf",
+      "family": "KaTeX_Caligraphic",
+      "rawFamily": "KaTeX_Caligraphic",
+      "subfamily": "Bold",
+      "postscript": "KaTeX_Caligraphic-Bold",
+      "weight": 700,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Caligraphic-Bold-BEiXGLvX.woff",
+      "family": "KaTeX_Caligraphic",
+      "rawFamily": "KaTeX_Caligraphic",
+      "subfamily": "Bold",
+      "postscript": "KaTeX_Caligraphic-Bold",
+      "weight": 700,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2",
+      "family": "KaTeX_Caligraphic",
+      "rawFamily": "KaTeX_Caligraphic",
+      "subfamily": "Bold",
+      "postscript": "KaTeX_Caligraphic-Bold",
+      "weight": 700,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Caligraphic-Regular-CTRA-rTL.woff",
+      "family": "KaTeX_Caligraphic",
+      "rawFamily": "KaTeX_Caligraphic",
+      "subfamily": "Regular",
+      "postscript": "KaTeX_Caligraphic-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Caligraphic-Regular-Di6jR-x-.woff2",
+      "family": "KaTeX_Caligraphic",
+      "rawFamily": "KaTeX_Caligraphic",
+      "subfamily": "Regular",
+      "postscript": "KaTeX_Caligraphic-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Caligraphic-Regular-wX97UBjC.ttf",
+      "family": "KaTeX_Caligraphic",
+      "rawFamily": "KaTeX_Caligraphic",
+      "subfamily": "Regular",
+      "postscript": "KaTeX_Caligraphic-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Fraktur-Bold-BdnERNNW.ttf",
+      "family": "KaTeX_Fraktur",
+      "rawFamily": "KaTeX_Fraktur",
+      "subfamily": "Bold",
+      "postscript": "KaTeX_Fraktur-Bold",
+      "weight": 700,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Fraktur-Bold-BsDP51OF.woff",
+      "family": "KaTeX_Fraktur",
+      "rawFamily": "KaTeX_Fraktur",
+      "subfamily": "Bold",
+      "postscript": "KaTeX_Fraktur-Bold",
+      "weight": 700,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Fraktur-Bold-CL6g_b3V.woff2",
+      "family": "KaTeX_Fraktur",
+      "rawFamily": "KaTeX_Fraktur",
+      "subfamily": "Bold",
+      "postscript": "KaTeX_Fraktur-Bold",
+      "weight": 700,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Fraktur-Regular-CB_wures.ttf",
+      "family": "KaTeX_Fraktur",
+      "rawFamily": "KaTeX_Fraktur",
+      "subfamily": "Regular",
+      "postscript": "KaTeX_Fraktur-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Fraktur-Regular-CTYiF6lA.woff2",
+      "family": "KaTeX_Fraktur",
+      "rawFamily": "KaTeX_Fraktur",
+      "subfamily": "Regular",
+      "postscript": "KaTeX_Fraktur-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Fraktur-Regular-Dxdc4cR9.woff",
+      "family": "KaTeX_Fraktur",
+      "rawFamily": "KaTeX_Fraktur",
+      "subfamily": "Regular",
+      "postscript": "KaTeX_Fraktur-Regular",
+      "weight": 400,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Main-Bold-Cx986IdX.woff2",
+      "family": "KaTeX_Main",
+      "rawFamily": "KaTeX_Main",
+      "subfamily": "Bold",
+      "postscript": "KaTeX_Main-Bold",
+      "weight": 700,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Main-Bold-Jm3AIy58.woff",
+      "family": "KaTeX_Main",
+      "rawFamily": "KaTeX_Main",
+      "subfamily": "Bold",
+      "postscript": "KaTeX_Main-Bold",
+      "weight": 700,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Main-Bold-waoOVXN0.ttf",
+      "family": "KaTeX_Main",
+      "rawFamily": "KaTeX_Main",
+      "subfamily": "Bold",
+      "postscript": "KaTeX_Main-Bold",
+      "weight": 700,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Main-BoldItalic-DxDJ3AOS.woff2",
+      "family": "KaTeX_Main",
+      "rawFamily": "KaTeX_Main",
+      "subfamily": "Bold Italic",
+      "postscript": "KaTeX_Main-BoldItalic",
+      "weight": 700,
+      "style": "italic",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Main-BoldItalic-DzxPMmG6.ttf",
+      "family": "KaTeX_Main",
+      "rawFamily": "KaTeX_Main",
+      "subfamily": "Bold Italic",
+      "postscript": "KaTeX_Main-BoldItalic",
+      "weight": 700,
+      "style": "italic",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Main-BoldItalic-SpSLRI95.woff",
+      "family": "KaTeX_Main",
+      "rawFamily": "KaTeX_Main",
+      "subfamily": "Bold Italic",
+      "postscript": "KaTeX_Main-BoldItalic",
+      "weight": 700,
+      "style": "italic",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Math-BoldItalic-B3XSjfu4.ttf",
+      "family": "KaTeX_Math",
+      "rawFamily": "KaTeX_Math",
+      "subfamily": "Bold Italic",
+      "postscript": "KaTeX_Math-BoldItalic",
+      "weight": 700,
+      "style": "italic",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Math-BoldItalic-CZnvNsCZ.woff2",
+      "family": "KaTeX_Math",
+      "rawFamily": "KaTeX_Math",
+      "subfamily": "Bold Italic",
+      "postscript": "KaTeX_Math-BoldItalic",
+      "weight": 700,
+      "style": "italic",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Math-BoldItalic-iY-2wyZ7.woff",
+      "family": "KaTeX_Math",
+      "rawFamily": "KaTeX_Math",
+      "subfamily": "Bold Italic",
+      "postscript": "KaTeX_Math-BoldItalic",
+      "weight": 700,
+      "style": "italic",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Math-Italic-DA0__PXp.woff",
+      "family": "KaTeX_Math",
+      "rawFamily": "KaTeX_Math",
+      "subfamily": "Italic",
+      "postscript": "KaTeX_Math-Italic",
+      "weight": 400,
+      "style": "italic",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Math-Italic-flOr_0UB.ttf",
+      "family": "KaTeX_Math",
+      "rawFamily": "KaTeX_Math",
+      "subfamily": "Italic",
+      "postscript": "KaTeX_Math-Italic",
+      "weight": 400,
+      "style": "italic",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_Math-Italic-t53AETM-.woff2",
+      "family": "KaTeX_Math",
+      "rawFamily": "KaTeX_Math",
+      "subfamily": "Italic",
+      "postscript": "KaTeX_Math-Italic",
+      "weight": 400,
+      "style": "italic",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_SansSerif-Bold-CFMepnvq.ttf",
+      "family": "KaTeX_SansSerif",
+      "rawFamily": "KaTeX_SansSerif",
+      "subfamily": "Bold",
+      "postscript": "KaTeX_SansSerif-Bold",
+      "weight": 700,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_SansSerif-Bold-D1sUS0GD.woff2",
+      "family": "KaTeX_SansSerif",
+      "rawFamily": "KaTeX_SansSerif",
+      "subfamily": "Bold",
+      "postscript": "KaTeX_SansSerif-Bold",
+      "weight": 700,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    },
+    {
+      "file": "KaTeX_SansSerif-Bold-DbIhKOiC.woff",
+      "family": "KaTeX_SansSerif",
+      "rawFamily": "KaTeX_SansSerif",
+      "subfamily": "Bold",
+      "postscript": "KaTeX_SansSerif-Bold",
+      "weight": 700,
+      "style": "normal",
+      "variationAxes": [],
+      "identified": true,
+      "isIcon": false
+    }
+  ],
+  "families": [
+    {
+      "family": "KaTeX_AMS",
+      "weights": [
+        400
+      ],
+      "variable": false,
+      "fileCount": 3,
+      "files": [
+        "KaTeX_AMS-Regular-BQhdFMY1.woff2",
+        "KaTeX_AMS-Regular-DMm9YOAa.woff",
+        "KaTeX_AMS-Regular-DRggAlZN.ttf"
+      ]
+    },
+    {
+      "family": "KaTeX_Caligraphic",
+      "weights": [
+        400,
+        700
+      ],
+      "variable": false,
+      "fileCount": 6,
+      "files": [
+        "KaTeX_Caligraphic-Bold-ATXxdsX0.ttf",
+        "KaTeX_Caligraphic-Bold-BEiXGLvX.woff",
+        "KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2",
+        "KaTeX_Caligraphic-Regular-CTRA-rTL.woff",
+        "KaTeX_Caligraphic-Regular-Di6jR-x-.woff2",
+        "KaTeX_Caligraphic-Regular-wX97UBjC.ttf"
+      ]
+    },
+    {
+      "family": "KaTeX_Fraktur",
+      "weights": [
+        400,
+        700
+      ],
+      "variable": false,
+      "fileCount": 6,
+      "files": [
+        "KaTeX_Fraktur-Bold-BdnERNNW.ttf",
+        "KaTeX_Fraktur-Bold-BsDP51OF.woff",
+        "KaTeX_Fraktur-Bold-CL6g_b3V.woff2",
+        "KaTeX_Fraktur-Regular-CB_wures.ttf",
+        "KaTeX_Fraktur-Regular-CTYiF6lA.woff2",
+        "KaTeX_Fraktur-Regular-Dxdc4cR9.woff"
+      ]
+    },
+    {
+      "family": "KaTeX_Main",
+      "weights": [
+        700
+      ],
+      "variable": false,
+      "fileCount": 6,
+      "files": [
+        "KaTeX_Main-Bold-Cx986IdX.woff2",
+        "KaTeX_Main-Bold-Jm3AIy58.woff",
+        "KaTeX_Main-Bold-waoOVXN0.ttf",
+        "KaTeX_Main-BoldItalic-DxDJ3AOS.woff2",
+        "KaTeX_Main-BoldItalic-DzxPMmG6.ttf",
+        "KaTeX_Main-BoldItalic-SpSLRI95.woff"
+      ]
+    },
+    {
+      "family": "KaTeX_Math",
+      "weights": [
+        400,
+        700
+      ],
+      "variable": false,
+      "fileCount": 6,
+      "files": [
+        "KaTeX_Math-BoldItalic-B3XSjfu4.ttf",
+        "KaTeX_Math-BoldItalic-CZnvNsCZ.woff2",
+        "KaTeX_Math-BoldItalic-iY-2wyZ7.woff",
+        "KaTeX_Math-Italic-DA0__PXp.woff",
+        "KaTeX_Math-Italic-flOr_0UB.ttf",
+        "KaTeX_Math-Italic-t53AETM-.woff2"
+      ]
+    },
+    {
+      "family": "KaTeX_SansSerif",
+      "weights": [
+        700
+      ],
+      "variable": false,
+      "fileCount": 3,
+      "files": [
+        "KaTeX_SansSerif-Bold-CFMepnvq.ttf",
+        "KaTeX_SansSerif-Bold-D1sUS0GD.woff2",
+        "KaTeX_SansSerif-Bold-DbIhKOiC.woff"
+      ]
+    }
+  ],
+  "unidentified": [],
+  "meta": {
+    "generatedAt": "2026-10-09T21:29:39.183Z",
+    "tool": "fontkit"
+  }
+}

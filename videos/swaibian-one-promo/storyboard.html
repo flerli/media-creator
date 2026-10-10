@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>swaibian one — 25s promo — sketch sheet v1</title>
+<style>
+  @font-face {
+    font-family: "Inter";
+    src: url("assets/fonts/inter-var.woff2") format("woff2");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+  }
+  :root {
+    --canvas: #f7f8fa;
+    --panel: #ffffff;
+    --soft: #f0f1f4;
+    --ink: #111827;
+    --text: #353740;
+    --muted: #6b7280;
+    --border: #e5e7eb;
+    --accent: #10a37f;
+    --accent-soft: #e7f6f1;
+    --mint: #cbf1e6;
+    --ai: #7c3aed;
+    --ai-soft: #f0eaff;
+    --lilac: #efdcf7;
+    --peach: #ffe2c5;
+    --success: #16a34a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0e1116;
+    color: #e7e9ee;
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  }
+  .sheet { max-width: 1680px; margin: 0 auto; padding: 56px 56px 96px; }
+  header.page { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; padding-bottom: 28px; border-bottom: 1px solid #232a34; }
+  .page h1 { font-size: 30px; font-weight: 700; letter-spacing: -0.02em; }
+  .page .dek { margin-top: 8px; color: #9aa3b2; font-size: 15px; max-width: 72ch; }
+  .tags { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag { border: 1px solid #2c3440; color: #c3cad6; border-radius: 999px; padding: 6px 12px; font-size: 12px; letter-spacing: 0.04em; white-space: nowrap; }
+  .tag.hot { background: #16281f; border-color: #1f4a38; color: #7fd8ba; }
+  .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px 26px; margin-top: 36px; }
+  .wrap { min-width: 0; }
+  .cell {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    container-type: inline-size;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--canvas);
+    color: var(--ink);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
+  }
+  .meta { margin-top: 10px; display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  .meta .name { font-size: 13px; font-weight: 700; letter-spacing: 0.02em; }
+  .meta .time { font-size: 12px; color: #7d8798; font-variant-numeric: tabular-nums; }
+  .note { margin-top: 6px; font-size: 12.5px; line-height: 1.5; color: #9aa3b2; }
+  .note b { color: #d4dae4; }
+  .chip { display: inline-block; margin-top: 8px; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #7d8798; border: 1px solid #2c3440; border-radius: 999px; padding: 3px 10px; }
+  .chip.cut { color: #f0b9b9; border-color: #4a2b2b; }
+  .chip.fade { color: #b9cdf0; border-color: #2b3a55; }
+
+  /* ---------- shared frame styles (design language at 1920x1080 via cqw) ---------- */
+  .pad { position: absolute; inset: 0; padding: 5cqw; }
+  .eyebrow { font-size: 1.05cqw; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 0.6cqw; }
+  .eyebrow .dot { width: 0.6cqw; height: 0.6cqw; border-radius: 50%; background: var(--accent); }
+  .display { font-weight: 700; letter-spacing: -0.025em; line-height: 1.02; color: var(--ink); }
+  .rule { height: 0.22cqw; background: var(--accent); border-radius: 2px; }
+  .pill { display: inline-flex; align-items: center; gap: 0.6cqw; background: var(--mint); color: #0d4636; font-weight: 700; border-radius: 999px; padding: 0.9cqw 1.8cqw; }
+  .plate { border-radius: 1.2cqw; overflow: hidden; box-shadow: 0 3cqw 7cqw rgba(15, 23, 42, 0.18); border: 0.12cqw solid rgba(17, 24, 39, 0.08); background: #fff; }
+  .plate img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .ghost { position: absolute; font-weight: 800; letter-spacing: -0.04em; color: #111827; opacity: 0.05; line-height: 1; pointer-events: none; white-space: nowrap; }
+
+  /* frame 1 */
+  .f1 .ghost { font-size: 26cqw; top: 18%; left: 22%; }
+  .f1 .display { font-size: 8.2cqw; }
+  .f1 .stack { position: absolute; left: 5cqw; top: 26%; width: 62cqw; }
+  .f1 .rule { width: 14cqw; margin-top: 2.2cqw; }
+  .f1 .plate { position: absolute; right: 4.5cqw; top: 16%; width: 34cqw; aspect-ratio: 16/9; transform: perspective(1200px) rotateY(-8deg); }
+  .f1 .corner { position: absolute; left: 5cqw; top: 4.5cqw; }
+
+  /* frame 2 */
+  .f2 .eyebrow { position: absolute; left: 5cqw; top: 4.5cqw; }
+  .f2 .claims { position: absolute; left: 5cqw; top: 21%; width: 66cqw; }
+  .f2 .claim { font-size: 7.4cqw; }
+  .f2 .claim + .claim { margin-top: 1.4cqw; }
+  .f2 .pill { font-size: 5.4cqw; margin-top: 2.4cqw; }
+  .f2 .support { margin-top: 2.6cqw; font-size: 1.9cqw; color: var(--text); font-weight: 500; }
+  .f2 .plate { position: absolute; right: -6cqw; bottom: -8cqw; width: 42cqw; aspect-ratio: 16/9; opacity: 0.28; }
+
+  /* frame 3 */
+  .f3 .head { position: absolute; left: 5cqw; top: 4.5cqw; width: 40cqw; }
+  .f3 .headline { font-size: 4.6cqw; margin-top: 2cqw; }
+  .f3 .rail { position: absolute; left: 5cqw; top: 62%; width: 38cqw; height: 0.18cqw; background: var(--border); }
+  .f3 .rail::after { content: ""; position: absolute; right: 0; top: -0.3cqw; width: 0.8cqw; height: 0.8cqw; border-radius: 50%; background: var(--accent); }
+  .f3 .cards { position: absolute; right: 4.5cqw; top: 8cqw; width: 43cqw; display: flex; flex-direction: column; gap: 1.5cqw; }
+  .f3 .card { background: var(--panel); border: 0.14cqw solid var(--border); border-radius: 1.1cqw; padding: 1.6cqw 1.8cqw; box-shadow: 0 1.4cqw 3.4cqw rgba(15, 23, 42, 0.07); display: flex; gap: 1.4cqw; align-items: center; }
+  .f3 .card .thumb { width: 8.4cqw; aspect-ratio: 16/10; border-radius: 0.6cqw; overflow: hidden; flex: none; border: 0.1cqw solid var(--border); }
+  .f3 .card .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .f3 .card .bar { width: 0.4cqw; align-self: stretch; border-radius: 9px; flex: none; }
+  .f3 .card h3 { font-size: 1.75cqw; font-weight: 700; letter-spacing: -0.01em; }
+  .f3 .card p { font-size: 1.28cqw; color: var(--muted); margin-top: 0.35cqw; line-height: 1.35; }
+  .f3 .c-green .bar { background: var(--accent); }
+  .f3 .c-purple .bar { background: var(--ai); }
+  .f3 .c-warm .bar { background: #f59e0b; }
+
+  /* frame 4 */
+  .f4 .headline { position: absolute; left: 5cqw; top: 4.2cqw; font-size: 3.4cqw; }
+  .f4 .task { position: absolute; left: 5cqw; top: 19%; width: 40cqw; background: var(--panel); border: 0.14cqw solid var(--border); border-radius: 1.2cqw; padding: 2cqw; box-shadow: 0 2cqw 5cqw rgba(15, 23, 42, 0.08); }
+  .f4 .task .tagline { font-size: 1.05cqw; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+  .f4 .task .quote { margin-top: 1.4cqw; font-size: 1.85cqw; line-height: 1.4; color: var(--text); }
+  .f4 .task .quote .caret { display: inline-block; width: 0.16cqw; height: 1.9cqw; background: var(--ai); vertical-align: -0.35cqw; margin-left: 0.2cqw; }
+  .f4 .steps { margin-top: 1.8cqw; display: flex; flex-direction: column; gap: 1cqw; }
+  .f4 .step { display: flex; align-items: center; gap: 1cqw; font-size: 1.5cqw; color: var(--text); }
+  .f4 .tick { width: 1.9cqw; height: 1.9cqw; border-radius: 50%; background: var(--accent-soft); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 1.15cqw; font-weight: 800; flex: none; }
+  .f4 .step.done span { color: var(--muted); }
+  .f4 .progress { margin-top: 1.8cqw; height: 0.5cqw; border-radius: 99px; background: var(--soft); overflow: hidden; }
+  .f4 .progress i { display: block; height: 100%; width: 100%; background: var(--accent); border-radius: 99px; }
+  .f4 .dash { position: absolute; right: 4.5cqw; top: 16%; width: 45cqw; }
+  .f4 .dash .plate { aspect-ratio: 16/10; }
+  .f4 .dash .pill { position: absolute; left: -2cqw; bottom: -1.4cqw; background: var(--panel); border: 0.12cqw solid var(--accent); color: #0d4636; font-size: 1.35cqw; padding: 0.8cqw 1.6cqw; box-shadow: 0 1.4cqw 3cqw rgba(16, 163, 127, 0.22); }
+  .f4 .dash .pill .dot { width: 0.7cqw; height: 0.7cqw; border-radius: 50%; background: var(--success); }
+
+  /* frame 5 */
+  .f5 .head { position: absolute; left: 0; right: 0; top: 13%; text-align: center; }
+  .f5 .eyebrow { justify-content: center; }
+  .f5 .headline { font-size: 4.8cqw; margin-top: 1.6cqw; }
+  .f5 .pair { position: absolute; left: 50%; top: 47%; transform: translateX(-50%); display: flex; gap: 3cqw; width: 74cqw; }
+  .f5 .pair .card { flex: 1; background: var(--panel); border: 0.14cqw solid var(--border); border-radius: 1.2cqw; padding: 2.2cqw; box-shadow: 0 2.4cqw 5.6cqw rgba(15, 23, 42, 0.1); }
+  .f5 .pair .l { transform: perspective(1400px) rotateY(7deg); }
+  .f5 .pair .r { transform: perspective(1400px) rotateY(-7deg); background: linear-gradient(180deg, #fbf7ff, #ffffff 55%); }
+  .f5 .pair h3 { font-size: 2.2cqw; font-weight: 700; }
+  .f5 .pair p { margin-top: 0.8cqw; font-size: 1.4cqw; line-height: 1.45; color: var(--muted); }
+  .f5 .badge { display: inline-block; margin-top: 1.6cqw; font-size: 1.05cqw; font-weight: 700; padding: 0.5cqw 1.2cqw; border-radius: 999px; background: var(--accent-soft); color: #0d4636; }
+  .f5 .badge.p { background: var(--ai-soft); color: #4c1d95; }
+
+  /* frame 6 */
+  .f6 .center { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .f6 .headline { font-size: 5.6cqw; }
+  .f6 .cta { margin-top: 3cqw; position: relative; display: inline-flex; align-items: center; gap: 0.8cqw; background: var(--accent); color: #fff; font-weight: 700; font-size: 2cqw; border-radius: 0.9cqw; padding: 1.3cqw 2.6cqw; box-shadow: 0 0 0 0.6cqw rgba(16, 163, 127, 0.18), 0 2cqw 4.6cqw rgba(16, 163, 127, 0.35); }
+  .f6 .cursor { position: absolute; right: -1.2cqw; bottom: -1.2cqw; width: 2.2cqw; height: 2.2cqw; }
+  .f6 .lockup { margin-top: 5cqw; }
+  .f6 .word { font-size: 2.5cqw; font-weight: 800; letter-spacing: -0.02em; display: flex; align-items: center; gap: 0.8cqw; justify-content: center; }
+  .f6 .word img { width: 2.4cqw; height: 2.4cqw; }
+  .f6 .sub { margin-top: 1cqw; font-size: 1.3cqw; color: var(--muted); }
+  .f6 .url { margin-top: 1.6cqw; font-size: 1.3cqw; font-weight: 600; color: var(--text); letter-spacing: 0.02em; }
+
+  /* closing cells */
+  .wide { grid-column: 1 / -1; }
+  .close-cell { background: #141922; border: 1px solid #232a34; border-radius: 12px; padding: 26px 30px; }
+  .close-cell h2 { font-size: 15px; letter-spacing: 0.08em; text-transform: uppercase; color: #8b95a6; margin-bottom: 18px; }
+  .seams { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; font-size: 13px; color: #c3cad6; }
+  .seam { background: #1b222d; border: 1px solid #2c3440; border-radius: 8px; padding: 8px 12px; }
+  .seam b { color: #fff; }
+  .arrow { color: #5b6678; font-size: 12px; }
+  .tokens { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 26px; font-size: 13px; color: #c3cad6; }
+  .swatches { display: flex; flex-wrap: wrap; gap: 10px; }
+  .sw { display: flex; align-items: center; gap: 8px; background: #1b222d; border: 1px solid #2c3440; border-radius: 8px; padding: 6px 10px; font-size: 12px; }
+  .sw i { width: 14px; height: 14px; border-radius: 4px; display: inline-block; border: 1px solid rgba(255,255,255,0.15); }
+  .bans li { margin-left: 16px; margin-bottom: 6px; color: #9aa3b2; }
+  @media (max-width: 1100px) { .grid { grid-template-columns: 1fr; } .tokens { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header class="page">
+    <div>
+      <h1>swaibian one — “Put your own knowledge into AI use cases.”</h1>
+      <p class="dek">Sketch sheet v1 · six frames, 25.0s, 16:9. Static layouts at their key moment — no motion yet. Seams: crossfade where the thought continues, hard cut where it turns.</p>
+    </div>
+    <div class="tags">
+      <span class="tag hot">v1</span>
+      <span class="tag">1920×1080</span>
+      <span class="tag">25.0s</span>
+      <span class="tag">6 beats</span>
+      <span class="tag">music only</span>
+    </div>
+  </header>
+
+  <div class="grid">
+
+    <!-- ============ FRAME 1 ============ -->
+    <div class="wrap">
+      <div class="cell f1" id="frame-01">
+        <div class="ghost">know-how</div>
+        <div class="pad">
+          <div class="corner eyebrow"><span class="dot"></span> swaibian one</div>
+          <div class="stack">
+            <div class="display">Your know-how.</div>
+            <div class="display" style="color:#0d4636;">Put to work.</div>
+            <div class="rule"></div>
+          </div>
+          <div class="plate"><img src="capture/assets/your-know-howput-to-work.jpg" alt="" /></div>
+        </div>
+      </div>
+      <div class="meta"><span class="name">01 · YOUR KNOW-HOW. PUT TO WORK.</span><span class="time">0.0–4.0s</span></div>
+      <p class="note"><b>“Your know-how.” whips in word-by-word from below, the green rule draws, then the plate tilts in.</b> On the downbeat the line shoves up and “Put to work.” stamps. Cut away.</p>
+      <span class="chip cut">seam out · hard cut</span>
+    </div>
+
+    <!-- ============ FRAME 2 ============ -->
+    <div class="wrap">
+      <div class="cell f2" id="frame-02">
+        <img class="plate" src="capture/assets/you-already-have-what-it-takes.jpg" alt="" style="position:absolute;" />
+        <div class="pad">
+          <div class="eyebrow"><span class="dot"></span> The next way to work starts with you</div>
+          <div class="claims">
+            <div class="display claim">No coding.</div>
+            <div class="display claim">No external specialists.</div>
+            <div class="pill">You’re in charge.</div>
+            <p class="support">Put your knowledge into AI use cases.</p>
+          </div>
+        </div>
+      </div>
+      <div class="meta"><span class="name">02 · NO CODING. NO EXTERNAL SPECIALISTS.</span><span class="time">4.0–8.5s</span></div>
+      <p class="note"><b>“No coding.” slams from the left; “No external specialists.” snaps from the right.</b> “You’re in charge.” spring-pops in the mint pill. Faded plate drifts far right. Crossfade out.</p>
+      <span class="chip fade">seam out · crossfade</span>
+    </div>
+
+    <!-- ============ FRAME 3 ============ -->
+    <div class="wrap">
+      <div class="cell f3" id="frame-03">
+        <div class="pad">
+          <div class="head">
+            <div class="eyebrow"><span class="dot"></span> Your knowledge, ready for everyday work</div>
+            <div class="display headline">One conversation. Something you can keep using.</div>
+            <div class="rail"></div>
+          </div>
+          <div class="cards">
+            <div class="card c-green">
+              <div class="bar"></div>
+              <div class="thumb"><img src="capture/assets/one-conversation-something-you-can-keep-.jpg" alt="" /></div>
+              <div>
+                <h3>Expert Team</h3>
+                <p>The right help, shaped by you.</p>
+              </div>
+            </div>
+            <div class="card c-purple">
+              <div class="bar"></div>
+              <div>
+                <h3>Workflow</h3>
+                <p>Your way of getting it done.</p>
+              </div>
+            </div>
+            <div class="card c-warm">
+              <div class="bar"></div>
+              <div>
+                <h3>Dashboard</h3>
+                <p>A result you can make sense of.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="meta"><span class="name">03 · ONE CONVERSATION. SOMETHING YOU CAN KEEP USING.</span><span class="time">8.5–13.5s</span></div>
+      <p class="note"><b>Cards cascade in one shared beat: Expert Team → Workflow → Dashboard.</b> Hairlines draw top-edge, the rail links headline to cards. Hard cut out on the beat.</p>
+      <span class="chip cut">seam out · hard cut</span>
+    </div>
+
+    <!-- ============ FRAME 4 ============ -->
+    <div class="wrap">
+      <div class="cell f4" id="frame-04">
+        <div class="pad">
+          <div class="display headline">A new case. A familiar way of working.</div>
+          <div class="task">
+            <div class="tagline">Bring a real case</div>
+            <p class="quote">“When a customer asks for a quote, I check what they need, note what’s missing, and prepare a reply.”<span class="caret"></span></p>
+            <div class="steps">
+              <div class="step done"><span class="tick">✓</span><span>Check what they need</span></div>
+              <div class="step done"><span class="tick">✓</span><span>Note what’s missing</span></div>
+              <div class="step done"><span class="tick">✓</span><span>Prepare a reply</span></div>
+            </div>
+            <div class="progress"><i></i></div>
+          </div>
+          <div class="dash">
+            <div class="plate"><img src="capture/assets/a-new-casea-familiar-way-of-working.jpg" alt="" /></div>
+            <span class="pill"><span class="dot"></span> Ready for review</span>
+          </div>
+        </div>
+      </div>
+      <div class="meta"><span class="name">04 · A NEW CASE. A FAMILIAR WAY OF WORKING.</span><span class="time">13.5–18.0s</span></div>
+      <p class="note"><b>The quote types in, then the three steps light up and check off on the beat while the progress fill advances.</b> Dashboard plate tilts in; “Ready for review” pops. Crossfade out.</p>
+      <span class="chip fade">seam out · crossfade</span>
+    </div>
+
+    <!-- ============ FRAME 5 ============ -->
+    <div class="wrap">
+      <div class="cell f5" id="frame-05">
+        <div class="pad">
+          <div class="head">
+            <div class="eyebrow"><span class="dot"></span> For enterprises and partners</div>
+            <div class="display headline">Yours to run. Yours to build on.</div>
+          </div>
+          <div class="pair">
+            <div class="card l">
+              <h3>Enterprise rollout</h3>
+              <p>Roll swaibian one out to every team in your organisation.</p>
+              <span class="badge">whole org</span>
+            </div>
+            <div class="card r">
+              <h3>White-label technology</h3>
+              <p>Run it inside your own product, under your brand.</p>
+              <span class="badge p">your brand</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="meta"><span class="name">05 · YOURS TO RUN. YOURS TO BUILD ON.</span><span class="time">18.0–21.0s</span></div>
+      <p class="note"><b>Two cards open toward center with mirrored tilts and one badge each — the calmest beat.</b> Almost still; the breather before the ask. Hard cut out.</p>
+      <span class="chip cut">seam out · hard cut</span>
+    </div>
+
+    <!-- ============ FRAME 6 ============ -->
+    <div class="wrap">
+      <div class="cell f6" id="frame-06">
+        <div class="center">
+          <div class="display headline">Make your first Use Case.</div>
+          <span class="cta">Create your first use case
+            <svg class="cursor" viewBox="0 0 24 24" fill="none"><path d="M5 3l14 8.5-6.2 1.4L9.8 19 5 3z" fill="#fff" stroke="#111827" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </span>
+          <div class="lockup">
+            <div class="word"><img src="capture/assets/favicon.svg" alt="" /> swaibian <span style="font-weight:800;color:#0d4636;">one</span></div>
+            <div class="sub">No coding. No external specialists. You’re in charge.</div>
+            <div class="url">one.swaibian.com</div>
+          </div>
+        </div>
+      </div>
+      <div class="meta"><span class="name">06 · MAKE YOUR FIRST USE CASE.</span><span class="time">21.0–25.0s</span></div>
+      <p class="note"><b>The headline condenses into the real green button; a cursor arrives and clicks — ripple, spring.</b> Stage clears to the wordmark lockup, held to the last frame.</p>
+      <span class="chip">end · hold</span>
+    </div>
+
+    <!-- ============ SEAM MAP ============ -->
+    <div class="wide close-cell">
+      <h2>Seam map</h2>
+      <div class="seams">
+        <span class="seam"><b>01</b> hero</span><span class="arrow">→ crossfade →</span>
+        <span class="seam"><b>02</b> claim</span><span class="arrow">→ hard cut →</span>
+        <span class="seam"><b>03</b> capability</span><span class="arrow">→ crossfade →</span>
+        <span class="seam"><b>04</b> evidence</span><span class="arrow">→ hard cut →</span>
+        <span class="seam"><b>05</b> enterprise</span><span class="arrow">→ hard cut →</span>
+        <span class="seam"><b>06</b> CTA</span><span class="arrow">→ hold</span>
+      </div>
+    </div>
+
+    <!-- ============ TOKENS ============ -->
+    <div class="wide close-cell">
+      <h2>Tokens &amp; bans</h2>
+      <div class="tokens">
+        <div>
+          <div class="swatches">
+            <span class="sw"><i style="background:#f7f8fa;"></i> canvas #F7F8FA</span>
+            <span class="sw"><i style="background:#111827;"></i> ink #111827</span>
+            <span class="sw"><i style="background:#6b7280;"></i> muted #6B7280</span>
+            <span class="sw"><i style="background:#10a37f;"></i> accent #10A37F</span>
+            <span class="sw"><i style="background:#7c3aed;"></i> ai #7C3AED</span>
+            <span class="sw"><i style="background:#cbf1e6;"></i> mint #CBF1E6</span>
+            <span class="sw"><i style="background:#efdcf7;"></i> lilac #EFDCF7</span>
+            <span class="sw"><i style="background:#ffe2c5;"></i> peach #FFE2C5</span>
+          </div>
+        </div>
+        <div>
+          <p><b style="color:#fff;">Type — Inter</b></p>
+          <p style="margin-top:8px;">Display 88–120px / 700 / −0.02em</p>
+          <p>Supporting 30–38px / 400–500</p>
+          <p>Eyebrow 20–24px / 700 / +0.14em</p>
+        </div>
+        <div>
+          <p><b style="color:#fff;">Bans</b></p>
+          <ul class="bans" style="margin-top:8px;">
+            <li>no dark mode · no full-screen gradients · no pure #000</li>
+            <li>no gradient text · no identical card grids</li>
+            <li>no slideshow (a fresh card per beat) · no screensaver motion</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

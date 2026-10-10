@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>f01 — your know-how. put to work.</title></head>
+<body>
+<template>
+<style>
+  @font-face { font-family: "Inter"; src: url("assets/fonts/inter-var.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+  #root {
+    position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden;
+    background: #f7f8fa; color: #111827;
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  }
+  #root .scene { position: absolute; inset: 0; }
+  #root .ghost {
+    position: absolute; top: 150px; left: 380px; white-space: nowrap;
+    font-size: 500px; font-weight: 800; letter-spacing: -0.04em; line-height: 1;
+    color: #111827; opacity: 0.05; pointer-events: none;
+  }
+  #root .glow {
+    position: absolute; left: 240px; top: 420px; width: 900px; height: 480px;
+    background: radial-gradient(closest-side, rgba(16, 163, 127, 0.55), rgba(16, 163, 127, 0));
+    opacity: 0; pointer-events: none;
+  }
+  #root .corner {
+    position: absolute; left: 96px; top: 86px; display: flex; align-items: center; gap: 12px;
+    font-size: 20px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6b7280;
+  }
+  #root .corner .dot { width: 12px; height: 12px; border-radius: 50%; background: #10a37f; }
+  #root .stack { position: absolute; left: 96px; top: 272px; width: 1230px; }
+  #root .display { font-weight: 700; letter-spacing: -0.025em; line-height: 1.02; font-size: 140px; }
+  #root .line1 { color: #111827; }
+  #root .line2 { color: #0d4636; }
+  #root .line1 .w { display: inline-block; opacity: 0; }
+  #root .line2 { opacity: 0; }
+  #root .rule {
+    width: 270px; height: 4px; margin-top: 42px; border-radius: 2px;
+    background: #10a37f; transform: scaleX(0); transform-origin: 0 50%;
+  }
+  #root .plate {
+    position: absolute; right: 86px; top: 172px; width: 653px; aspect-ratio: 16 / 9;
+    border-radius: 22px; overflow: hidden; background: #fff;
+    border: 2px solid rgba(17, 24, 39, 0.08);
+    box-shadow: 0 56px 120px rgba(15, 23, 42, 0.18);
+    opacity: 0;
+  }
+  #root .plate img { display: block; width: 100%; height: 100%; object-fit: cover; }
+</style>
+<div data-hf-id="hf-4tha" id="root" data-composition-id="f01" data-width="1920" data-height="1080" data-duration="4">
+  <div data-hf-id="hf-wble" class="scene" id="f01-scene">
+    <div data-hf-id="hf-yq07" class="ghost" id="f01-ghost" data-layout-ignore="">know-how</div>
+    <div data-hf-id="hf-9hyu" class="glow" id="f01-glow"></div>
+    <div data-hf-id="hf-d0ts" class="corner" id="f01-corner"><span data-hf-id="hf-9gry" class="dot"></span>swaibian one</div>
+    <div data-hf-id="hf-n63m" class="stack" id="f01-stack">
+      <div data-hf-id="hf-4bfq" class="display line1" id="f01-line1"><span data-hf-id="hf-zrx8" class="w" id="f01-w-your">Your</span> <span data-hf-id="hf-ctdn" class="w" id="f01-w-know">know-</span><span data-hf-id="hf-6elw" class="w" id="f01-w-how">how.</span></div>
+      <div data-hf-id="hf-s9vn" class="display line2" id="f01-line2">Put to work.</div>
+      <div data-hf-id="hf-930q" class="rule" id="f01-rule"></div>
+    </div>
+    <div data-hf-id="hf-pndy" class="plate" id="f01-plate"><img data-hf-id="hf-s8s3" id="f01-img" src="capture/assets/your-know-howput-to-work.jpg" alt="" data-layout-allow-overflow="true"></div>
+  </div>
+</div>
+<script>
+(function () {
+  var tl = gsap.timeline({ paused: true });
+  var F = 1 / 60;
+
+  // eyebrow — light fade from above
+  tl.fromTo("#f01-corner", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 0.12);
+
+  // "Your know-how." — waterfall arrival, overlapping cascade, binary opacity
+  tl.set("#f01-w-your", { opacity: 1, y: 64 }, 0.14);
+  tl.to("#f01-w-your", { y: 0, duration: 0.18, ease: "power4.out" }, 0.14);
+  tl.set("#f01-w-know", { opacity: 1, y: 50 }, 0.14 + 0.18 + 2 * F);
+  tl.to("#f01-w-know", { y: 0, duration: 0.15, ease: "power4.out" }, 0.14 + 0.18 + 2 * F);
+  tl.set("#f01-w-how", { opacity: 1, y: 70 }, 0.14 + 0.18 + 0.15 + 1 * F);
+  tl.to("#f01-w-how", { y: 0, duration: 0.15, ease: "power4.out" }, 0.14 + 0.18 + 0.15 + 1 * F);
+
+  // hero plate — entrance on the wrapper, slow zoom on the image (no conflicting transforms)
+  tl.fromTo("#f01-plate", { opacity: 0, x: 120, transformPerspective: 1200, rotationY: -16 },
+    { opacity: 1, x: 0, rotationY: -8, duration: 0.8, ease: "power3.out" }, 0.6);
+  tl.fromTo("#f01-img", { scale: 1.0 }, { scale: 1.06, duration: 3.1, ease: "none" }, 0.7);
+
+  // accent rule draws left→right
+  tl.fromTo("#f01-rule", { scaleX: 0 }, { scaleX: 1, duration: 0.5, ease: "expo.out" }, 0.95);
+
+  // "Put to work." — line 1 shoves up (nudge curve), line 2 stamps in on the same beat
+  tl.to("#f01-line1", { y: -6, duration: 0.12, ease: "power3.in" }, 1.25);
+  tl.to("#f01-line1", { y: -20, duration: 0.1, ease: "none" }, 1.37);
+  tl.to("#f01-line1", { y: -26, duration: 0.35, ease: "power4.out" }, 1.49);
+  tl.fromTo("#f01-line2", { opacity: 0, scale: 1.35, filter: "blur(14px)" },
+    { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.55, ease: "power4.out" }, 1.45);
+
+  // glow blooms in landing with the stamp, then one bounded breath
+  tl.fromTo("#f01-glow", { opacity: 0, scale: 0.9 }, { opacity: 0.3, scale: 1, duration: 0.7, ease: "power2.out" }, 1.0);
+  var glow = document.getElementById("f01-glow");
+  var phase = { p: 0 };
+  tl.to(phase, {
+    p: Math.PI * 2, duration: 2.2, ease: "none",
+    onUpdate: function () {
+      var s = Math.sin(phase.p);
+      glow.style.opacity = String(0.3 + s * 0.04);
+      glow.style.transform = "scale(" + (1 + s * 0.015) + ")";
+    },
+  }, 1.7);
+
+  // ambient ghost drift
+  tl.fromTo("#f01-ghost", { x: 0 }, { x: -44, duration: 4, ease: "none" }, 0);
+
+  // crossfade out to frame 2 (light-through-canvas)
+  tl.to("#f01-scene", { opacity: 0, duration: 0.42, ease: "power1.in" }, 3.55);
+
+  window.__timelines["f01"] = tl;
+})();
+</script>
+</template>
+</body>
+</html>

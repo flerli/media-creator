@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>f04 — a new case. a familiar way of working.</title></head>
+<body>
+<template>
+<style>
+  @font-face { font-family: "Inter"; src: url("assets/fonts/inter-var.woff2") format("woff2"); font-weight: 100 900; font-style: normal; font-display: swap; }
+  #root {
+    position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden;
+    background: #f7f8fa; color: #111827;
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  }
+  #root .scene { position: absolute; inset: 0; }
+  #root .headline {
+    position: absolute; left: 96px; top: 88px; font-size: 65px; font-weight: 700;
+    letter-spacing: -0.022em; color: #111827;
+  }
+  #root .task {
+    position: absolute; left: 96px; top: 246px; width: 768px;
+    background: #fff; border: 2px solid #e5e7eb; border-radius: 24px; padding: 42px;
+    box-shadow: 0 36px 80px rgba(15, 23, 42, 0.08);
+  }
+  #root .task .tagline { font-size: 20px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #6b7280; }
+  #root .task .quotewrap { margin-top: 26px; min-height: 170px; }
+  #root .task .quote { font-size: 36px; line-height: 1.42; color: #353740; }
+  #root .task .caret { display: inline-block; width: 3px; height: 38px; background: #7c3aed; vertical-align: -7px; margin-left: 3px; }
+  #root .steps { margin-top: 26px; display: flex; flex-direction: column; gap: 20px; }
+  #root .step { display: flex; align-items: center; gap: 20px; font-size: 29px; color: #353740; }
+  #root .step .txt { color: #353740; }
+  #root .tick {
+    width: 38px; height: 38px; border-radius: 50%; flex: none;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid #e5e7eb; background: transparent; color: #cbd5e1;
+    font-size: 23px; font-weight: 800;
+  }
+  #root .progress { margin-top: 30px; height: 10px; border-radius: 99px; background: #f0f1f4; overflow: hidden; }
+  #root .progress .fill { display: block; width: 100%; height: 100%; background: #10a37f; border-radius: 99px; transform-origin: 0 50%; }
+  #root .dash { position: absolute; right: 86px; top: 208px; width: 864px; }
+  #root .dash .plate {
+    aspect-ratio: 16 / 10; border-radius: 24px; overflow: hidden; background: #fff;
+    border: 2px solid rgba(17, 24, 39, 0.08); box-shadow: 0 48px 110px rgba(15, 23, 42, 0.16); opacity: 0;
+  }
+  #root .dash .plate img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  #root .dash .pill {
+    position: absolute; left: -38px; bottom: -27px; display: inline-flex; align-items: center; gap: 12px;
+    background: #fff; border: 2px solid #10a37f; color: #0d4636; font-weight: 700; font-size: 26px;
+    border-radius: 999px; padding: 15px 30px; box-shadow: 0 26px 56px rgba(16, 163, 127, 0.22);
+    opacity: 0;
+  }
+  #root .dash .pill .dot { width: 14px; height: 14px; border-radius: 50%; background: #16a34a; }
+</style>
+<div data-hf-id="hf-2hko" id="root" data-composition-id="f04" data-width="1920" data-height="1080" data-duration="4.5">
+  <div data-hf-id="hf-0juv" class="scene" id="f04-scene">
+    <div data-hf-id="hf-rgar" class="headline" id="f04-head">A new case. A familiar way of working.</div>
+    <div data-hf-id="hf-tked" class="task" id="f04-task">
+      <div data-hf-id="hf-tjo9" class="tagline">Bring a real case</div>
+      <div data-hf-id="hf-7q1s" class="quotewrap"><p data-hf-id="hf-d2g4" class="quote" id="f04-quote"></p><span data-hf-id="hf-ypjw" class="caret" id="f04-caret"></span></div>
+      <div data-hf-id="hf-70xd" class="steps">
+        <div data-hf-id="hf-gj8z" class="step" id="f04-s1"><span data-hf-id="hf-lzgv" class="tick" id="f04-t1">✓</span><span data-hf-id="hf-33ln" class="txt">Check what they need</span></div>
+        <div data-hf-id="hf-7vd4" class="step" id="f04-s2"><span data-hf-id="hf-ai7m" class="tick" id="f04-t2">✓</span><span data-hf-id="hf-zay3" class="txt">Note what’s missing</span></div>
+        <div data-hf-id="hf-8n0x" class="step" id="f04-s3"><span data-hf-id="hf-zril" class="tick" id="f04-t3">✓</span><span data-hf-id="hf-almx" class="txt">Prepare a reply</span></div>
+      </div>
+      <div data-hf-id="hf-31j5" class="progress"><span data-hf-id="hf-z5d8" class="fill" id="f04-fill"></span></div>
+    </div>
+    <div data-hf-id="hf-q1pg" class="dash">
+      <div data-hf-id="hf-tebr" class="plate" id="f04-plate"><img data-hf-id="hf-1qlm" id="f04-img" src="capture/assets/a-new-casea-familiar-way-of-working.jpg" alt=""></div>
+      <span data-hf-id="hf-a5jg" class="pill" id="f04-pill"><span data-hf-id="hf-9gry" class="dot"></span>Ready for review</span>
+    </div>
+  </div>
+</div>
+<script>
+(function () {
+  var tl = gsap.timeline({ paused: true });
+
+  // crossfade in from frame 3
+  tl.fromTo("#f04-scene", { opacity: 0 }, { opacity: 1, duration: 0.45, ease: "power2.out" }, 0);
+  tl.fromTo("#f04-head", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 0.2);
+  tl.fromTo("#f04-task", { opacity: 0, y: 28 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 0.5);
+
+  // the quote types in — discrete states, instant jumps, real punctuation
+  var QUOTE = "\u201CWhen a customer asks for a quote, I check what they need, note what\u2019s missing, and prepare a reply.\u201D";
+  var SEQUENCE = [
+    { t: 0, text: "" },
+    { t: 0.05, text: "\u201CWhen a customer" },
+    { t: 0.28, text: "\u201CWhen a customer asks" },
+    { t: 0.52, text: "\u201CWhen a customer asks for a quote," },
+    { t: 0.82, text: "\u201CWhen a customer asks for a quote, I check" },
+    { t: 1.08, text: "\u201CWhen a customer asks for a quote, I check what they need," },
+    { t: 1.38, text: "\u201CWhen a customer asks for a quote, I check what they need, note what\u2019s missing," },
+    { t: 1.6, text: QUOTE },
+  ];
+  function textAt(t) {
+    for (var i = SEQUENCE.length - 1; i >= 0; i--) if (t >= SEQUENCE[i].t) return SEQUENCE[i].text;
+    return "";
+  }
+  var quoteEl = document.getElementById("f04-quote");
+  var caretEl = document.getElementById("f04-caret");
+  var driver = { t: 0 };
+  tl.to(driver, {
+    t: 1.7, duration: 1.7, ease: "none",
+    onUpdate: function () { quoteEl.textContent = textAt(driver.t); },
+  }, 0.9);
+  var blink = { p: 0 };
+  tl.fromTo(blink, { p: 0 }, {
+    p: Math.PI * 2 * 3, duration: 1.8, ease: "none",
+    onUpdate: function () { caretEl.style.opacity = Math.sin(blink.p) > 0 ? "1" : "0"; },
+  }, 0.9);
+  tl.to(caretEl, { opacity: 0, duration: 0.18, ease: "power1.in" }, 2.62);
+
+  // steps arrive, then check off one by one; the fill advances in step
+  tl.fromTo("#f04-s1", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 1.4);
+  tl.fromTo("#f04-s2", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 1.62);
+  tl.fromTo("#f04-s3", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 1.84);
+
+  function checkOff(i, at) {
+    var tick = document.getElementById("f04-t" + i);
+    var row = document.getElementById("f04-s" + i);
+    tl.fromTo(tick,
+      { scale: 0.6, backgroundColor: "rgba(16,163,127,0)", color: "#cbd5e1", borderColor: "#e5e7eb" },
+      { scale: 1, backgroundColor: "#e7f6f1", color: "#10a37f", borderColor: "#10a37f", duration: 0.3, ease: "power3.out" },
+      at);
+    tl.to(row.querySelector(".txt"), { color: "#6b7280", duration: 0.35, ease: "power1.out" }, at);
+  }
+  checkOff(1, 2.45);
+  checkOff(2, 2.85);
+  checkOff(3, 3.15);
+  tl.fromTo("#f04-fill", { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: "power2.out" }, 2.45);
+
+  // dashboard plate lands with the verified result; pill pops on its settle
+  tl.fromTo("#f04-plate", { opacity: 0, x: 96, transformPerspective: 1400, rotationY: -14 },
+    { opacity: 1, x: 0, rotationY: -5, duration: 0.7, ease: "power3.out" }, 2.9);
+  tl.fromTo("#f04-img", { scale: 1.0 }, { scale: 1.05, duration: 1.6, ease: "none" }, 3.0);
+  tl.fromTo("#f04-pill", { opacity: 0, scale: 0, y: 12 }, { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "power3.out" }, 3.55);
+
+  window.__timelines["f04"] = tl;
+})();
+</script>
+</template>
+</body>
+</html>

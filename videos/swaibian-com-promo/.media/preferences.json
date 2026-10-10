@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "preferences": {
+    "destination": {
+      "value": "website",
+      "confirmed_in": [
+        "swaibian-com-promo"
+      ],
+      "updated_at": "2026-10-10T07:07:04.897Z"
+    },
+    "aspect": {
+      "value": "1920x1080",
+      "confirmed_in": [
+        "swaibian-com-promo"
+      ],
+      "updated_at": "2026-10-10T07:07:04.948Z"
+    },
+    "language": {
+      "value": "en",
+      "confirmed_in": [
+        "swaibian-com-promo"
+      ],
+      "updated_at": "2026-10-10T07:07:05.001Z"
+    },
+    "flow": {
+      "value": "automation",
+      "confirmed_in": [
+        "swaibian-com-promo"
+      ],
+      "updated_at": "2026-10-10T07:07:05.060Z"
+    },
+    "storyboard": {
+      "value": "yes",
+      "confirmed_in": [
+        "swaibian-com-promo"
+      ],
+      "updated_at": "2026-10-10T07:07:05.140Z"
+    }
+  },
+  "sightings": {}
+}

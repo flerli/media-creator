@@ -1,0 +1,4 @@
+/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (7.4.0.post2)/charset_normalizer (3.4.2) doesn't match a supported version!
+  warnings.warn(
+[musicgen] seed dur=28.00s tokens=1400
+[musicgen] wrote /Users/flerli/01_Swaibian/Swaibian-Main_Office/05_Products/media-creator/assets/bgm/track.wav samples=960000 sr=32000
