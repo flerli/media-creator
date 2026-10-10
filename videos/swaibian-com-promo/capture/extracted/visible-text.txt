@@ -1,0 +1,82 @@
+[button] Products
+[a] About us
+[a] Contact us
+[span] Toggle Menu
+[span] SWAIBIAN     SWAIBIAN     SWAIBIAN
+[span] SWAIBIAN     SWAIBIAN     SWAIBIAN
+[h1] AI, Made Simple.
+[span] Swabian Heritage. Silicon Valley Innovation.
+[p] Rooted in the heart of Swabia — where precision engineering meets relentless innovation. We bring world-class AI solutions to companies and users, making complex technology effortlessly simple.
+[blockquote] “From Stuttgart to the world — Swabian quality, now powered by artificial intelligence.”
+[div] Oil & Gas
+[div] Gastronomy
+[div] Multimedia
+[a] Let Us Bring AI to Your Field
+[button] Explore Our Products
+[a] About Swaibian
+[h2] Frameworks
+[h2] BrainWavr
+[p] Agent-assisted workspaces for versioned projects, exports, and domain views — built on Swaibian's ScaiCo technology.
+[h3] Workflow navigation, progress, and collaboration in one surface
+[p] Open a project and move through the workflow tree, track progress, manage collaborators, and access history, export, chat, and actions — all from one authenticated workspace.
+[blockquote] “One workspace for project flow, AI actions, version history, and export — structured for agents, built for teams.”
+[p] BrainWavr
+[p] Agent-assisted workflow platform
+[a] Read the story
+[h2] ScaiCo
+[p] Scaled agentic Company — shape blueprints, attach tools, run live sessions, and keep budgets visible as work moves.
+[h3] Create agents and teams without writing code
+[p] Start from a guided studio: create projects, specialist agents, teams, and tool access. Shape the structure before anything runs — no orchestration plumbing needed.
+[blockquote] Build the team structure once, export it as a blueprint, and redeploy it across projects — no re-configuration, no re-coding.
+[p] ScaiCo
+[p] Multi-agent orchestration platform
+[a] Read the story
+[h2] Applications
+[div] Plaza flagship
+[p] Desktop workspace
+[h2] Turn scattered AI work into one calm command center.
+[p] Plan, see, and execute without the tab chaos.
+[p] Plaza brings the assistant, the canvas, the workflow, and the board into one private desktop workspace.
+[span] Private desktop
+[span] Guided work
+[span] One place
+[a] See Plaza
+[h2] BookBloom
+[p] Literature that talks back — AI characters, scene generation, and immersive audio built into the reading experience via the ERES format.
+[h3] Talk to the characters while you read
+[p] Open the character panel inside the reading view and ask questions in context. The cast responds with knowledge grounded in the text — not the internet. Conversations happen inside the story world.
+[blockquote] “Characters that know their own story, scenes that paint themselves, and a soundtrack that breathes with every chapter.”
+[p] BookBloom
+[p] Interactive reading platform
+[a] Read the story
+[h2] Notaria
+[p] Blockchain-secured digital notarization with AI-powered notary and lawyer agents — built on Swaibian's ScaiCo technology.
+[h3] Verify a document without signing in
+[p] Paste a hash or upload a file to compute it in the browser, then check notarization status — no account needed. Start with verification, go deeper when you're ready.
+[blockquote] “No scheduling, no office visits. Your AI notary and legal team are always at hand — open verification for anyone, deeper workflow when you sign in.”
+[p] Notaria
+[p] Digital notarization platform
+[a] Read the story
+[h2] Tendr
+[p] Guests scan a QR code, chat with AI, and discover every dish — allergens, pairings, and translations included.
+[h3] Upload a photo, get a digital menu in seconds
+[p] Photograph a printed menu and receive structured, searchable dish data within seconds — prices, descriptions, and allergens included. No manual entry, no delays.
+[p] Tendr
+[p] AI-powered menu assistant
+[a] Read the story
+[a] Swaibian
+[p] AI, Made Simple. Complex technology, effortless experience — across every industry.
+[h3] Products
+[a] BookBloom
+[a] BrainWavr
+[a] Impressum
+[a] Privacy Policy
+[button] Cookie Settings
+[p] swaibian UG (haftungsbeschränkt). All rights reserved.
+[p] contact@swaibian.com
+[h3] 🍪 Cookie Settings
+[p] We use cookies to ensure the website functions properly. Analytics and marketing cookies are only set with your consent.
+[a] Privacy Policy
+[button] Accept Selected
+[button] Reject Non-Essential
+[button] Manage
