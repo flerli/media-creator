@@ -1,5 +1,7 @@
 # media-creator
 
+![Plaza promo banner — 2-second snippets from the example video, playing in sequence](videos/swaibian-plaza-promo/renders/plaza-promo-banner.gif)
+
 Repo for producing Swaibian media: HyperFrames videos (HTML → deterministic
 MP4), decks, and motion graphics. Every video is a self-contained HyperFrames
 project under `videos/<project>/`.
@@ -93,7 +95,12 @@ so any line, cut, or beat can be changed later and re-rendered identically.
 for how a project is laid out: `index.html`, `BRIEF.md`, `frame.md`,
 `STORYBOARD.md`, `storyboard.html`, `compositions/`, `capture/`, `assets/`,
 `renders/`, plus its own `hyperframes.json` and pinned `package.json` scripts.
-It is currently briefed and in progress — a 60s "Donna's Dispatch" promo.
+
+It is delivered — a 34.4s "Donna's Dispatch" promo. Contact sheet below, one
+frame per scene; the render is
+`renders/plaza_promo_hyperframes.mp4`.
+
+![Contact sheet of the Plaza promo — one frame per scene](videos/swaibian-plaza-promo/renders/plaza-promo-contact-sheet.jpg)
 
 Other projects under `videos/` are local-only and never leave your machine.
 
