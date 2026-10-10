@@ -1,0 +1,122 @@
+[button] Products
+[a] About us
+[a] Contact us
+[span] Toggle Menu
+[a] Back
+[span] PLAZA     PLAZA     PLAZA
+[span] PLAZA     PLAZA     PLAZA
+[p] One workspace. Everything you need.
+[h1] Plaza
+[p] Stop juggling ten tools.
+[p] Start working in one.
+[p] AI planning, visual workflows, execution boards, live canvas, and mobile access — all in a single private desktop app. No more switching between Miro, Asana, ChatGPT, and Notion.
+[span] Get Plaza
+[span] Book a demo
+[p] Everything in one place
+[p] AI assistant, canvas, workflows, boards, and mobile companion — one app.
+[span] One app     One app     One app
+[span] One app     One app     One app
+[p] Before Plaza
+[h2] You needed all of these. Now you don't.
+[span] Mural
+[span] Miro
+[span] Asana
+[span] Trello
+[span] Notion
+[span] Claude
+[span] ChatGPT
+[span] MS365 Copilot
+[span] Jira
+[span] Monday
+[p] Plaza replaces the stack. Plan, coordinate, review, execute — one private desktop.
+[span] Donna     Donna     Donna
+[span] Donna     Donna     Donna
+[p] Meet Donna
+[h2] She works while you live.
+[p] Donna is not a chatbot you prompt. She is an autonomous assistant who learns your priorities, handles tasks on her own, and reaches out when something needs your attention — even if you didn't know it existed yet.
+[h3] Autonomous
+[p] She works on tasks while you are busy, asleep, or offline.
+[h3] Proactive
+[p] She surfaces what matters before you know to ask.
+[h3] Always reachable
+[p] Check in via phone or watch. Give her tasks from anywhere.
+[h3] She learns you
+[p] Over time, she becomes the closest thing to a team member an AI can be.
+[span] Donna and lobster claws     Donna and lobster claws     Donna and lobster claws
+[span] Donna and lobster claws     Donna and lobster claws     Donna and lobster claws
+[p] And yes: Donna eats lobster for breakfast!
+[p] This is real. Click to explore.
+[p] Donna's command center
+[p] Triage, guidance, and proactive task management.
+[p] Donna's Dispatch
+[p] She researched, compiled, and delivered this — without being asked.
+[p] The full workspace
+[p] Donna connects canvas, workflows, and boards into one living desktop.
+[p] A new kind of assistant
+[p] Something like Donna has never existed before. She doesn't wait for instructions — she anticipates, acts, and reports back. On desktop, on your phone, on your wrist. The more you work with her, the more she understands what you need before you do.
+[span] Inside Plaza     Inside Plaza     Inside Plaza
+[span] Inside Plaza     Inside Plaza     Inside Plaza
+[p] Inside Plaza
+[h2] AI, canvas, boards, workflows. One surface.
+[h3] Agentic Dev Pipeline + Productivity
+[p] Audit-grade software solutions built while you sleep. Plus focus mode, ambient soundscapes, and chat — all built in.
+[h3] Metro + Swaiboard
+[p] Visual workflow design flows straight into execution boards. No handoff, no context loss.
+[h3] One desktop. Zero tab-switching.
+[p] Assistant, canvas, workflow designer, project boards, timeline, calendar, capacity view — all visible without leaving the app.
+[span] Globetrotter     Globetrotter     Globetrotter
+[span] Globetrotter     Globetrotter     Globetrotter
+[p] Work from anywhere
+[h2] Rooftop bar. Beach. Surfboard. Still on top of it.
+[p] Globetrotter keeps Plaza on your wrist, phone, and tablet. Capture a thought, check Donna's reply, drop a task — wherever you are.
+[span] Get Globetrotter on the App Store
+[p] After-work rooftop
+[p] Donna is listening. The cocktail can wait.
+[p] Beach in Bali
+[p] Donna replied. Back to the sunset.
+[p] Between waves
+[p] Quick thought capture. Hands back on the board.
+[p] Morning coffee
+[p] Plaza received it. Move on with your day.
+[p] Sunset check-in
+[p] Thought, task, mini chat — right from the wrist.
+[span] Get Plaza     Get Plaza     Get Plaza
+[span] Get Plaza     Get Plaza     Get Plaza
+[p] Download
+[h2] Ready to stop tab-switching?
+[p] Verify your email. Choose your platform. Get a signed installer link.
+[p] Verified download access
+[h3] Request installer access
+[p] Use a work email, choose your platform, and verify the request before the installer link is revealed.
+[label] Name
+[p] Use your first name and surname so the verification email can be addressed correctly.
+[label] Work email
+[p] We use this address for your verification code and the backup download link.
+[p] Preferred platform
+[p] macOS
+[p] Desktop installer for Apple silicon and macOS rollout.
+[p] Windows
+[p] Desktop installer for Windows team environments.
+[button] Send verification code
+[p] Disposable inbox providers are rejected. Verified links expire automatically and are designed for a controlled rollout rather than open file dumping.
+[p] One app to rule them all
+[h2] Plan. Execute. Stay ahead. Anywhere.
+[p] It has never been this easy to stay on top of your work — whether you are at your desk, on a rooftop, or catching waves.
+[span] Get Plaza
+[span] Book a demo
+[a] Swaibian
+[p] AI, Made Simple. Complex technology, effortless experience — across every industry.
+[h3] Products
+[a] BookBloom
+[a] BrainWavr
+[a] Impressum
+[a] Privacy Policy
+[button] Cookie Settings
+[p] swaibian UG (haftungsbeschränkt). All rights reserved.
+[p] contact@swaibian.com
+[h3] 🍪 Cookie Settings
+[p] We use cookies to ensure the website functions properly. Analytics and marketing cookies are only set with your consent.
+[a] Privacy Policy
+[button] Accept Selected
+[button] Reject Non-Essential
+[button] Manage

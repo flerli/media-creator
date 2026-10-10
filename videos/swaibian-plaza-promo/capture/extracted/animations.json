@@ -1,0 +1,56 @@
+{
+  "summary": {
+    "webAnimations": 1,
+    "cssDeclarations": 50,
+    "scrollTargets": 31,
+    "cdpAnimations": 31,
+    "canvases": 0
+  },
+  "namedAnimations": [],
+  "scrollTriggeredElements": 31,
+  "representativeAnimations": [
+    {
+      "type": "CSSAnimation",
+      "playState": "running",
+      "animationName": "aurora",
+      "targetSelector": "div.aurora-overlay.after:animate-aurora.pointer-events-none",
+      "targetRect": {
+        "x": -10,
+        "y": 55,
+        "width": 1940,
+        "height": 1100,
+        "top": 55,
+        "right": 1930,
+        "bottom": 1155,
+        "left": -10
+      },
+      "keyframes": [
+        {
+          "offset": 0,
+          "easing": "linear",
+          "composite": "auto",
+          "backgroundPositionX": "50%, 50%",
+          "backgroundPositionY": "50%, 50%",
+          "content": "\"\"",
+          "computedOffset": 0
+        },
+        {
+          "offset": 1,
+          "easing": "linear",
+          "composite": "auto",
+          "backgroundPositionX": "350%, 350%",
+          "backgroundPositionY": "50%, 50%",
+          "content": "\"\"",
+          "computedOffset": 1
+        }
+      ],
+      "timing": {
+        "duration": 60000,
+        "delay": 0,
+        "iterations": null,
+        "easing": "linear",
+        "direction": "normal"
+      }
+    }
+  ]
+}

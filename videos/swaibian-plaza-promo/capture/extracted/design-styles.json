@@ -1,0 +1,289 @@
+{
+  "typography": [
+    {
+      "role": "display",
+      "fontFamily": "Neue Haas Grotesk Text Pro",
+      "fontSize": "96px",
+      "fontWeight": "600",
+      "lineHeight": "96px",
+      "letterSpacing": "-2.4px",
+      "color": "transparent",
+      "sampleText": "Plaza"
+    },
+    {
+      "role": "heading",
+      "fontFamily": "Neue Haas Grotesk Text Pro",
+      "fontSize": "48px",
+      "fontWeight": "600",
+      "lineHeight": "48px",
+      "letterSpacing": "-1.2px",
+      "color": "transparent",
+      "sampleText": "You needed all of these. Now you don't."
+    },
+    {
+      "role": "body",
+      "fontFamily": "Neue Haas Grotesk Text Pro",
+      "fontSize": "36px",
+      "fontWeight": "500",
+      "lineHeight": "40px",
+      "letterSpacing": "normal",
+      "color": "#0B4A6F",
+      "sampleText": "Stop juggling ten tools.Start working in one."
+    },
+    {
+      "role": "heading-3",
+      "fontFamily": "Neue Haas Grotesk Text Pro",
+      "fontSize": "20px",
+      "fontWeight": "600",
+      "lineHeight": "28px",
+      "letterSpacing": "normal",
+      "color": "#0B4A6F",
+      "sampleText": "Agentic Dev Pipeline + Productivity"
+    },
+    {
+      "role": "heading-3",
+      "fontFamily": "Neue Haas Grotesk Text Pro",
+      "fontSize": "18px",
+      "fontWeight": "600",
+      "lineHeight": "28px",
+      "letterSpacing": "normal",
+      "color": "#0B4A6F",
+      "sampleText": "Autonomous"
+    },
+    {
+      "role": "link",
+      "fontFamily": "Neue Haas Grotesk Text Pro",
+      "fontSize": "16px",
+      "fontWeight": "500",
+      "lineHeight": "24px",
+      "letterSpacing": "normal",
+      "color": "#000000",
+      "sampleText": "About us"
+    }
+  ],
+  "spacing": {
+    "observed": [
+      4,
+      6,
+      8,
+      12,
+      16,
+      20,
+      24,
+      32,
+      40,
+      96,
+      192
+    ],
+    "baseUnit": 8
+  },
+  "radius": [
+    "6px",
+    "19.2px",
+    "28px",
+    "9999px"
+  ],
+  "shadows": [
+    {
+      "value": "rgba(11, 74, 111, 0.15) 0px 8px 32px 0px, rgba(240, 240, 240, 0.6) 0px 1px 0px 0px inset, rgba(135, 207, 207, 0.2) 0px -1px 0px 0px inset",
+      "count": 10
+    },
+    {
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(11, 74, 111, 0.14) 0px 24px 60px 0px",
+      "count": 6
+    },
+    {
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(7, 25, 40, 0.18) 0px 24px 60px 0px",
+      "count": 5
+    },
+    {
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(11, 74, 111, 0.22) 0px 22px 44px 0px",
+      "count": 3
+    },
+    {
+      "value": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(11, 74, 111, 0.08) 0px 18px 36px 0px",
+      "count": 2
+    }
+  ],
+  "buttons": [
+    {
+      "label": "Everything in one placeAI assistant, can",
+      "background": "transparent",
+      "backgroundImage": "",
+      "backdropFilter": "",
+      "color": "#0B4A6F",
+      "padding": "0px",
+      "borderRadius": "0px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "boxShadow": "none",
+      "fontSize": "16px",
+      "fontWeight": "300",
+      "height": "544px"
+    },
+    {
+      "label": "Donna's command centerTriage, guidance, ",
+      "background": "transparent",
+      "backgroundImage": "linear-gradient(rgba(255, 255, 255, 0.98), rgba(239, 247, 250, 0.86))",
+      "backdropFilter": "",
+      "color": "#0B4A6F",
+      "padding": "0px",
+      "borderRadius": "28px",
+      "border": "1px solid rgba(11, 74, 111, 0.12)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(11, 74, 111, 0.14) 0px 24px 60px 0px",
+      "fontSize": "16px",
+      "fontWeight": "300",
+      "height": "395px"
+    },
+    {
+      "label": "macOSDesktop installer for Apple silicon",
+      "background": "#0B4A6F",
+      "backgroundImage": "",
+      "backdropFilter": "",
+      "color": "#0B4A6F",
+      "padding": "16px",
+      "borderRadius": "19.2px",
+      "border": "1px solid rgba(11, 74, 111, 0.4)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(11, 74, 111, 0.1) 0px 16px 34px 0px",
+      "fontSize": "16px",
+      "fontWeight": "300",
+      "height": "82px"
+    },
+    {
+      "label": "WindowsDesktop installer for Windows tea",
+      "background": "#FFFFFF",
+      "backgroundImage": "",
+      "backdropFilter": "",
+      "color": "#0B4A6F",
+      "padding": "16px",
+      "borderRadius": "19.2px",
+      "border": "1px solid rgba(11, 74, 111, 0.12)",
+      "boxShadow": "none",
+      "fontSize": "16px",
+      "fontWeight": "300",
+      "height": "82px"
+    },
+    {
+      "label": "Send verification code",
+      "background": "transparent",
+      "backgroundImage": "linear-gradient(135deg, rgba(11, 74, 111, 0.96), rgba(30, 141, 161, 0.9))",
+      "backdropFilter": "",
+      "color": "#FFFFFF",
+      "padding": "12px 24px",
+      "borderRadius": "9999px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(11, 74, 111, 0.22) 0px 20px 44px 0px",
+      "fontSize": "14px",
+      "fontWeight": "600",
+      "height": "48px"
+    },
+    {
+      "label": "Accept All",
+      "background": "#0B4A6F",
+      "backgroundImage": "",
+      "backdropFilter": "",
+      "color": "#FFFFFF",
+      "padding": "8px 20px",
+      "borderRadius": "9999px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "boxShadow": "none",
+      "fontSize": "12px",
+      "fontWeight": "600",
+      "height": "32px"
+    }
+  ],
+  "cards": [],
+  "nav": {
+    "label": "navigation",
+    "background": "#FFFFFF",
+    "backgroundImage": "",
+    "backdropFilter": "blur(12px)",
+    "color": "#0B4A6F",
+    "padding": "0px",
+    "borderRadius": "0px",
+    "border": "",
+    "boxShadow": "rgba(175, 255, 235, 0.8) 0px -1px 8px 0px inset",
+    "fontSize": "16px",
+    "fontWeight": "300",
+    "height": "65px"
+  },
+  "chips": [
+    {
+      "label": "Back",
+      "background": "#FFFFFF",
+      "color": "#171717",
+      "padding": "8px 16px",
+      "borderRadius": "9999px",
+      "border": "0px solid rgb(229, 231, 235)",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.1) 0px 2px 4px -2px",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "height": "36px"
+    },
+    {
+      "label": "Mural",
+      "background": "#FFFFFF",
+      "color": "#6B7280",
+      "padding": "10px 20px",
+      "borderRadius": "9999px",
+      "border": "1px solid rgba(11, 74, 111, 0.1)",
+      "boxShadow": "none",
+      "fontSize": "14px",
+      "fontWeight": "500",
+      "height": "42px"
+    }
+  ],
+  "statCells": [],
+  "tabs": [],
+  "backgrounds": [
+    {
+      "value": "linear-gradient(135deg, rgb(240, 240, 240) 0%, rgb(182, 173, 170) 100%)",
+      "area": 17490960
+    },
+    {
+      "value": "linear-gradient(rgba(240, 240, 240, 0.96), rgba(255, 255, 255, 0.92) 38%, rgba(174, 166, 163, 0.18))",
+      "area": 17490960
+    },
+    {
+      "value": "repeating-linear-gradient(100deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 7%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0) 12%, rgb(255, 255, 255) 16%), repeating-linear-gradient(100deg, rgb(255, 81, 46) 10%, rgb(252, 191, 165) 15%, rgb(121, 255, 226) 20%, rgb(255, 101, 45) 25%, rgb(175, 255, 224) 30%)",
+      "area": 4268000
+    },
+    {
+      "value": "linear-gradient(135deg, rgba(240, 240, 240, 0.2), rgba(135, 207, 207, 0.1) 50%, rgba(240, 240, 240, 0.2))",
+      "area": 2666130
+    },
+    {
+      "value": "linear-gradient(rgba(255, 255, 255, 0.9), rgba(122, 181, 166, 0.12), rgba(11, 74, 111, 0.08), rgba(0, 0, 0, 0) 82%)",
+      "area": 2073600
+    },
+    {
+      "value": "linear-gradient(rgba(255, 255, 255, 0.98), rgba(239, 247, 250, 0.86))",
+      "area": 2357061
+    }
+  ],
+  "glass": [
+    {
+      "backdropFilter": "blur(12px) saturate(1.8)",
+      "background": "rgba(240, 240, 240, 0.15)",
+      "border": "1px solid rgba(255, 255, 255, 0.7)",
+      "borderRadius": "16px",
+      "boxShadow": "rgba(11, 74, 111, 0.15) 0px 8px 32px 0px, rgba(240, 240, 240, 0.6) 0px 1px 0px 0px inset, rgba(135, 207, 207, 0.2) 0px -1px 0px 0px inset",
+      "area": 2666130
+    },
+    {
+      "backdropFilter": "blur(40px)",
+      "background": "rgba(255, 255, 255, 0.78)",
+      "border": "1px solid rgba(11, 74, 111, 0.12)",
+      "borderRadius": "32px",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(11, 74, 111, 0.1) 0px 28px 70px 0px",
+      "area": 1034240
+    },
+    {
+      "backdropFilter": "blur(24px)",
+      "background": "rgba(255, 255, 255, 0.7)",
+      "border": "1px solid rgba(255, 255, 255, 0.58)",
+      "borderRadius": "27.2px",
+      "boxShadow": "rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(11, 74, 111, 0.08) 0px 18px 40px 0px",
+      "area": 465408
+    }
+  ]
+}

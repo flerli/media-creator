@@ -5,7 +5,8 @@ MP4), decks, and motion graphics. Every video is a self-contained HyperFrames
 project under `videos/<project>/`.
 
 You do not operate this repo by hand. You **brief the video producer agent**
-and it plans, builds, checks, and renders the video for you.
+and it plans, builds, checks, and renders the video for you. Projects are
+local-only: `videos/` is gitignored except the `swaibian-plaza-promo/` example.
 
 ## How to use — brief the agent
 
@@ -43,8 +44,10 @@ reviewed → render approved.
 4. **Builds compositions** as deterministic HyperFrames HTML: a single paused
    timeline, seek-safe animation (GSAP), no clocks, no unseeded randomness, no
    network fetches at render time.
-5. **Runs the gates**: `npm run check` (lint, runtime, layout, motion,
-   contrast) until green.
+5. **Runs the gates** and verifies on disk: `npm run check` (lint, runtime,
+   layout, motion, contrast) must reach zero errors, and the agent inspects the
+   real artifacts — captured assets, each frame's HTML, the contact sheets —
+   fixing or rebuilding in place instead of trusting a tool's success message.
 6. **Previews in Studio** for your review, iterating on your feedback.
 7. **Renders** `renders/video.mp4` — reproducibly, only after approval.
 
@@ -69,12 +72,14 @@ The agent then, without further prompting:
 
 - asks 3–4 quick questions (audience, key message, tone, deadline) and drafts
   `BRIEF.md`;
-- captures swaibian.com/book — real screens, brand colours, fonts — and shows
-  you a scene plan with an ASCII sketch per scene;
+- captures swaibian.com/book — real screens, brand colours, fonts — and sketches
+  the scene plan into `storyboard.html` (real fonts/colors/copy, no motion)
+  before any build;
 - builds the composition (product screens in device frames, statement cards
   cut to the music's beat), generates an offline music bed, writes
   `STORYBOARD.md`, `frame.md`, and the compositions;
-- runs `npm run check` until green, then hands you a Studio preview URL;
+- runs `npm run check` until it reports zero errors, then hands you a Studio
+  preview URL;
 - after your notes ("hold the last card longer, warmer music") it re-checks and
   re-previews;
 - on your "approved" it renders `videos/swaibian-book-promo/renders/video.mp4`.
@@ -87,11 +92,14 @@ so any line, cut, or beat can be changed later and re-rendered identically.
 | Project | What | Status |
 | --- | --- | --- |
 | `videos/swaibian-one-promo/` | 25s promo for [one.swaibian.com](https://one.swaibian.com) — no-code AI use cases | Delivered — `renders/video.mp4` |
-| `videos/swaibian-com-promo/` | 60s promo for [www.swaibian.com](https://www.swaibian.com) — "No magic. Just work." | In progress |
+| `videos/swaibian-com-promo/` | 60s promo for [www.swaibian.com](https://www.swaibian.com) — "No magic. Just work." | Built — 10 frames / 58.5s; no render yet |
+| `videos/swaibian-plaza-promo/` | 60s promo for Plaza — "Donna's Dispatch" | Briefed — in progress; the committed example |
 
-Each project holds its own `index.html`, `BRIEF.md`, `frame.md`,
-`STORYBOARD.md`, `storyboard.html`, `compositions/`, `capture/`, `assets/`,
-`renders/`, plus its own `hyperframes.json` and pinned `package.json` scripts.
+Only `videos/swaibian-plaza-promo/` is committed to git; every other project
+under `videos/` is local-only and ignored. Each project holds its own
+`index.html`, `BRIEF.md`, `frame.md`, `STORYBOARD.md`, `storyboard.html`,
+`compositions/`, `capture/`, `assets/`, `renders/`, plus its own
+`hyperframes.json` and pinned `package.json` scripts.
 
 ## Reference
 

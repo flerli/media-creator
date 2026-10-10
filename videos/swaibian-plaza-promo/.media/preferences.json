@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "preferences": {
+    "destination": {
+      "value": "website",
+      "confirmed_in": [
+        "swaibian-plaza-promo"
+      ],
+      "updated_at": "2026-10-10T09:57:37.724Z"
+    },
+    "aspect": {
+      "value": "1920x1080",
+      "confirmed_in": [
+        "swaibian-plaza-promo"
+      ],
+      "updated_at": "2026-10-10T09:57:37.857Z"
+    },
+    "language": {
+      "value": "en",
+      "confirmed_in": [
+        "swaibian-plaza-promo"
+      ],
+      "updated_at": "2026-10-10T09:57:37.913Z"
+    },
+    "flow": {
+      "value": "automation",
+      "confirmed_in": [
+        "swaibian-plaza-promo"
+      ],
+      "updated_at": "2026-10-10T09:57:37.963Z"
+    },
+    "storyboard": {
+      "value": "yes",
+      "confirmed_in": [
+        "swaibian-plaza-promo"
+      ],
+      "updated_at": "2026-10-10T09:57:38.015Z"
+    },
+    "style_preset.product-launch-video": {
+      "value": "blue-professional",
+      "confirmed_in": [
+        "swaibian-plaza-promo"
+      ],
+      "updated_at": "2026-10-10T10:10:54.521Z"
+    }
+  },
+  "sightings": {}
+}
